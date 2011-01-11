@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="generator" content="blohg {{ version }}" />  
+        <link type="text/css" media="screen" rel="stylesheet" href="{{
+            url_for('.static', filename='screen.css') }}" />
+        <link rel="alternate" type="application/atom+xml" href="{{
+            url_for('views.feed') }}" title="{{ config.TITLE }}" />
+        <title>{{ config.TITLE }}{% block title %}{% endblock %}</title>
+
+<!-- begin disqus header -->
+{% block disqus_header %}{% endblock %}
+
+<!-- end disqus header -->
+
+    </head>
+    <body>
+        <div id="header">
+            <h1>{{ config.TITLE_HTML }}</h1>
+            <h2>{{ config.TAGLINE }}</h2>
+            <ul>
+                {%- if active_page == 'page' %}
+                    {%- set active_page = 'home' %}
+                {%- endif %}
+                {%- if active_page == 'tag' %}
+                    {%- set active_page = 'post' %}
+                {%- endif %}
+                {%- for href, id, title in [
+                    (url_for('views.home'), '', 'home'),
+                    (url_for('views.post_list'), 'post', 'posts'),
+                    (url_for('views.content', slug='about'), 'about', 'about'),
+                    (url_for('views.content', slug='projects'), 'projects', 'projects'),
+                    (url_for('views.content', slug='contact'), 'contact', 'contact'),
+                ] %}
+                <li><a href="{{ href }}"{% if id == active_page %} class="active"{%
+                    endif %}>{{ title }}</a></li>
+                {%- endfor %}
+            </ul>
+            <p id="submenu">
+                Important links:
+                {%- for href, title in [
+                    ('http://www.gentoo.org/', 'Gentoo Linux'),
+                    ('http://www.gentoobr.org/', 'Gentoo Linux Brazil'),
+                ] %}
+                <a href="{{ href }}">{{ title }}</a>{%
+                    if not loop.last %} -{% endif %}
+                {%- endfor %}
+            </p>
+        </div>
+        <div class="colmask rightmenu">
+            <div class="colleft">
+                <div class="col1">
+
+<!-- begin content -->
+{% block body %}{% endblock %}
+
+<!-- end content -->
+
+                </div>
+                <div class="col2">
+                    {%- if tags %}
+                    <h2>Tags</h2>
+                    <ul>
+                        {%- for tag in tags %}
+                        <li><a href="{{ url_for('views.tag', tag=tag) }}">{{
+                            tag }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                    {%- endif %}
+                    <h2>Blogroll</h2>
+                    <ul>
+                        {%- for href, title in [
+                            ('http://lucumr.pocoo.org/', 'Armin Ronacher'),
+                            ('http://ferringb.wordpress.com/', 'Brian Harring'),
+                            ('http://blog.yporti.com/', 'Bruno T. Yporti'),
+                            ('http://blogs.gentoo.org/calchan/', 'Denis Dupeyron'),
+                            ('http://blog.flameeyes.eu/', 'Diego E. "Flameeyes" Pettenò'),
+                            ('http://omenezes.com/', 'Gabriel Menezes'),
+                            ('http://blogs.gentoo.org/jmbsvicetto/', 'Jorge Manuel B. S. Vicetto'),
+                            ('http://stevelosh.com/', 'Steve Losh'),
+                        ] %}
+                        <li><a href="{{ href }}">{{ title }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                    <h2>Under the hood</h2>
+                    <ul>
+                        {%- for href, title in [
+                            ('http://python.org/', 'Python'),
+                            ('http://mercurial.selenic.com/', 'Mercurial'),
+                            ('http://docutils.sf.net/', 'Docutils'),
+                            ('http://gunicorn.org/', 'Gunicorn'),
+                            ('http://flask.pocoo.org/', 'Flask'),
+                            ('http://packages.python.org/Flask-Babel/', 'Flask-Babel'),
+                            ('http://jinja.pocoo.org/', 'Jinja2'),
+                            ('http://werkzeug.pocoo.org/', 'Werkzeug'),
+                        ] %}
+                        <li><a href="{{ href }}">{{ title }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                    <h2>Content License</h2>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
+                            <img alt="Creative Commons License"
+                                style="border-width:0"
+                                src="http://i.creativecommons.org/l/by-nc/2.5/88x31.png" />
+                        </a>
+                        <br />
+                        This work is licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-nc/2.5/">
+                            Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                <strong>&copy; {{ config.AUTHOR }}</strong> |
+                Design by:
+                <a href="http://matthewjamestaylor.com/blog/perfect-2-column-right-menu.htm">
+                    Matthew James Taylor
+                </a> |
+                Powered by:
+                <a href="http://hg.rafaelmartins.eng.br/blohg/">
+                    blohg {{ version }}
+                </a>
+            </p>  
+        </div>
+
+<!-- begin disqus footer -->
+        {% block disqus_footer %}{% endblock %}
+
+<!-- end disqus footer -->
+
+<!-- begin google analytics -->
+
+        {%- if not config.DEBUG %}
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            var pageTracker = _gat._getTracker("UA-2886928-8");
+            pageTracker._initData();
+            pageTracker._trackPageview();
+        </script>
+        {%- endif %}
+
+<!-- end google analytics -->
+
+    </body>
+</html>
