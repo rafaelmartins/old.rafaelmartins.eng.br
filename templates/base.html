@@ -6,7 +6,7 @@
         <link type="text/css" media="screen" rel="stylesheet" href="{{
             url_for('.static', filename='screen.css') }}" />
         <link rel="alternate" type="application/atom+xml" href="{{
-            url_for('views.feed') }}" title="{{ config.TITLE }}" />
+            url_for('views.atom') }}" title="{{ config.TITLE }}" />
         <title>{{ config.TITLE }}{% block title %}{% endblock %}</title>
 
 <!-- begin disqus header -->
