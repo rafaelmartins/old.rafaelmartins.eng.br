@@ -1,7 +1,7 @@
 [ANN] g-octave 0.3
 ==================
 
-.. tags: gentoo,g-octave,gsoc,summer_of_code,octave
+.. tags: gentoo,g-octave,gsoc,octave
 
 g-octave 0.3 was released today and come with some cool features:
 

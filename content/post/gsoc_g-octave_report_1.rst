@@ -1,7 +1,7 @@
 GSoC - g-Octave - weekly report #1
 ==================================
 
-.. tags: gentoo,g-octave,gsoc,summer_of_code,octave
+.. tags: gentoo,g-octave,gsoc,octave
 
 .. _g-Octave: http://g-octave.rafaelmartins.eng.br/
 .. _`Google Summer of code 2010`: http://socghop.appspot.com/

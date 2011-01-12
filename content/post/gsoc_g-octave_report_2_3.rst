@@ -1,7 +1,7 @@
 GSoC - g-Octave - weekly report #2 #3
 =====================================
 
-.. tags: gentoo,g-octave,gsoc,summer_of_code,octave
+.. tags: gentoo,g-octave,gsoc,octave
 
 Hi folks,
 

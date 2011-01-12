@@ -1,7 +1,7 @@
 My participation in the Google Summer of Code 2010
 ==================================================
 
-.. tags: gentoo,mercurial,summer_of_code
+.. tags: gentoo,mercurial,gsoc
 
 .. _`Gentoo Linux`: http://www.gentoo.org/
 .. _Mercurial: http://mercurial.selenic.com/

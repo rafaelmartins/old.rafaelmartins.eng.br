@@ -1,7 +1,7 @@
 [ANN] g-octave 0.4
 ==================
 
-.. tags: gentoo,g-octave,gsoc,summer_of_code,octave
+.. tags: gentoo,g-octave,gsoc,octave
 
 g-octave 0.4 was released today and here are the news:
 

@@ -1,7 +1,7 @@
 [ANN] g-octave 0.2
 ==================
 
-.. tags: gentoo,g-octave,gsoc,summer_of_code,octave
+.. tags: gentoo,g-octave,gsoc,octave
 
 g-octave 0.2 was released today and come with support to the installation
 of packages from the octave-forge SVN repository and a fresh package
