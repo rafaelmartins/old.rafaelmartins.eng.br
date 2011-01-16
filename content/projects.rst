@@ -20,10 +20,6 @@ Softwares
 **g-Octave**: A tool that generates and installs ebuilds for the `Octave-Forge`_
 packages on `Gentoo Linux`_ [http://rafaelmartins.eng.br/en-us/projects/g-octave/]
 
-**python-controlsystems**: Python_ modules to study of `Control Systems`_,
-and some example apps, like tf-plotter_ and web-plotter_:
-[http://pycontrolsystems.com/]
-
 **Lintouch-NG**: The new generation of the opensource HMI software
 **Lintouch**: [http://lintouch-ng.sourceforge.net/]
 
