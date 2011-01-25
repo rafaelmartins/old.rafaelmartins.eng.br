@@ -44,7 +44,7 @@ Others
 [http://gentoobr.org]
 
 **Gentoo Linux**: I'm a `Gentoo Linux`_ developer. Roles: sci-electronics,
-g-octave, python and lua.. [http://gentoo.org/]
+g-octave, python and lua. [http://gentoo.org/]
 
 
 .. date added automatically by the script blohg_dump.py.
