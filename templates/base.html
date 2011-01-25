@@ -30,7 +30,7 @@
                     (url_for('views.home'), '', 'home'),
                     (url_for('views.post_list'), 'post', 'posts'),
                     (url_for('views.content', slug='about'), 'about', 'about'),
-                    ('http://labs.rafaelmartins.org/', 'projects', 'projects'),
+                    (url_for('views.content', slug='projects'), 'projects', 'projects'),
                     (url_for('views.content', slug='contact'), 'contact', 'contact'),
                 ] %}
                 <li><a href="{{ href }}"{% if id == active_page %} class="active"{%
@@ -134,17 +134,17 @@
 
 <!-- begin google analytics -->
 
-        {%- if not config.DEBUG %}
-        <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-            var pageTracker = _gat._getTracker("UA-2886928-8");
-            pageTracker._initData();
-            pageTracker._trackPageview();
-        </script>
-        {%- endif %}
+{% if not config.DEBUG -%}
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-2886928-8");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+{%- endif %}
 
 <!-- end google analytics -->
 
