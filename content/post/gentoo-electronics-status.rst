@@ -31,7 +31,7 @@ Currently we have 2 main tasks:
   mentoring anyone to join Gentoo as developer, but I'm sure that some senior
   developer will be glad to help you join the team if you are really interested.
 
-- Write test benches: Electronics software is kinda esoterical. Arch testers
+- Write test benches: Electronics software is kinda esoteric. Arch testers
   usually are not specialists, then we should provide good test benches to
   make their life easier when stabilizing our packages.
 

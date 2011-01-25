@@ -18,32 +18,23 @@ Softwares
 ---------
 
 **g-Octave**: A tool that generates and installs ebuilds for the `Octave-Forge`_
-packages on `Gentoo Linux`_ [http://rafaelmartins.eng.br/en-us/projects/g-octave/]
+packages on `Gentoo Linux`_ [http://g-octave.org/]
 
-**Lintouch-NG**: The new generation of the opensource HMI software
-**Lintouch**: [http://lintouch-ng.sourceforge.net/]
+**blohg**: A Mercurial-based blog engine. [http://hg.rafaelmartins.eng.br/blohg/]
 
-**web-overlay**: A PHP script to list packages of `Gentoo Linux`_ overlays:
-[http://hg.rafaelmartins.eng.br/web-overlay/]
-[http://overlay.rafaelmartins.eng.br/]
+**cgisysinfo**: A small cgi utility to show basic system information on linux machines.
+[http://hg.rafaelmartins.eng.br/cgisysinfo/]
 
-**imageshack-uploader**: A CLI image uploader to http://imageshack.us.
-Written using Python_. [http://hg.rafaelmartins.eng.br/imageshack-uploader/]
+**rpnshell**: A RPN-based calculator to the command-line interface.
+[http://hg.rafaelmartins.eng.br/rpnshell/]
 
-**musiclogd**: A LastFM-like music logger. Can send info about the musics
-played with MPD to a remote server using the POST method.
-[http://hg.rafaelmartins.eng.br/musiclogd/]
+**pidsim**: PID Controller simulator. [http://pidsim.rafaelmartins.eng.br/]
 
-**gentoo-overlay**: My `Gentoo Linux`_ overlay:
-[http://overlay.rafaelmartins.eng.br/]
+**gentoo-overlay**: My `Gentoo Linux`_ overlay.
+[http://hg.rafaelmartins.eng.br/gentoo-overlay/]
 
-**pycolors**: A Python_ module to ease the use of colors on the CLI:
-[http://hg.rafaelmartins.eng.br/pycolors/]
-[http://packages.python.org/pycolors/]
-
-**podget**: A Python_ script to download and play chapters of podcasts,
-using wget and mplayer:
-[http://hg.rafaelmartins.eng.br/podget/]
+**marrie**: A simple podcast client that runs on the CLI.
+[http://rafaelmartins.eng.br/projects/marrie/]
 
 
 Others
@@ -52,8 +43,8 @@ Others
 **GentooBR.org**: The brazilian user group of `Gentoo Linux`_:
 [http://gentoobr.org]
 
-**Gentoo Linux**: I'm a `Gentoo Linux`_ developer under recruitment,
-to work with the **sci-electronics** stuff. [http://gentoo.org/]
+**Gentoo Linux**: I'm a `Gentoo Linux`_ developer. Roles: sci-electronics,
+g-octave, python and lua.. [http://gentoo.org/]
 
 
 .. date added automatically by the script blohg_dump.py.
