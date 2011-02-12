@@ -1,6 +1,8 @@
 Octave 3.4.0 available on Gentoo
 ================================
 
+.. tags: gentoo,octave
+
 Hi all,
 
 I updated the package *sci-mathematics/octave* to the version 3.4.0, released
