@@ -17,4 +17,6 @@ and `report the bugs`_.
 
 .. _`report the bugs`: http://bugs.gentoo.org/
 
+**Update**: octave-3.4.0 is already unmasked!
+
 Thanks!
