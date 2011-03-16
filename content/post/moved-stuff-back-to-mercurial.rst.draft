@@ -1,0 +1,26 @@
+Moved my stuff back to Mercurial
+================================
+
+.. tags: gentoo,octave,mercurial,git
+
+Hi all,
+
+I just finished moving all my repositories (Gentoo-related repositories included)
+from Git_ to Mercurial_. Actually only a few repositories were using Git_,
+some of them due to Gentoo infrastructure restrictions, but I decided to host my 
+projects myself for now (or at least until `bug #350461`_ gets fixed).
+
+As Mercurial_ is also a DVCS_, people will be able to get my source and host
+anywhere if they want, and my projects will not die, even if I die tomorrow.
+
+.. _Git: http://git-scm.com/
+.. _Mercurial: http://mercurial.selenic.com/
+.. _`bug #350461`: http://bugs.gentoo.org/350461
+.. _DVCS: http://en.wikipedia.org/wiki/Distributed_revision_control
+
+So here are the hgweb instances that I'm running currently:
+
+- http://hg.rafaelmartins.eng.br/
+- http://hg.g-octave.org/
+
+Thanks!
