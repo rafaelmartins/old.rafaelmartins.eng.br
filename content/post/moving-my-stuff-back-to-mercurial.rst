@@ -1,16 +1,14 @@
-Moved my stuff back to Mercurial
-================================
+Moving my stuff back to Mercurial
+=================================
 
 .. tags: gentoo,octave,mercurial,git
 
-Hi all,
-
-I just finished moving all my repositories (Gentoo-related repositories included)
+I moved all my repositories (Gentoo-related repositories included)
 from Git_ to Mercurial_. Actually only a few repositories were using Git_,
-some of them due to Gentoo infrastructure restrictions, but I decided to host my 
-projects myself for now (or at least until `bug #350461`_ gets fixed).
+some of them due to Gentoo infrastructure restrictions, but I decided to host
+my projects myself right now (or at least until `bug #350461`_ be fixed).
 
-As Mercurial_ is also a DVCS_, people will be able to get my source and host
+As Mercurial_ is also a DVCS_, people will be able to copy my source and host
 anywhere if they want, and my projects will not die, even if I die tomorrow.
 
 .. _Git: http://git-scm.com/
