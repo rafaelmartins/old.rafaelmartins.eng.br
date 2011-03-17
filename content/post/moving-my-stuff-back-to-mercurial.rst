@@ -9,7 +9,8 @@ some of them due to Gentoo infrastructure restrictions, but I decided to host
 my projects myself right now (or at least until `bug #350461`_ be fixed).
 
 As Mercurial_ is also a DVCS_, people will be able to copy my sourcecode and
-host anywhere if needed, and my projects will not die, even if I die tomorrow.
+host anywhere if needed, and my projects will not die, even if I stop
+maintaining them.
 
 .. _Git: http://git-scm.com/
 .. _Mercurial: http://mercurial.selenic.com/
