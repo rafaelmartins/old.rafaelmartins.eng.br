@@ -30,7 +30,7 @@
                     (url_for('views.home'), '', 'home'),
                     (url_for('views.post_list'), 'post', 'posts'),
                     (url_for('views.content', slug='about'), 'about', 'about'),
-                    (url_for('views.content', slug='projects'), 'projects', 'projects'),
+                    ('http://labs.rafaelmartins.eng.br/', 'labs', 'labs'),
                     (url_for('views.content', slug='contact'), 'contact', 'contact'),
                 ] %}
                 <li><a href="{{ href }}"{% if id == active_page %} class="active"{%
