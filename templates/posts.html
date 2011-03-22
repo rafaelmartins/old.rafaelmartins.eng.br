@@ -3,8 +3,8 @@
 {%- block title %}{% if title %} » {{ title }}{% endif %}{% endblock %}
 
 {%- block body %}
-{%- if tag %}<h4>Tag: {{ tag }} (<small><a href="{{
-    url_for('views.atom', tag=tag) }}">Atom feed</a></small>)</h4>{% endif %}
+{%- if tag %}<h4>Tag: {{ ' + '.join(tag) }} (<small><a href="{{
+    url_for('views.atom', tag='/'.join(tag)) }}">Atom feed</a></small>)</h4>{% endif %}
 {%- for post in posts %}
 <h2>{% if is_post(post.slug) %}<a href="{{
     url_for('views.content', slug=post.slug) }}">{{ post.title }}</a>{%
