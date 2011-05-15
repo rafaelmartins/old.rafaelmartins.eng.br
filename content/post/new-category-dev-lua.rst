@@ -1,7 +1,7 @@
 New category: dev-lua
 =====================
 
-.. tags: gentoo,lua
+.. tags: en-us,gentoo,lua
 
 .. _Lua: http://www.lua.org/
 .. _dev-lua: http://znurt.org/dev-lua

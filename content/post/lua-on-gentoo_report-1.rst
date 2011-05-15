@@ -1,7 +1,7 @@
 Lua on Gentoo - progress report #1
 ==================================
 
-.. tags: gentoo,lua
+.. tags: en-us,gentoo,lua
 
 .. _Lua: http://www.lua.org/
 .. _overlay: http://git.overlays.gentoo.org/gitweb/?p=proj/lua.git;a=summary

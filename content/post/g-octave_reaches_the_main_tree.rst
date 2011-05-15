@@ -1,7 +1,7 @@
 g-octave reaches the main tree!
 ===============================
 
-.. tags: gentoo,g-octave
+.. tags: en-us,gentoo,g-octave
 
 .. _`Gentoo developer`: http://article.gmane.org/gmane.linux.gentoo.devel.announce/1098
 .. _`Trac instance`: http://www.g-octave.org/

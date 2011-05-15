@@ -1,7 +1,7 @@
 Version Bump checker
 ====================
 
-.. tags: gentoo
+.. tags: en-us,gentoo
 
 .. _`Frugalware Linux`: http://frugalware.org/
 .. _Fabric: http://fabfile.org/

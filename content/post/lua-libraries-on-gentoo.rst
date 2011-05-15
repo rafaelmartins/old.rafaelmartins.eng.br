@@ -1,7 +1,7 @@
 Lua libraries on Gentoo
 =======================
 
-.. tags: gentoo,lua
+.. tags: en-us,gentoo,lua
 
 .. _Lua: http://lua.org/
 .. _contact: /en-us/contact/

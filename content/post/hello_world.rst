@@ -1,7 +1,7 @@
 Hello World
 ===========
 
-.. tags: random_stuff
+.. tags: en-us,random-stuff
 
 Hi folks!
 

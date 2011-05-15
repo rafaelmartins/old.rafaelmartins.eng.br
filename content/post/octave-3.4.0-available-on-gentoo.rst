@@ -1,7 +1,7 @@
 Octave 3.4.0 available on Gentoo
 ================================
 
-.. tags: gentoo,octave
+.. tags: en-us,gentoo
 
 Hi all,
 

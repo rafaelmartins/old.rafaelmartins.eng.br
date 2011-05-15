@@ -1,7 +1,7 @@
 [ANN] g-octave 0.4.1
 ====================
 
-.. tags: gentoo,g-octave,octave
+.. tags: en-us,gentoo,g-octave
 
 .. _`#340577`: http://bugs.gentoo.org/show_bug.cgi?id=340577
 

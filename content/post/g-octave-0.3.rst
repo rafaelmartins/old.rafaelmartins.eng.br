@@ -1,7 +1,7 @@
 [ANN] g-octave 0.3
 ==================
 
-.. tags: gentoo,g-octave,gsoc,octave
+.. tags: en-us,gentoo,g-octave,gsoc
 
 g-octave 0.3 was released today and come with some cool features:
 

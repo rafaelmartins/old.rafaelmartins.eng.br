@@ -1,7 +1,7 @@
 GSoC is over!
 =============
 
-.. tags: gentoo,g-octave,gsoc,octave
+.. tags: en-us,gentoo,g-octave,gsoc
 
 Hi people!
 

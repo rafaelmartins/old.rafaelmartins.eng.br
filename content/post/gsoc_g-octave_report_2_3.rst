@@ -1,7 +1,7 @@
 GSoC - g-Octave - weekly report #2 #3
 =====================================
 
-.. tags: gentoo,g-octave,gsoc,octave
+.. tags: en-us,gentoo,g-octave,gsoc
 
 Hi folks,
 

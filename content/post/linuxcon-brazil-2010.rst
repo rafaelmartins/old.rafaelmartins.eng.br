@@ -1,7 +1,7 @@
 LinuxCon Brazil 2010
 ====================
 
-.. tags: linuxcon,gentoo
+.. tags: en-us,events,gentoo
 
 Hi folks,
 

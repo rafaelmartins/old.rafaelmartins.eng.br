@@ -1,7 +1,7 @@
 Moving my stuff back to Mercurial
 =================================
 
-.. tags: gentoo,g-octave,mercurial,git
+.. tags: en-us,gentoo,g-octave,mercurial,git
 
 I moved all my repositories (Gentoo-related repositories included)
 from Git_ to Mercurial_. Actually only a few repositories were using Git_,

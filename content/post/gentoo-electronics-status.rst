@@ -1,7 +1,7 @@
 Gentoo Electronics' status
 ==========================
 
-.. tags: gentoo,electronics
+.. tags: en-us,gentoo,electronics
 
 .. _`Lua on Gentoo`: /en-us/tag/lua/
 .. _`subproject page`: http://www.gentoo.org/proj/en/science/electronics/
