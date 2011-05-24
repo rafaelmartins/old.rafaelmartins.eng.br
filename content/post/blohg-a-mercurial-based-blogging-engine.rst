@@ -1,5 +1,5 @@
-blohg, A Mercurial based blog engine
-====================================
+blohg, A Mercurial based blogging engine
+========================================
 
 .. tags: en-us,blohg,gentoo
 
