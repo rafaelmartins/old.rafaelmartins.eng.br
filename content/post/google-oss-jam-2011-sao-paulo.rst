@@ -10,7 +10,7 @@ at the offices of Google_ in São Paulo.
 
 .. _Google: http://www.google.com/
 
-The event was very cool, and a nice oportunity to meet other people highly
+The event was very cool, and a nice opportunity to meet other people highly
 interested in open source software and nerdy stuff.
 
 This time I talked about my current GSoC project: `Distfile patching support`_
