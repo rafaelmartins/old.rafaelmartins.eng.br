@@ -162,7 +162,11 @@ At this point I have a Mercurial_ queue with the 4 reworked patches inside
     added-xz-autodetection-support.diff
     added-liblzma-build-system-checks-using-pkgconfig.diff
     added-xz-functionality-to-libcfile.diff
+
+Commit the queue changes::
     
+    $ hg commit --mq -m "added queue"
+
 I can publish it somewhere using the command::
     
     $ hg push --mq $REMOTE_REPO_URL
