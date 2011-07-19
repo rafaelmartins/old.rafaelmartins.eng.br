@@ -1,7 +1,7 @@
 Reworking patches with Mercurial Queues
 =======================================
 
-.. tags: mercurial,git,gsoc,gentoo,diffball
+.. tags: en-us,mercurial,git,gsoc,gentoo,diffball
 
 Hi all,
 
