@@ -1,10 +1,12 @@
 {%- extends 'base.html' %}
 {%- block body %}
 <h2>Posts</h2>
-<ul>
-    {%- for post in posts %}
-    <li><a href="{{ url_for('views.content', slug=post.slug) }}">{{
-        post.title }}</a> - {{ post.datetime|datetimeformat }}</li>
-    {%- endfor %}
-</ul>
+<div class="post">
+    <ul>
+        {%- for post in posts %}
+        <li><a href="{{ url_for('views.content', slug=post.slug) }}">{{
+            post.title }}</a> - {{ post.datetime|datetimeformat }}</li>
+        {%- endfor %}
+    </ul>
+</div>
 {%- endblock %}
