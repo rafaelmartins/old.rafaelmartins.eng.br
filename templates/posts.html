@@ -40,7 +40,7 @@
 <p><a href="{{ url_for('views.content', slug=post.slug) }}">Read more...</a></p>
 {% endif -%}
     <footer>
-        <!--<span class="author">Authorname</span>-->
+        <span class="author">{{ post.author_name }}</span>
         <span class="permalink">
             <a href="{{ url_for('views.content', slug=post.slug) }}">
                 Permalink
