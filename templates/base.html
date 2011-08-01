@@ -40,7 +40,7 @@
                             (url_for('views.home'), '', 'Home'),
                             (url_for('views.post_list'), 'post', 'Posts'),
                             (url_for('views.content', slug='about'), 'about', 'About'),
-                            ('http://rafaelmartins.eng.br/resume/', 'resume', 'Resume'),
+                            (url_for('views.content', slug='resume'), 'resume', 'Resume'),
                             (url_for('views.content', slug='contact'), 'contact', 'Contact'),
                         ] %}
                         <li {% if id == active_page %} class="current"{% endif %}>
