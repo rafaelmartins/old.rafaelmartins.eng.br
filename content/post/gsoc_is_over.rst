@@ -17,14 +17,14 @@ easy for him. ;)
 
 I would also like to thank:
 
-    - Sebastien Fabbro and all the people from ``#gentoo-science`` by the cool
-      chat.
-    - The Gentoo GSoC admin, `Donnie Berkholz`_, by the support.
-    - `Brian Harring`_ and `Robin H. Johnson`_ by the help with the infrastructure.
-    - All the people from the `Google Open Source Office`_, mainly the GSoC admin,
-      `Carol Smith`_, by the support and the GSoC itself.
-    - The `GNU Octave`_ developers by the great piece of software.
-    - All the Gentoo_ community.
+- Sebastien Fabbro and all the people from ``#gentoo-science`` by the cool
+  chat.
+- The Gentoo GSoC admin, `Donnie Berkholz`_, by the support.
+- `Brian Harring`_ and `Robin H. Johnson`_ by the help with the infrastructure.
+- All the people from the `Google Open Source Office`_, mainly the GSoC admin,
+  `Carol Smith`_, by the support and the GSoC itself.
+- The `GNU Octave`_ developers by the great piece of software.
+- All the Gentoo_ community.
 
 .. _`Donnie Berkholz`: http://dberkholz.wordpress.com/
 .. _`Brian Harring`: http://www.pkgcore.org/
