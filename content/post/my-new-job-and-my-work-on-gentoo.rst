@@ -26,6 +26,9 @@ these packages as soon as possible.
 
 That's all that I can do for now. I hope you all understand and support me.
 
+Feel free to consider this as the first step for the changes `I talked about a
+few weeks ago </post/about-changes-and-needs/>`_. ;o)
+
 Wish me luck, please!
 
 Thanks.
