@@ -14,10 +14,10 @@ overloaded with work:
 
 .. read_more
 
-- I'll not maintain actively any packages that are maintained by the herds
+- I'll not actively maintain any packages that are maintained by the herds
   that I'm member. These packages will still have nice maintainers from the
   herds.
-- I'll maintain actively any packages where I'm explicitly listed as maintainer.
+- I'll actively maintain any packages where I'm explicitly listed as maintainer.
   e.g. my name is listed on ``metadata.xml``.
 
 Since I left the university I stopped using a fair amount of the Gentoo
