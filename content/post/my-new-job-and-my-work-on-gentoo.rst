@@ -6,7 +6,7 @@ My new job and my work on Gentoo
 Hi all,
 
 it looks like my live is moving forward and I got a nice full-time position.
-The bad part is that it isn't related to Gentoo, or even related with free
+The bad part is that it isn't related to Gentoo, or even related to free
 software development at all. That means I'm not going to have a lot of free
 time to work on Gentoo stuff, for the coming months at least. Then I'll
 define some "policies" to avoid me to retire from gentoo and to go crazy
