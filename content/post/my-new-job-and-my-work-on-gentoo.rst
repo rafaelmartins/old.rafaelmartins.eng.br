@@ -12,6 +12,8 @@ time to work on Gentoo stuff, for the coming months at least. Then I'll
 define some "policies" to avoid me to retire from gentoo and to go crazy
 overloaded with work:
 
+.. read_more
+
 - I'll not maintain actively any packages that are maintained by the herds
   that I'm member. These packages will still have nice maintainers from the
   herds.
