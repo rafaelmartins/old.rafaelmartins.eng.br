@@ -15,6 +15,8 @@ libraries, like Matplotlib and the Flask framework.
 
 .. _PIDSIM: http://pidsim.rafaelmartins.eng.br/
 
+.. read_more
+
 I spent almost 3 years working on this project, and now I'm tired of it.
 Actually I finished the stuff I wanted to implement and presented it to get my
 degree.
