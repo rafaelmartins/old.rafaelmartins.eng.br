@@ -1,7 +1,8 @@
 Resume
 ======
 
-This is my resume. Please do not redistribute it without first asking me.
+This is my open-source-related resume. Please do not redistribute it without
+first asking me.
 
 
 Files

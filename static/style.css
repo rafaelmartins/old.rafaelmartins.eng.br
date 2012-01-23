@@ -398,3 +398,10 @@ tt {
     font: 1em 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
     background: #eee;
 }
+
+img.align-left {
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
