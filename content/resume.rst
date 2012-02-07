@@ -15,3 +15,4 @@ Files
 - `HTML (pt_BR) <resume-pt_br.html>`_
 - `reSTructuredText (pt_BR) <resume-pt_br.txt>`_
 
+Repository with source code: http://hg.rafaelmartins.eng.br/resume/
