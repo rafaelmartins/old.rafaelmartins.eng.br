@@ -398,3 +398,41 @@ tt {
     font: 1em 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
     background: #eee;
 }
+
+img.align-left, .figure.align-left, object.align-left, iframe.align-left {
+    clear: left ;
+    float: left ;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-right, .figure.align-right, object.align-right, iframe.align-right {
+    clear: right ;
+    float: right ;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-center, .figure.align-center, object.align-center, iframe.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    clear: both;
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+footer {
+    clear: both;
+}

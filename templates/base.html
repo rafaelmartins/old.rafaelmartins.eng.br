@@ -41,7 +41,6 @@
                             (url_for('views.post_list'), 'post', 'Posts'),
                             (url_for('views.content', slug='about'), 'about', 'About'),
                             (url_for('views.content', slug='resume'), 'resume', 'Resume'),
-                            (url_for('views.content', slug='contact'), 'contact', 'Contact'),
                         ] %}
                         <li {% if id == active_page %} class="current"{% endif %}>
                             <a href="{{ href }}">{{ title }}</a>
@@ -107,13 +106,6 @@
                             <li><a href="{{ href }}">{{ title }}</a></li>
                             {%- endfor %}
                         </ul>
-                        <h2>PythonBrasil[7]</h2>
-                        <p>
-                            <a href="http://www.pythonbrasil.org.br/" title="PythonBrasil[7]"> 
-                                <img src="http://www.python.org.br/banners-pythonbrasil/pythonbrasil7-rectangle.gif"
-                                    alt="PythonBrasil[7]" />
-                            </a>
-                        </p>
                         <h2>Content License</h2>
                         <p>
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
