@@ -1,7 +1,7 @@
 Silly Wizard
 ============
 
-.. tags: music,celtic-folk,scottish-folk
+.. tags: en-us,music,celtic-folk,scottish-folk
 
 Hi all,
 
