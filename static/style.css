@@ -7,7 +7,7 @@
     margin:0;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display:block;
 }
 
@@ -35,11 +35,11 @@ abbr[title], dfn[title] {
 }
 
 .clear:after {
-    display: block; 
-    visibility: hidden; 
-    clear: both; 
-    height: 0; 
-    content: "."; 
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: ".";
 }
 
 h1, h2, h3 {
@@ -435,4 +435,30 @@ img.align-center, .figure.align-center, object.align-center, iframe.align-center
 
 footer {
     clear: both;
+}
+
+table.field-list {
+    font-family: monospace;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+th.field-name {
+    padding-right: 20px;
+}
+
+div.warning {
+    border: #ccc 1px solid;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+div.warning p {
+    display: inline;
+}
+
+p.admonition-title {
+    font-weight: bold;
+    margin-right: 15px;
 }
