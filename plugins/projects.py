@@ -26,7 +26,6 @@ else:
     cache = FileSystemCache(app.config.get('CACHE_DIR', '/tmp'),
                             default_timeout=int(
                                 app.config.get('CACHE_TIMEOUT', 300)))
-cache.clear()
 
 
 def text_field(key, value):
