@@ -10,22 +10,24 @@
     :license: GPL-2, see blohg/LICENSE for more details.
 """
 
-from blohg.rst import parser
 from contextlib import closing
 from docutils import nodes
 from docutils.parsers.rst import directives, Directive
+from docutils.statemachine import string2lines
 from flask import current_app as app
 from urllib2 import urlopen
-from werkzeug.contrib.cache import FileSystemCache, NullCache
+from werkzeug.contrib.cache import RedisCache, NullCache
 import json
 import posixpath
 
 if app.debug:
     cache = NullCache()
 else:
-    cache = FileSystemCache(app.config.get('CACHE_DIR', '/tmp'),
-                            default_timeout=int(
-                                app.config.get('CACHE_TIMEOUT', 300)))
+    cache = RedisCache(app.config.get('REDIS_HOST', 'localhost'),
+                       int(app.config.get('REDIS_PORT', 6379)),
+                       app.config.get('REDIS_PASSWORD', None),
+                       int(app.config.get('CACHE_TIMEOUT', 300)),
+                       app.config.get('CACHE_KEY_PREFIX', 'blohg_projects_'))
 
 
 def text_field(key, value):
@@ -44,8 +46,7 @@ def reference_field(key, value, value_text=None):
 
 
 def get_pypi_data(project_id):
-    key = 'projects_' + project_id
-    value = cache.get(key)
+    value = cache.get(project_id)
     if value is not None:
         return value
     project_url = 'http://pypi.python.org/pypi/%s/json' % project_id
@@ -65,9 +66,8 @@ def get_pypi_data(project_id):
         'homepage': value['info']['home_page'],
         'download-url': donwload_url or '',
         'license': value['info']['license'],
-        'long_description': parser(value['info']['description'])['fragment'],
     }
-    cache.set(key, info)
+    cache.set(project_id, info)
     return info
 
 
@@ -122,23 +122,18 @@ class PyPIProject(Project):
         'repository-type': directives.unchanged,
         'repository-url': directives.uri,
         'license': directives.unchanged,
-        'hide-long-description': directives.flag,
     }
 
     def run(self):
         options = get_pypi_data(self.arguments[0])
         options.update(self.options)
-        tmp = []
+        self.options = options
+        rv = Project.run(self)
         if len(options):
             warning = 'At least part of the data above was grabbed ' \
                 'automatically from PyPI.'
-            if 'hide-long-description' not in self.options:
-                tmp.append(nodes.raw('', options['long_description'],
-                                     format='html'))
-            tmp.append(nodes.warning('', nodes.paragraph(warning, warning)))
-        self.options = options
-        del self.options['long_description']
-        return Project.run(self) + tmp
+            rv.append(nodes.warning('', nodes.paragraph(warning, warning)))
+        return rv
 
 
 directives.register_directive('project', Project)
