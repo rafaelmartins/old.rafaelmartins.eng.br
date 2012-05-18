@@ -3,9 +3,7 @@ Silly Wizard
 
 .. tags: en-us,music,celtic-folk,scottish-folk
 
-Hi all,
-
-a few months ago, following the indication of some friend, I subscribed to
+A few months ago, following the indication of some friend, I subscribed to
 `Calm Radio`_. It is a nice web service, where you pay a few dollars per
 month and have access to several streaming channels, with random songs from
 different music styles being played, and you can even mix the songs with
