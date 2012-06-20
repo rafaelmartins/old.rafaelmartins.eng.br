@@ -7,17 +7,17 @@ About
 .. attachment-image:: rafael.jpg
    :align: left
 
-My name is Rafael Goncalves Martins.
+My name is Rafael Goncalves Martins. I'm a Control and Automation engineer,
+programmer and open-source developer.
 
-I'm a Control and Automation engineer, programmer and open-source developer.
+I'm currently working for Collabora_, as Software Engineer.
 
-I'm currently working on the brazilian branch of a german company, with
-industrial automation.
+.. _Collabora: http://www.collabora.com/
 
 I spend almost all my free time playing with open-source stuff. The main
 projects I'm working on are `Gentoo Linux`_ and blohg_.
 
-On the personal-side, I'm a 23 years old guy, single, living at São Paulo/SP,
+On the personal-side, I'm a 24 years old guy, single, living at São Paulo/SP,
 Brazil.
 
 
@@ -26,6 +26,7 @@ Contact
 
 - **Email (Personal stuff)**: rafael [at] rafaelmartins [dot] eng [dot] br
 - **Email (Gentoo-related stuff)**: rafaelmartins [at] gentoo [dot] org
+- **Email (Work-related stuff)**: rafael.martins [at] collabora [dot] com
 - **IRC**: rafaelmartins [at] irc.{freenode,oftc}.net
 - **Facebook**: http://www.facebook.com/rafaelgmartins
 - **Twitter**: http://twitter.com/rafaelmartins/
