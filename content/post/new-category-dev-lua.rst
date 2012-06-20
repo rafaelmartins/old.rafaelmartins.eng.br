@@ -6,9 +6,7 @@ New category: dev-lua
 .. _Lua: http://www.lua.org/
 .. _dev-lua: http://znurt.org/dev-lua
 
-Hi all,
-
-last friday I moved all the Lua-related packages already on the main tree to
+Last friday I moved all the Lua-related packages already on the main tree to
 the just created dev-lua category. The package moves were smooth and the
 things should be ok now.
 

@@ -3,8 +3,6 @@ blohg, A Mercurial based blog engine
 
 .. tags: en-us,blohg,gentoo
 
-Hi all,
-
 The more detail-oriented people may have noticed that this blog runs on a
 different blog engine, called blohg_, that's developed by myself. I'm
 developing it for some time already, but it's the first time that I'm talking

@@ -6,9 +6,7 @@ Gentoo Electronics' status
 .. _`Lua on Gentoo`: /en-us/tag/lua/
 .. _`subproject page`: http://www.gentoo.org/proj/en/science/electronics/
 
-Hi all,
-
-although I'm relatively busy with my work to improve `Lua on Gentoo`_ I need to
+Although I'm relatively busy with my work to improve `Lua on Gentoo`_ I need to
 update you about my main role: sci-electronics. Actually, the Gentoo Electronics
 subproject right now.
 

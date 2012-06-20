@@ -6,8 +6,6 @@ g-octave reaches the main tree!
 .. _`Gentoo developer`: http://article.gmane.org/gmane.linux.gentoo.devel.announce/1098
 .. _`Trac instance`: http://www.g-octave.org/
 
-Hi folks,
-
 Since the last sunday I'm officially a `Gentoo developer`_ and one of
 my first actions was move g-octave from the science overlay to the
 main tree.

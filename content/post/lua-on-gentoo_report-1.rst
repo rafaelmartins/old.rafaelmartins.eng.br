@@ -7,9 +7,7 @@ Lua on Gentoo - progress report #1
 .. _overlay: http://git.overlays.gentoo.org/gitweb/?p=proj/lua.git;a=summary
 .. _LuaJIT: http://luajit.org/
 
-Hi all,
-
-following with the work to improve the Lua_ programing language on Gentoo,
+Following with the work to improve the Lua_ programing language on Gentoo,
 I created an overlay_ where I'm working on the experimental stuff. Currently
 I'm working to support the usage of LuaJIT_ as the main Lua implementation
 (using an eselect module, that I'm writing as well). There's nothing ready for

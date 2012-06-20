@@ -7,9 +7,7 @@ Voltando a escrever em Português
 .. _`Planet Gentoo`: http://planet.gentoo.org/
 .. _pt-br: http://rafaelmartins.eng.br/tag/pt-br/
 
-Olá pessoal,
-
-após bastante tempo publicando posts apenas em Inglês, decidi voltar a escrever
+Após bastante tempo publicando posts apenas em Inglês, decidi voltar a escrever
 algumas coisas em Português. A idéia de escrever os posts em Inglês surgiu da
 minha necessidade de melhorar meu conhecimento do idioma e de me comunicar com
 os usuários do `Gentoo Linux`_ através do `Planet Gentoo`_.

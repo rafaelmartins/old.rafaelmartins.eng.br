@@ -3,9 +3,7 @@ LinuxCon Brazil 2010
 
 .. tags: en-us,events,gentoo
 
-Hi folks,
-
-last week I have been attending to the LinuxCon Brazil 2010, that was the first
+Last week I have been attending to the LinuxCon Brazil 2010, that was the first
 edition of this event here in Brazil.
 
 All the talks were pretty good and the event was a great oportunity to meet nice

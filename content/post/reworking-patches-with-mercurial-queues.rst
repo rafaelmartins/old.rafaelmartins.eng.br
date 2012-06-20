@@ -3,9 +3,7 @@ Reworking patches with Mercurial Queues
 
 .. tags: en-us,mercurial,git,gsoc,gentoo,diffball
 
-Hi all,
-
-the first task of my `GSoC project`_ was to add XZ support to diffball,
+The first task of my `GSoC project`_ was to add XZ support to diffball,
 that is a tool that generates binary deltas for tarballs and binaries
 in general.
 

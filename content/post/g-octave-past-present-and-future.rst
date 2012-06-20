@@ -3,8 +3,6 @@ g-octave: past, present and future
 
 .. tags: en-us,gentoo,g-octave
 
-Hi people,
-
 I started g-octave_ in the end of 2009, as a pet project. I was needing
 something better to deal with octave-forge_ software than the old
 ``sci-mathematics/octave-forge-*`` packages distributed by the gentoo-science

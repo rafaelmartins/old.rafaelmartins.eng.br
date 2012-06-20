@@ -3,8 +3,6 @@ PIDSIM
 
 .. tags: en-us,engineering,gentoo,stupid-stuff
 
-Hi all,
-
 Following the line of the previous post, I will talk about the projects I'll
 stop maintaining for now. It's not a ``gentoo-x86`` package, but it's available
 for Gentoo users anyway.

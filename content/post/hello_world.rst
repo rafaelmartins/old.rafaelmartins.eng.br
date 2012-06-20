@@ -3,8 +3,6 @@ Hello World
 
 .. tags: en-us,random-stuff
 
-Hi folks!
-
 Now I'll start to write some posts in english, and translate the
 pages of my brazilian portuguese site to english too.
 

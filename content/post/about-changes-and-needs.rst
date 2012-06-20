@@ -9,8 +9,6 @@ About changes and needs
    related to technical stuff. Feel free to skip this entry if you are just
    interested on strictly technical topics.
 
-Hi all,
-
 I'm not used to write about my personal life here, but this time I need to write
 up some things that are making me feel weird.
 

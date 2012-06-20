@@ -3,8 +3,6 @@ GSoC is over!
 
 .. tags: en-us,gentoo,g-octave,gsoc
 
-Hi people!
-
 I'm done with my work on the Google Summer of Code for this year
 and I would like to thank to all the people that helped me during
 the last 3 months.

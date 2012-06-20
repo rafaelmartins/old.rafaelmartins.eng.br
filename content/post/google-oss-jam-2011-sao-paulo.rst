@@ -3,8 +3,6 @@ Google OSS Jam 2011 - São Paulo
 
 .. tags: en-us,google,gentoo,gsoc
 
-Hi all,
-
 Last night I participated of the third edition of Google OSS Jam, that happened
 at the offices of Google_ in São Paulo.
 

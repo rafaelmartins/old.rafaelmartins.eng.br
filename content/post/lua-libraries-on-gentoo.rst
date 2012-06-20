@@ -6,9 +6,7 @@ Lua libraries on Gentoo
 .. _Lua: http://lua.org/
 .. _contact: /en-us/contact/
 
-Hi all,
-
-since before I became a Gentoo developer I'm planning to create
+Since before I became a Gentoo developer I'm planning to create
 an overlay with packages for Lua_ libraries. Actually I already
 worked a bit on it, but this thing is far from done. Some libraries
 are tricky to pack properly due to some reasons that I'll discuss
