@@ -54,6 +54,13 @@ added yet by the default blohg template::
 
 This will prevent your blohg repository of include the build files by mistake.
 
+Now commit the ``.hgignore`` file to the repository, if needed::
+
+    $ hg commit -Am 'Added .hgignore'
+
+These two steps aren't needed if your blohg repository was created using the
+template shipped with a recent enough version of blohg.
+
 
 Creating a Makefile to automate the deployment
 ----------------------------------------------
