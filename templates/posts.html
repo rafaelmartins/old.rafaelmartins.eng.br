@@ -74,14 +74,14 @@
 {%- set start = pagination.num_pages - 2 if end > pagination.num_pages else start %}
 <div class="wp-pagenavi">
     {%- if pagination.current != 1 %}
-    <a href="{{ url_for('views.home', page=1) }}" title="&lt;&lt; First">
+    <a href="{{ pagination.url_gen(1) }}" title="&lt;&lt; First">
         &lt;&lt; First
     </a>
     {%- else %}
     <span>&lt;&lt; First</span>
     {%- endif %}
     {%- if pagination.current > 1 %}
-    <a href="{{ url_for('views.home', page=pagination.current-1) }}" title="&lt; Previous">
+    <a href="{{ pagination.url_gen(pagination.current-1) }}" title="&lt; Previous">
          &lt; Previous
     </a>
     {%- else %}
@@ -91,24 +91,26 @@
     <span class="extend">...</span>
     {%- endif %}
     {%- for i in range(start, end) %}
+    {%- if i > 0 %}
     {%- if pagination.current != i %}
-    <a href="{{ url_for('views.home', page=i) }}" title="{{ i }}">
+    <a href="{{ pagination.url_gen(i) }}" title="{{ i }}">
         {{ i }}
     </a>
     {%- else %}
     <span class="current">{{ i }}</span>
+    {%- endif %}
     {%- endif %}
     {%- endfor %}
     {%- if end <= pagination.num_pages %}
     <span class="extend">...</span>
     {%- endif %}
     {%- if pagination.current < pagination.num_pages %}
-    <a href="{{ url_for('views.home', page=pagination.current+1) }}" title="Next &gt;">Next &gt;</a>
+    <a href="{{ pagination.url_gen(pagination.current+1) }}" title="Next &gt;">Next &gt;</a>
     {%- else %}
     <span>Next &gt;</span>
     {%- endif %}
     {%- if pagination.current != pagination.num_pages %}
-    <a href="{{ url_for('views.home', page=pagination.num_pages) }}" title="Last &gt;&gt;">Last &gt;&gt;</a>
+    <a href="{{ pagination.url_gen(pagination.num_pages) }}" title="Last &gt;&gt;">Last &gt;&gt;</a>
     {%- else %}
     <span>Last &gt;&gt;</span>
     {%- endif %}
