@@ -91,7 +91,6 @@
                                 ('http://blog.flameeyes.eu/', 'Diego E. "Flameeyes" Pettenò'),
                                 ('http://blog.omenezes.com/', 'Gabriel Menezes'),
                                 ('http://blogs.gentoo.org/jmbsvicetto/', 'Jorge Manuel B. S. Vicetto'),
-                                ('http://stevelosh.com/', 'Steve Losh'),
                             ] %}
                             <li><a href="{{ href }}">{{ title }}</a></li>
                             {%- endfor %}
@@ -99,10 +98,13 @@
                         <h2>Under the hood</h2>
                         <ul>
                             {%- for href, title in [
+                                ('http://blohg.org/', 'blohg'),
                                 ('http://python.org/', 'Python'),
                                 ('http://mercurial.selenic.com/', 'Mercurial'),
                                 ('http://docutils.sf.net/', 'Docutils'),
-                                ('http://gunicorn.org/', 'Gunicorn'),
+                                ('http://httpd.apache.org/', 'Apache HTTP Server'),
+                                ('http://www.nginx.org/', 'nginx'),
+                                ('http://code.google.com/p/modwsgi/', 'modwsgi'),
                                 ('http://flask.pocoo.org/', 'Flask'),
                                 ('http://jinja.pocoo.org/', 'Jinja2'),
                                 ('http://werkzeug.pocoo.org/', 'Werkzeug'),
@@ -136,7 +138,7 @@
         <footer id="pagefooter">
             <div id="footerwrap">
                 <div class="copyright">
-                    &copy;2006-2011 {{ config.AUTHOR }}
+                    &copy;2006-2012 {{ config.AUTHOR }}
                 </div>
                 <div class="credit">
                     Powered by:
