@@ -1,22 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>{{ config.TITLE }}{% block title %}{% endblock %}</title>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <meta name="generator" content="blohg {{ version }}" />
-        <link rel="stylesheet" type="text/css" href="{{
-            url_for('static', filename='style.css') }}" />
-        <link type="text/css" media="screen" rel="stylesheet" href="{{
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--[if lt IE 9]><script src="{{
+            url_for('static', filename='bootstrap/js/html5.min.js') }}"></script><![endif]-->
+        <link type="text/css" rel="stylesheet" href="{{
+            url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{
+            url_for('static', filename='bootstrap/css/bootstrap-responsive.min.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{
+            url_for('static', filename='bootstrap/css/custom.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{
             url_for('static', filename='pygments.css') }}" />
         <link rel="alternate" type="application/atom+xml" href="{{
             url_for('views.atom') }}" title="{{ config.TITLE }}" />
-        <!--[if IE]>
-            <script src="{{ url_for('static', filename='js/html5.js') }}"></script>
-        <![endif]-->
-        <!--[if IE 6]>
-            <script src="{{ url_for('static', filename='js/belatedPNG.js') }}"></script>
-            <script>DD_belatedPNG.fix('*');</script>
-        <![endif]-->
 
 <!-- begin opengraph header -->
 {% block opengraph_header %}{% endblock %}
@@ -30,126 +30,112 @@
 
     </head>
     <body>
-        <div id="bodywrap">
-            <section id="pagetop">
-                <p id="siteinfo">{{ config.TAGLINE }}</p>
-                <nav id="sitenav">
-                    <ul>
-                        {%- if active_page == 'page' %}
-                            {%- set active_page = 'home' %}
-                        {%- endif %}
-                        {%- if active_page == 'tag' %}
-                            {%- set active_page = 'post' %}
-                        {%- endif %}
-                        {%- for href, id, title in [
-                            (url_for('views.home'), '', 'Home'),
-                            (url_for('views.post_list'), 'post', 'Posts'),
-                            (url_for('views.content', slug='about'), 'about', 'About'),
-                            (url_for('views.content', slug='resume'), 'resume', 'Resume'),
-                        ] %}
-                        <li{% if id == active_page %} class="current"{% endif %}>
-                            <a href="{{ href }}">{{ title }}</a>
-                        </li>
-                        {%- endfor %}
-                    </ul>
-                </nav>
-            </section>
-            <header id="pageheader">
-                <h1>
-                    {{ config.TITLE_HTML }}
-                </h1>
-            </header>
-            <div id="contents">
-                <section id="main">
-                    <div id="leftcontainer">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="{{ url_for('views.home') }}">{{ config.TITLE_HTML }}</a>
+                    <nav class="nav-collapse collapse">
+                        <ul class="nav">
+                            {%- if active_page == 'page' %}
+                                {%- set active_page = 'home' %}
+                            {%- endif %}
+                            {%- if active_page == 'tag' %}
+                                {%- set active_page = 'post' %}
+                            {%- endif %}
+                            {%- for href, id, title in [
+                                (url_for('views.home'), '', 'Home'),
+                                (url_for('views.post_list'), 'post', 'Posts'),
+                                (url_for('views.content', slug='about'), 'about', 'About'),
+                                (url_for('views.content', slug='resume'), 'resume', 'Resume'),
+                            ] %}
+                            <li{% if active_page == id %} class="active"{%
+                                endif %}><a href="{{ href }}">{{ title }}</a></li>
+                            {%- endfor %}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span9">
 
 <!-- begin content -->
 {% block body %}{% endblock %}
 
 <!-- end content -->
 
+                </div>
+                <div class="span3">
+                    <h3>Tags</h3>
+                    <div class="tagcloud">
+                        {%- for tag in tags %}
+                        <span class="label"><a href="{{
+                            url_for('views.tag', tag=tag) }}"><i class="icon-tag"></i> {{
+                            tag }}</a></span> {%- endfor %}
                     </div>
-                </section>
-                <section id="sidebar">
-                    <div id="sidebarwrap">
-                        {%- if tags %}
-                        <h2>Tags</h2>
-                        <ul>
-                            {%- for tag in tags %}
-                            <li><a href="{{ url_for('views.tag', tag=tag) }}">{{
-                                tag }}</a></li>
-                            {%- endfor %}
-                        </ul>
-                        {%- endif %}
-                        <h2>Blogroll</h2>
-                        <ul>
-                            {%- for href, title in [
-                                ('http://lucumr.pocoo.org/', 'Armin Ronacher'),
-                                ('http://ferringb.wordpress.com/', 'Brian Harring'),
-                                ('http://blog.yporti.com/', 'Bruno T. Yporti'),
-                                ('http://blogs.gentoo.org/calchan/', 'Denis Dupeyron'),
-                                ('http://blog.flameeyes.eu/', 'Diego E. "Flameeyes" Pettenò'),
-                                ('http://blog.omenezes.com/', 'Gabriel Menezes'),
-                                ('http://blogs.gentoo.org/jmbsvicetto/', 'Jorge Manuel B. S. Vicetto'),
-                                ('http://stevelosh.com/', 'Steve Losh'),
-                            ] %}
-                            <li><a href="{{ href }}">{{ title }}</a></li>
-                            {%- endfor %}
-                        </ul>
-                        <h2>Under the hood</h2>
-                        <ul>
-                            {%- for href, title in [
-                                ('http://python.org/', 'Python'),
-                                ('http://mercurial.selenic.com/', 'Mercurial'),
-                                ('http://docutils.sf.net/', 'Docutils'),
-                                ('http://gunicorn.org/', 'Gunicorn'),
-                                ('http://flask.pocoo.org/', 'Flask'),
-                                ('http://jinja.pocoo.org/', 'Jinja2'),
-                                ('http://werkzeug.pocoo.org/', 'Werkzeug'),
-                                ('http://www.gentoo.org/', 'Gentoo Linux'),
-                            ] %}
-                            <li><a href="{{ href }}">{{ title }}</a></li>
-                            {%- endfor %}
-                        </ul>
-                        <h2>Content License</h2>
-                        <p>
-                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
-                                <img alt="Creative Commons License"
-                                    style="border-width:0"
-                                    src="{{ url_for('static', filename='creative-commons-88x31.png') }}" />
-                            </a>
-                            <br />
-                            This work is licensed under a <a rel="license"
-                                href="http://creativecommons.org/licenses/by-nc/2.5/">
-                                Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
-                        </p>
-                        <h2>Disclaimer</h2>
-                        <p>
-                            This is a personal weblog. The opinions expressed here represent my own
-                            and not those of Collabora Ltd., Gentoo Foundation or anyone else.
-                        </p>
-                    </div>
-                </section>
-                <div class="clear"></div>
+                    <h3>Blogroll</h3>
+                    <ul>
+                        {%- for href, title in [
+                            ('http://lucumr.pocoo.org/', 'Armin Ronacher'),
+                            ('http://ferringb.wordpress.com/', 'Brian Harring'),
+                            ('http://blog.yporti.com/', 'Bruno T. Yporti'),
+                            ('http://blogs.gentoo.org/calchan/', 'Denis Dupeyron'),
+                            ('http://blog.flameeyes.eu/', 'Diego E. "Flameeyes" Pettenò'),
+                            ('http://blog.omenezes.com/', 'Gabriel Menezes'),
+                            ('http://blogs.gentoo.org/jmbsvicetto/', 'Jorge Manuel B. S. Vicetto'),
+                            ('http://stevelosh.com/', 'Steve Losh'),
+                        ] %}
+                        <li><a href="{{ href }}">{{ title }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                    <h3>Under the hood</h3>
+                    <ul>
+                        {%- for href, title in [
+                            ('http://python.org/', 'Python'),
+                            ('http://mercurial.selenic.com/', 'Mercurial'),
+                            ('http://docutils.sf.net/', 'Docutils'),
+                            ('http://gunicorn.org/', 'Gunicorn'),
+                            ('http://flask.pocoo.org/', 'Flask'),
+                            ('http://jinja.pocoo.org/', 'Jinja2'),
+                            ('http://werkzeug.pocoo.org/', 'Werkzeug'),
+                            ('http://www.gentoo.org/', 'Gentoo Linux'),
+                        ] %}
+                        <li><a href="{{ href }}">{{ title }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                    <h3>Content License</h3>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
+                            <img alt="Creative Commons License"
+                                style="border-width:0"
+                                src="{{ url_for('static', filename='creative-commons-88x31.png') }}" />
+                        </a>
+                        <br />
+                        This work is licensed under a <a rel="license"
+                            href="http://creativecommons.org/licenses/by-nc/2.5/">
+                            Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
+                    </p>
+                    <h3>Disclaimer</h3>
+                    <p>
+                        This is a personal weblog. The opinions expressed here represent my own
+                        and not those of Collabora Ltd., Gentoo Foundation or anyone else.
+                    </p>
+                </div>
             </div>
+            <footer>
+                <p class="lead">
+                    Powered by: <a href="http://blohg.org/">blohg {{ version }}</a>
+                </p>
+            </footer>
         </div>
-        <footer id="pagefooter">
-            <div id="footerwrap">
-                <div class="copyright">
-                    &copy;2006-2011 {{ config.AUTHOR }}
-                </div>
-                <div class="credit">
-                    Powered by:
-                    <a href="http://blohg.org/" title="blohg {{ version }}">
-                        blohg {{ version }}
-                    </a> |
-                    <a href="http://cssheaven.org" title="Downlaod Free CSS Templates">
-                        Website Template
-                    </a>
-                    by CSSHeaven.org
-                </div>
-            </div>
-        </footer>
+        <script src="{{ url_for('static', filename='bootstrap/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 
 <!-- begin disqus footer -->
 {% block disqus_footer %}{% endblock %}
