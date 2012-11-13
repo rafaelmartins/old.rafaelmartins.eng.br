@@ -10,6 +10,8 @@ body {
 
 footer p {
     text-align: center;
+    font-size: 18px;
+    margin: 16px;
 }
 
 img.align-left, .figure.align-left, object.align-left, iframe.align-left {
