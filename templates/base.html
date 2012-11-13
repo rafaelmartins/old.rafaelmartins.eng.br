@@ -72,14 +72,14 @@
 
                 </div>
                 <div class="span3">
-                    <h3>Tags</h3>
+                    <h4>Tags</h4>
                     <div class="tagcloud">
                         {%- for tag in tags %}
                         <span class="label"><a href="{{
                             url_for('views.tag', tag=tag) }}"><i class="icon-tag"></i> {{
                             tag }}</a></span> {%- endfor %}
                     </div>
-                    <h3>Blogroll</h3>
+                    <h4>Blogroll</h4>
                     <ul>
                         {%- for href, title in [
                             ('http://lucumr.pocoo.org/', 'Armin Ronacher'),
@@ -94,7 +94,7 @@
                         <li><a href="{{ href }}">{{ title }}</a></li>
                         {%- endfor %}
                     </ul>
-                    <h3>Under the hood</h3>
+                    <h4>Under the hood</h4>
                     <ul>
                         {%- for href, title in [
                             ('http://python.org/', 'Python'),
@@ -109,7 +109,7 @@
                         <li><a href="{{ href }}">{{ title }}</a></li>
                         {%- endfor %}
                     </ul>
-                    <h3>Content License</h3>
+                    <h4>Content License</h4>
                     <p>
                         <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
                             <img alt="Creative Commons License"
@@ -121,7 +121,7 @@
                             href="http://creativecommons.org/licenses/by-nc/2.5/">
                             Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
                     </p>
-                    <h3>Disclaimer</h3>
+                    <h4>Disclaimer</h4>
                     <p>
                         This is a personal weblog. The opinions expressed here represent my own
                         and not those of Collabora Ltd., Gentoo Foundation or anyone else.

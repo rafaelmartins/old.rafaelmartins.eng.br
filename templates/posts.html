@@ -5,17 +5,17 @@
 {%- block body %}
 
 {%- if tag -%}
-<h3>Tag: {% for i in tag %}<span class="label"><i class="icon-tag"></i> {{
+<h4>Tag: {% for i in tag %}<span class="label"><i class="icon-tag"></i> {{
     i }}</span> {% if not loop.last %}+ {% endif %}{% endfor %} (<small><a href="{{
     url_for('views.atom', tag='/'.join(tag)) }}">Atom feed</a></small>)
-</h3>
+</h4>
 {%- endif %}
 
 {%- for post in posts %}
 <article>
-    <h2>{% if is_post(post.slug) %}<a href="{{
+    <h3>{% if is_post(post.slug) %}<a href="{{
         url_for('views.content', slug=post.slug) }}">{{ post.title }}</a>{%
-        else %}{{ post.title }}{% endif %}</h2>
+        else %}{{ post.title }}{% endif %}</h3>
 
 <!-- begin html parsed by docutils -->
 
