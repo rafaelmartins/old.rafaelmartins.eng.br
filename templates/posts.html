@@ -75,51 +75,6 @@
     <li class="next disabled"><span>Older &rarr;</span></li>
     {%- endif %}
 </ul>
-
-
-
-<!--{%- set start = 1 if pagination.current < 2 else pagination.current - 1 %}
-{%- set end = start + 3 if start + 2 < pagination.num_pages else pagination.num_pages + 1 %}
-{%- set start = pagination.num_pages - 2 if end > pagination.num_pages else start %}
-<div class="pagination pagination-large pagination-centered">
-    <ul>
-        {%- if pagination.current != 1 %}
-        <li><a href="{{ pagination.url_gen(1) }}">&laquo;&laquo;</a></li>
-        {%- else %}
-        <li class="disabled"><span>&laquo;&laquo;</span></li>
-        {%- endif %}
-        {%- if pagination.current > 1 %}
-        <li><a href="{{ pagination.url_gen(pagination.current-1) }}">&laquo;</a></li>
-        {%- else %}
-        <li class="disabled"><span>&laquo;</span></li>
-        {%- endif %}
-        {%- if start > 1 %}
-        <li class="disabled"><span>...</span></li>
-        {%- endif %}
-        {%- for i in range(start, end) %}
-        {%- if i > 0 %}
-        {%- if pagination.current != i %}
-        <li><a href="{{ pagination.url_gen(i) }}">{{ i }}</a></li>
-        {%- else %}
-        <li class="active"><span>{{ i }}</span></li>
-        {%- endif %}
-        {%- endif %}
-        {%- endfor %}
-        {%- if end <= pagination.num_pages %}
-        <li class="disabled"><span>...</span></li>
-        {%- endif %}
-        {%- if pagination.current < pagination.num_pages %}
-        <li><a href="{{ pagination.url_gen(pagination.current+1) }}">&raquo;</a></li>
-        {%- else %}
-        <li class="disabled"><span>&raquo;</span></li>
-        {%- endif %}
-        {%- if pagination.current != pagination.num_pages %}
-        <li><a href="{{ pagination.url_gen(pagination.num_pages) }}">&raquo;&raquo;</a></li>
-        {%- else %}
-        <li class="disabled"><span>&raquo;&raquo;</span></li>
-        {%- endif %}
-    </ul>
-</div>-->
 {%- endif %}
 
 <!-- end pagination -->
