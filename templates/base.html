@@ -80,21 +80,6 @@
                             url_for('views.tag', tag=tag) }}"><i class="icon-tag"></i> {{
                             tag }}</a></span> {%- endfor %}
                     </div>
-                    <h4>Blogroll</h4>
-                    <ul>
-                        {%- for href, title in [
-                            ('http://lucumr.pocoo.org/', 'Armin Ronacher'),
-                            ('http://ferringb.wordpress.com/', 'Brian Harring'),
-                            ('http://blog.yporti.com/', 'Bruno T. Yporti'),
-                            ('http://blogs.gentoo.org/calchan/', 'Denis Dupeyron'),
-                            ('http://blog.flameeyes.eu/', 'Diego E. "Flameeyes" Pettenò'),
-                            ('http://blog.omenezes.com/', 'Gabriel Menezes'),
-                            ('http://blogs.gentoo.org/jmbsvicetto/', 'Jorge Manuel B. S. Vicetto'),
-                            ('http://stevelosh.com/', 'Steve Losh'),
-                        ] %}
-                        <li><a href="{{ href }}">{{ title }}</a></li>
-                        {%- endfor %}
-                    </ul>
                     <h4>Under the hood</h4>
                     <ul>
                         {%- for href, title in [
