@@ -26,8 +26,8 @@ the tumblelogs: simplicity.
 
 To solve this issue, I developed a `blohg extension
 <http://hg.rafaelmartins.eng.br/blogs/rafael.martins.im/file/default/ext/blohg_tumblelog.py>`_
-(Yeah, blohg-1.0 supports extensions! \o/ ) that adds some cool reStructuredText
-directives:
+(Yeah, blohg-1.0 supports extensions! ``\o/`` ) that adds some cool
+reStructuredText directives:
 
 
 link
