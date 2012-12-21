@@ -1,7 +1,7 @@
 Creating a tumblelog with blohg
 ===============================
 
-.. tags: en-us,gentoo
+.. tags: en-us,blohg,gentoo
 
 .. pull-quote::
 
