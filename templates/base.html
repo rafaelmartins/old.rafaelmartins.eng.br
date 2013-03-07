@@ -52,7 +52,6 @@
                                 (url_for('views.post_list'), 'post', 'Posts'),
                                 (url_for('views.content', slug='about'), 'about', 'About'),
                                 (url_for('views.content', slug='resume'), 'resume', 'Resume'),
-                                ('http://projects.rafaelmartins.eng.br/', None, 'Projects'),
                             ] %}
                             <li{% if active_page == id %} class="active"{%
                                 endif %}><a href="{{ href }}">{{ title }}</a></li>
