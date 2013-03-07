@@ -15,7 +15,7 @@ Files
 - `HTML (pt_BR) <resume-pt_br.html>`_
 - `reSTructuredText (pt_BR) <resume-pt_br.txt>`_
 
-Repository with source code: http://hg.rafaelmartins.eng.br/resume/
+.. Repository with source code: http://hg.rafaelmartins.eng.br/resume/
 
 This resume makes use of the
 `Droid fonts <http://en.wikipedia.org/wiki/Droid_%28font%29>`_, that are
