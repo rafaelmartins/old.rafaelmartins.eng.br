@@ -10,9 +10,9 @@ About
 My name is Rafael Goncalves Martins. I'm a Control and Automation engineer,
 programmer and open-source developer.
 
-I'm currently working for Collabora_, as Software Engineer.
+I'm currently working for `Titans Group`_, as Software Architect.
 
-.. _Collabora: http://www.collabora.com/
+.. _`Titans Group`: http://titansgroup.com.br/
 
 I spend almost all my free time playing with open-source stuff. The main
 projects I'm working on are `Gentoo Linux`_ and blohg_.
@@ -26,7 +26,7 @@ Contact
 
 - **Email (Personal stuff)**: rafael [at] rafaelmartins [dot] eng [dot] br
 - **Email (Gentoo-related stuff)**: rafaelmartins [at] gentoo [dot] org
-- **Email (Work-related stuff)**: rafael.martins [at] collabora [dot] com
+- **Email (Work-related stuff)**: rafael.martins [at] titansgroup [dot] com [dot] br
 - **IRC**: rafaelmartins [at] irc.{freenode,oftc}.net
 - **Facebook**: http://www.facebook.com/rafaelgmartins
 - **Twitter**: http://twitter.com/rafaelmartins/
