@@ -114,16 +114,12 @@ Writing, Projects, and Links
 - Profiles: Twitter_, Linkedin_, Facebook_
 - Some open source projects on Github: https://github.com/rafaelmartins
 
-.. - This Resume_: Text_, PDF_, HTML_, Repository_ (You have revision
-   NODEID__, updated DATE)
-
 .. _blohg: http://blohg.org/
 .. _Resume: http://rafaelmartins.eng.br/resume/
 .. _Text: resume-en.txt
 .. _HTML: resume-en.html
 .. _PDF: resume-en.pdf
 .. _Repository: http://hg.rafaelmartins.eng.br/resume/
-__ http://hg.rafaelmartins.eng.br/resume/rev/NODEID
 .. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/

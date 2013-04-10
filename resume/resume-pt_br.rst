@@ -115,8 +115,6 @@ Publicações, Projetos, e Links
 - Perfis: Twitter_, Linkedin_, Facebook_
 - Alguns projetos de software livre no Github: https://github.com/rafaelmartins
 
-.. - Este `Currículo`_: `Texto puro`_, PDF_, HTML_, `Repositório`_ (Você tem a revisão
-   NODEID__, atualizada em DATE)
 
 .. _blohg: http://blohg.org/
 .. _`Currículo`: http://rafaelmartins.eng.br/resume/
@@ -124,7 +122,6 @@ Publicações, Projetos, e Links
 .. _HTML: resume-pt_br.html
 .. _PDF: resume-pt_br.pdf
 .. _`Repositório`: http://hg.rafaelmartins.eng.br/resume/
-.. __ http://hg.rafaelmartins.eng.br/resume/rev/NODEID
 .. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/
