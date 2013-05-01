@@ -1,7 +1,7 @@
 FISL 13
 =======
 
-.. tags: en-us,collabora,fisl,gsoc
+.. tags: en-us,events,collabora,fisl,gsoc
 
 This is just a quick (and late) post about FISL 13, that happened at Porto
 Alegre/RS, Brazil, from July 25th to 28th.
