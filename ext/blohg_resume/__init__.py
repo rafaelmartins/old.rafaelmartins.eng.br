@@ -3,13 +3,22 @@ import logging
 import re
 
 from contextlib import closing
-from cStringIO import StringIO
 from docutils.core import publish_string
-from flask import abort, current_app, render_template, make_response, url_for
+from flask import abort, render_template, make_response, url_for
 from flask.helpers import locked_cached_property
+
+try:
+    from cStringIO import StringIO
+except ImportError:
+    from StringIO import StringIO
 
 from blohg.ext import BlohgBlueprint, BlohgExtension
 from blohg.signals import reloaded
+
+# ugly hack to fix werkzeug's logger, otherwise it will conflict with rst2pdf's
+# logger
+_wz_logger = logging.getLogger('werkzeug')
+_wz_logger.propagate = False
 
 ext = BlohgExtension(__name__)
 resume = BlohgBlueprint('resume', __name__, url_prefix='/resume',
@@ -23,7 +32,8 @@ class ResumeLocale(object):
                     ('html', 'HyperText Markup Language (HTML)'),
                     ('rst', 'ReStructuredText (RST)')]
 
-    def __init__(self, blohg, filepath):  # filepath relative to repository root
+    def __init__(self, blohg, filepath):
+        # filepath is relative to repository root
         self.blohg = blohg
         self.filepath = filepath
         self.locale_id = None
@@ -68,10 +78,10 @@ class ResumeLocale(object):
         from rst2pdf.styles import CallableStyleSheet
         if self.filectx is None:
             abort(404)
-        stylesheet_filename = resume.repo_static_folder + '/resume.style'
-        stylesheet = CallableStyleSheet(stylesheet_filename,
-                                        self.blohg.changectx.get_filectx(stylesheet_filename).content)
-        parser = RstToPdf(breaklevel=0, stylesheets=[stylesheet])
+        ss_filename = resume.repo_static_folder + '/resume.style'
+        ss_filectx = self.blohg.changectx.get_filectx(ss_filename)
+        ss = CallableStyleSheet(ss_filename, ss_filectx.content)
+        parser = RstToPdf(breaklevel=0, stylesheets=[ss])
         with closing(StringIO()) as fp:
             parser.createPdf(text=self.content, output=fp)
             rv = make_response(fp.getvalue())
@@ -79,6 +89,7 @@ class ResumeLocale(object):
         return rv
 
 
+@reloaded.connect
 def reload_context(sender):
     ext.g.locales = []
     resume_dir = sender.app.config['RESUME_DIR'].rstrip('/') + '/'
@@ -105,17 +116,13 @@ def render(language, file_format):
     for l in ext.g.locales:
         if l.locale_id == language:
             locale = l
-    if locale is None:
+            break
+    if locale is None or not hasattr(locale, file_format):
         abort(404)
-    #if not hasattr(locale, file_format):
-    #    abort(404)
     return getattr(locale, file_format)
 
 
 @ext.setup_extension
 def setup_extension(app):
-    from blohg import Flask
-    assert isinstance(app, Flask)
     app.config.setdefault('RESUME_DIR', 'resume')
     app.register_blueprint(resume)
-    reloaded.connect(reload_context)
