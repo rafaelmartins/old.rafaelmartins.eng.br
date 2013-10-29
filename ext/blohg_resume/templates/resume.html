@@ -1,0 +1,22 @@
+{%- extends 'base.html' %}
+
+{%- block title %} » Resume{% endblock %}
+
+{%- block body %}
+
+<article>
+    <h3>Resume</h3>
+    <p>
+        This is my "public" resume. Please do not redistribute it without first asking me.
+    </p>
+    {%- for locale in locales %}
+    <h4>{{ locale.locale.english_name }}</h4>
+    <ul>
+        {%- for format, desc in locale.file_formats %}
+        <li><a href="{{ url_for('.render', language=locale.locale_id, file_format=format) }}">{{ desc }}</a></li>
+        {%- endfor %}
+    </ul>
+    {%- endfor %}
+</article>
+
+{%- endblock %}
