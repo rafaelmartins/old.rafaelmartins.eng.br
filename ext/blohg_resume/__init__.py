@@ -145,6 +145,7 @@ def render(language, file_format):
 
 @ext.setup_extension
 def setup_extension(app):
+    ext.g.locales = []
     app.config.setdefault('RESUME_DIR', 'resume')
     app.register_blueprint(resume)
     reload_context(app.blohg)
