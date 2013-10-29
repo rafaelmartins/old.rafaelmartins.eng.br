@@ -1,3 +1,9 @@
+fontsAlias:
+    stdFont: DroidSans
+    stdBold: DroidSans-Bold
+    stdSans: DroidSans
+    stdSansBold: DroidSans-Bold
+
 styles:
     title:
         spaceBefore: 0

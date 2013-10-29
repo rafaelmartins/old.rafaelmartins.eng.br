@@ -76,6 +76,7 @@ class ResumeLocale(object):
     def pdf(self):
         from rst2pdf.createpdf import RstToPdf
         from rst2pdf.styles import CallableStyleSheet
+
         if self.filectx is None:
             abort(404)
         ss_filename = resume.repo_static_folder + '/resume.style'
@@ -87,6 +88,30 @@ class ResumeLocale(object):
             rv = make_response(fp.getvalue())
         rv.headers['Content-Type'] = 'application/pdf'
         return rv
+
+
+@reloaded.connect
+def embed_pdf_fonts(sender):
+    from reportlab.lib.fonts import addMapping
+    from reportlab.pdfbase.pdfmetrics import registerFont
+    from reportlab.pdfbase.ttfonts import TTFont
+
+    fonts = ['DroidSans', 'DroidSans-Bold', 'DroidSans', 'DroidSans']
+    registered_fonts = []
+
+    for font in fonts:
+        if font in registered_fonts:
+            continue
+        font_filename = '%s/fonts/%s.ttf' % (resume.repo_static_folder, font)
+        font_filectx = sender.changectx.get_filectx(font_filename)
+        with closing(StringIO(font_filectx.data)) as fp:
+            registerFont(TTFont(font, fp))
+        registered_fonts.append(font)
+
+    addMapping(fonts[0], 0, 0, fonts[0])
+    addMapping(fonts[0], 0, 1, fonts[2])
+    addMapping(fonts[0], 1, 0, fonts[1])
+    addMapping(fonts[0], 1, 1, fonts[3])
 
 
 @reloaded.connect
