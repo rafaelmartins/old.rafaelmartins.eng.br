@@ -96,6 +96,7 @@ def embed_pdf_fonts(sender):
     from reportlab.pdfbase.pdfmetrics import registerFont
     from reportlab.pdfbase.ttfonts import TTFont
 
+    # FIXME: the fonts shouldn't be hardcoded here :(
     fonts = ['DroidSans', 'DroidSans-Bold', 'DroidSans', 'DroidSans']
     registered_fonts = []
 
