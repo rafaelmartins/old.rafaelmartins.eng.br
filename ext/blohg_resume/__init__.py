@@ -147,3 +147,4 @@ def render(language, file_format):
 def setup_extension(app):
     app.config.setdefault('RESUME_DIR', 'resume')
     app.register_blueprint(resume)
+    reload_context(app.blohg)
