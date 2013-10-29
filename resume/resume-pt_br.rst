@@ -4,7 +4,7 @@ Rafael Gonçalves Martins
 :Email: rafael@rafaelmartins.eng.br
 :Website: http://rafaelmartins.eng.br/
 :Localização: São Paulo/SP, Brasil
-:Telefone: 19 8300-8467
+:Telefone: 11 98719-3306
 
 
 Formação
@@ -113,15 +113,9 @@ Publicações, Projetos, e Links
   Octave-forge no Gentoo Linux
 - Blog sobre Software Livre e Engenharia em http://rafaelmartins.eng.br/
 - Perfis: Twitter_, Linkedin_, Facebook_
-- Alguns projetos de software livre no Github: https://github.com/rafaelmartins
-
+- Projetos: Estão em http://hg.rafaelmartins.eng.br/
 
 .. _blohg: http://blohg.org/
-.. _`Currículo`: http://rafaelmartins.eng.br/resume/
-.. _`Texto puro`: resume-pt_br.txt
-.. _HTML: resume-pt_br.html
-.. _PDF: resume-pt_br.pdf
-.. _`Repositório`: http://hg.rafaelmartins.eng.br/resume/
 .. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/

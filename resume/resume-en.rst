@@ -4,7 +4,7 @@ Rafael Gonçalves Martins
 :Email: rafael@rafaelmartins.eng.br
 :Website: http://rafaelmartins.eng.br/
 :Location: São Paulo/SP, Brazil
-:Phone: 55-19-8300-8467
+:Phone: 55-11-98719-3306
 
 
 School
@@ -112,14 +112,9 @@ Writing, Projects, and Links
 - g-octave_ - A tool that generates and installs ebuilds for Octave-Forge on Gentoo Linux
 - Blog about Free Software and Engineering at http://rafaelmartins.eng.br/
 - Profiles: Twitter_, Linkedin_, Facebook_
-- Some open source projects on Github: https://github.com/rafaelmartins
+- Projects: Are at http://hg.rafaelmartins.eng.br/
 
 .. _blohg: http://blohg.org/
-.. _Resume: http://rafaelmartins.eng.br/resume/
-.. _Text: resume-en.txt
-.. _HTML: resume-en.html
-.. _PDF: resume-en.pdf
-.. _Repository: http://hg.rafaelmartins.eng.br/resume/
 .. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/
