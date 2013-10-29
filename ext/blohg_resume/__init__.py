@@ -15,11 +15,6 @@ except ImportError:
 from blohg.ext import BlohgBlueprint, BlohgExtension
 from blohg.signals import reloaded
 
-# ugly hack to fix werkzeug's logger, otherwise it will conflict with rst2pdf's
-# logger
-_wz_logger = logging.getLogger('werkzeug')
-_wz_logger.propagate = False
-
 ext = BlohgExtension(__name__)
 resume = BlohgBlueprint('resume', __name__, url_prefix='/resume',
                         static_folder='static', template_folder='templates')
