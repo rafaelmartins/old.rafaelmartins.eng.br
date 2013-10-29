@@ -19,6 +19,8 @@ ext = BlohgExtension(__name__)
 resume = BlohgBlueprint('resume', __name__, url_prefix='/resume',
                         static_folder='static', template_folder='templates')
 
+g.locales = []
+
 
 class ResumeLocale(object):
 
