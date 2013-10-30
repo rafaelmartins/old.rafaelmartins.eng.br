@@ -1,10 +1,9 @@
 import babel
-import logging
 import re
 
 from contextlib import closing
 from docutils.core import publish_string
-from flask import abort, current_app, render_template, make_response, url_for
+from flask import abort, render_template, make_response, url_for
 from flask.helpers import locked_cached_property
 
 try:
@@ -111,15 +110,13 @@ def embed_pdf_fonts(sender):
 
 
 @reloaded.connect
-@resume.before_app_first_request
-def reload_context(sender=None):
-    app = sender and sender.app or current_app
+def reload_context(sender):
     ext.g.locales = []
-    resume_dir = app.config['RESUME_DIR'].rstrip('/') + '/'
-    for filepath in app.blohg.changectx.files:
+    resume_dir = sender.app.config['RESUME_DIR'].rstrip('/') + '/'
+    for filepath in sender.changectx.files:
         if not filepath.startswith(resume_dir):
             continue
-        locale = ResumeLocale(app.blohg, filepath)
+        locale = ResumeLocale(sender, filepath)
         if locale.locale_id is None:
             continue
         ext.g.locales.append(locale)
@@ -148,4 +145,11 @@ def render(language, file_format):
 @ext.setup_extension
 def setup_extension(app):
     app.config.setdefault('RESUME_DIR', 'resume')
+
+    @resume.before_request
+    def before_request():
+        if not hasattr(ext.g, 'locales'):
+            reload_context(app.blohg)
+
     app.register_blueprint(resume)
+    reload_context(app.blohg)
