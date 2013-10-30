@@ -4,7 +4,7 @@ import re
 
 from contextlib import closing
 from docutils.core import publish_string
-from flask import abort, current_app, g, render_template, make_response, url_for
+from flask import abort, current_app, render_template, make_response, url_for
 from flask.helpers import locked_cached_property
 
 try:
@@ -18,8 +18,6 @@ from blohg.signals import reloaded
 ext = BlohgExtension(__name__)
 resume = BlohgBlueprint('resume', __name__, url_prefix='/resume',
                         static_folder='static', template_folder='templates')
-
-g.locales = []
 
 
 class ResumeLocale(object):
@@ -116,7 +114,7 @@ def embed_pdf_fonts(sender):
 @resume.before_app_first_request
 def reload_context(sender=None):
     app = sender and sender.app or current_app
-    g.locales = []
+    ext.g.locales = []
     resume_dir = app.config['RESUME_DIR'].rstrip('/') + '/'
     for filepath in app.blohg.changectx.files:
         if not filepath.startswith(resume_dir):
@@ -124,13 +122,13 @@ def reload_context(sender=None):
         locale = ResumeLocale(app.blohg, filepath)
         if locale.locale_id is None:
             continue
-        g.locales.append(locale)
-    g.locales.sort(key=lambda x: x.locale_id)
+        ext.g.locales.append(locale)
+    ext.g.locales.sort(key=lambda x: x.locale_id)
 
 
 @resume.route('/')
 def home():
-    return render_template('resume.html', locales=g.locales)
+    return render_template('resume.html', locales=ext.g.locales)
 
 
 @resume.route('/resume-<language>.<file_format>')
@@ -138,7 +136,7 @@ def render(language, file_format):
     if file_format not in [i[0] for i in ResumeLocale.file_formats]:
         abort(404)
     locale = None
-    for l in g.locales:
+    for l in ext.g.locales:
         if l.locale_id == language:
             locale = l
             break
