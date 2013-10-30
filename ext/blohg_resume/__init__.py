@@ -150,6 +150,8 @@ def setup_extension(app):
     def before_request():
         if not hasattr(ext.g, 'locales'):
             reload_context(app.blohg)
+            embed_pdf_fonts(app.blohg)
 
     app.register_blueprint(resume)
     reload_context(app.blohg)
+    embed_pdf_fonts(app.blohg)
