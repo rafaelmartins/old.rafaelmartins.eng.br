@@ -1,3 +1,5 @@
+embeddedFonts: [ "DroidSans", "DroidSans-Bold" ]
+
 fontsAlias:
     stdFont: DroidSans
     stdBold: DroidSans-Bold
