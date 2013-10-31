@@ -24,7 +24,7 @@ class ResumeLocale(object):
     re_resume_src = re.compile(r'/resume\-([^\.-]+)\.rst$')
     file_formats = [('pdf', 'Portable Document Format (PDF)'),
                     ('html', 'HyperText Markup Language (HTML)'),
-                    ('rst', 'ReStructuredText (RST)')]
+                    ('rst', 'reStructuredText (RST)')]
 
     def __init__(self, blohg, filepath):
         # filepath is relative to repository root
