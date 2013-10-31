@@ -84,6 +84,14 @@ class ResumeLocale(object):
         return rv
 
 
+def fonts_registered():
+    from reportlab.pdfbase.pdfmetrics import _fonts
+    for font in ['DroidSans', 'DroidSans-Bold']:
+        if font not in _fonts:
+            return False
+    return True
+
+
 @reloaded.connect
 def embed_pdf_fonts(sender):
     from reportlab.lib.fonts import addMapping
@@ -150,6 +158,7 @@ def setup_extension(app):
     def before_request():
         if not hasattr(ext.g, 'locales'):
             reload_context(app.blohg)
+        if not fonts_registered():
             embed_pdf_fonts(app.blohg)
 
     app.register_blueprint(resume)
