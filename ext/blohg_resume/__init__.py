@@ -97,6 +97,7 @@ def embed_pdf_fonts(sender):
     from reportlab.lib.fonts import addMapping
     from reportlab.pdfbase.pdfmetrics import registerFont
     from reportlab.pdfbase.ttfonts import TTFont
+    import rst2pdf.findfonts
 
     # FIXME: the fonts shouldn't be hardcoded here :(
     fonts = ['DroidSans', 'DroidSans-Bold', 'DroidSans', 'DroidSans']
@@ -115,6 +116,14 @@ def embed_pdf_fonts(sender):
     addMapping(fonts[0], 0, 1, fonts[2])
     addMapping(fonts[0], 1, 0, fonts[1])
     addMapping(fonts[0], 1, 1, fonts[3])
+
+    # monkey patching rst2pdf :S
+    rst2pdf.findfonts.families['droid sans'] = fonts
+    rst2pdf.findfonts.fonts['droidsans'] = ('DroidSans.ttf',
+                                            'DroidSans.ttf', 'droid sans')
+    rst2pdf.findfonts.fonts['droidsans-bold'] = ('DroidSans-Bold.ttf',
+                                                 'DroidSans-Bold.ttf',
+                                                 'droid sans')
 
 
 @reloaded.connect
