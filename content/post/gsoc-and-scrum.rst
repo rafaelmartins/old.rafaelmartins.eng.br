@@ -13,6 +13,8 @@ and some of the other Gentoo automated ebuild generators in the future.
 For those who don't know, `Google Summer of Code`_ is a Google program that
 pays a student to work during 3 months on an open source project.
 
+.. _`Google Summer of Code`: http://www.google-melange.com/gsoc/homepage/google/gsoc2013
+
 I have been using Scrum at work for some time already, and asked Jauhien about
 trying to use it in our project. We agreed on using it wherever it made sense
 for our workflow. In other words, we adapted Scrum to our workflow, instead of
