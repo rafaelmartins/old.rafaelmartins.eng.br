@@ -19,6 +19,8 @@ We had sprints of 2 weeks, starting at monday, after a quick planning on IRC.
 We had a private IRC channel at Freenode, where we discussed stuff, had
 meetings, etc.
 
+.. read_more
+
 We didn't had daily meetings. We were on very different timezones, and it was
 quite hard to meet daily. We just used the other tools and our IRC channel to
 fill the gap left by the daily meetings.
