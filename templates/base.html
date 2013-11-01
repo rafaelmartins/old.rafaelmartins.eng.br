@@ -72,15 +72,15 @@
 
                 </div>
                 <div class="span3">
-                    <h4>Tags</h4>
-                    <div class="tagcloud">
+                    <h4 class="hidden-phone">Tags</h4>
+                    <div class="tagcloud hidden-phone">
                         {%- for tag in tags %}
                         <span class="label"><a href="{{
                             url_for('views.tag', tag=tag) }}"><i class="icon-tag"></i> {{
                             tag }}</a></span> {%- endfor %}
                     </div>
-                    <h4>Under the hood</h4>
-                    <ul>
+                    <h4 class="hidden-phone">Under the hood</h4>
+                    <ul class="hidden-phone">
                         {%- for href, title in [
                             ('http://blohg.org/', 'blohg'),
                             ('http://python.org/', 'Python'),
