@@ -22,7 +22,7 @@ adapt our workflow to Scrum. That's because none of us was a Scrum expert, and
 because we needed to follow Gentoo/Google guidelines and timeline during all
 the project, making it hard to apply some aspects of the Scrum methodologies.
 
-We had sprints of 2 weeks, starting at monday, after a quick planning on IRC.
+We had sprints of 2 weeks, starting on monday, after a quick planning on IRC.
 We had a private IRC channel at Freenode, where we discussed stuff, had
 meetings, etc.
 
