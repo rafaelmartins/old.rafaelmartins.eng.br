@@ -3,10 +3,15 @@ GSoC and Scrum
 
 .. tags: en-us,gentoo,gsoc
 
-This year I helped the Gentoo GSoC project as a mentor for the first time! I
+This year I helped the `Gentoo GSoC`_ project as a mentor for the first time! I
 mentored Jauhien Piatlicki, that worked on the g-sorcery project, that is a
 framework for automated ebuild generators. It is meant to replace g-octave
 and some of the other Gentoo automated ebuild generators in the future.
+
+.. _`Gentoo GSoC`: http://wiki.gentoo.org/wiki/Google_Summer_of_Code/2013
+
+For those who don't know, `Google Summer of Code`_ is a Google program that
+pays a student to work during 3 months on an open source project.
 
 I have been using Scrum at work for some time already, and asked Jauhien about
 trying to use it in our project. We agreed on using it wherever it made sense
