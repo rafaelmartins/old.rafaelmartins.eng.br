@@ -39,6 +39,12 @@ Desenvolvedor (voluntário), Gentoo Linux, *2010 - presente*
 .. _`subprojeto Eletrônica`: http://www.gentoo.org/proj/en/science/electronics/
 
 
+Orientador (voluntário, Google Summer of Code), Google Inc., *2013*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Orientou Jauhien Piatlicki durante 3 meses, para o Gentoo Linux
+
+
 Engenheiro de Software, Collabora Ltd., *2012*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -39,6 +39,12 @@ Developer (volunteer), Gentoo Linux, *2010 - present*
 .. _`Electronics subproject`: http://www.gentoo.org/proj/en/science/electronics/
 
 
+Mentor (volunteer, Google Summer of Code), Google Inc., *2013*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Mentored Jauhien Piatlicki during 3 months, for Gentoo Linux
+
+
 Software Engineer, Collabora Ltd., *2012*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
