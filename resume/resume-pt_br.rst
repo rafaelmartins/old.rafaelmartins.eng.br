@@ -120,3 +120,7 @@ Publicações, Projetos, e Links
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/
 
+.. last-modified::
+
+   Ultima modificação: %(datetime)s
+

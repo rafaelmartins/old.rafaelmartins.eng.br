@@ -2,8 +2,10 @@ import babel
 import re
 
 from contextlib import closing
+from datetime import datetime
 from docutils.core import publish_string
-from flask import abort, render_template, make_response, url_for
+from docutils.parsers.rst import Directive, directives, nodes
+from flask import abort, current_app, render_template, make_response, url_for
 from flask.helpers import locked_cached_property
 
 try:
@@ -61,6 +63,7 @@ class ResumeLocale(object):
                     'output_encoding': 'utf-8',
                     'initial_header_level': 2}
         rv = make_response(publish_string(source=self.content,
+                                          source_path=':repo:%s' % self.filepath,
                                           writer_name='html4css1',
                                           settings_overrides=settings))
         rv.headers['Content-Type'] = 'text/html; charset="utf-8"'
@@ -78,10 +81,41 @@ class ResumeLocale(object):
         ss = CallableStyleSheet(ss_filename, ss_filectx.content)
         parser = RstToPdf(breaklevel=0, stylesheets=[ss])
         with closing(StringIO()) as fp:
-            parser.createPdf(text=self.content, output=fp)
+            parser.createPdf(text=self.content,
+                             source_path=':repo:%s' % self.filepath,
+                             output=fp)
             rv = make_response(fp.getvalue())
         rv.headers['Content-Type'] = 'application/pdf'
         return rv
+
+
+class LastModifiedDirective(Directive):
+
+    required_arguments = 0
+    option_spec = {}
+    has_content = True
+
+    def run(self):
+        self.assert_has_content()
+        source = self.state.document.current_source
+        if not source.startswith(':repo:'):
+            raise self.error('Error in "%s" directive: Invalid source: %s' %
+                             (self.name, source))
+        try:
+            source = source[len(':repo:'):]
+            rv = ResumeLocale.re_resume_src.search(source)
+            locale = rv.group(1)
+            filectx = current_app.blohg.changectx.get_filectx(source)
+            mdate = filectx.mdate or filectx.date
+            mdatetime = datetime.utcfromtimestamp(mdate)
+            content = '\n'.join(self.content)
+            formatted_datetime = babel.dates.format_datetime(mdatetime,
+                                                             format='full',
+                                                             locale=locale)
+            rv = content.strip() % {'datetime': formatted_datetime}
+        except Exception, err:
+            raise self.error('Error in "%s" directive: %s' % (self.name, err))
+        return [nodes.paragraph(rv, rv)]
 
 
 @reloaded.connect
@@ -153,6 +187,7 @@ def render(language, file_format):
 
 @ext.setup_extension
 def setup_extension(app):
+    directives.register_directive('last-modified', LastModifiedDirective)
     app.config.setdefault('RESUME_DIR', 'resume')
     app.register_blueprint(resume)
     reload_context(app.blohg)
