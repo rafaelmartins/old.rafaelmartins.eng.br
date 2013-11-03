@@ -73,7 +73,7 @@ This post isn't intended to be a Scrum tutorial or something like that. I just
 wanted to share the experience of using these methodologies during a GSoC project.
 We just adapted Scrum to our workflow, as said before. Don't be too picky! :)
 
-If you are interested on the g-sorcery project, you can find more informatin here:
+If you are interested on the g-sorcery project, you can find more information here:
 
 https://github.com/jauhien/g-sorcery
 
