@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+    blohg_resume
+    ~~~~~~~~~~~~
+
+    A blohg extension that renders a resume to HTML/PDF.
+
+    :copyright: (c) 2012-2013 by Rafael Goncalves Martins
+    :license: GPL-2, see blohg/LICENSE for more details.
+"""
+
 import babel
 import re
 
