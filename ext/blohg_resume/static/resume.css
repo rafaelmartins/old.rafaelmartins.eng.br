@@ -8,26 +8,24 @@
  *
  */
 
-/*@font-face {
+@font-face {
 	font-family: 'Droid Sans';
 	font-style: normal;
 	font-weight: bold;
-	src: url('static/fonts/DroidSans-Bold.ttf');
+	src: url('fonts/DroidSans-Bold.ttf');
 }
 
 @font-face {
 	font-family: 'Droid Sans';
 	font-style: normal;
 	font-weight: normal;
-	src: url('static/fonts/DroidSans.ttf');
-}*/
-
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+	src: url('fonts/DroidSans.ttf');
+}
 
 body {
 	font-family: "Droid Sans", sans-serif;
 	font-size: 17px;
-	color: #000; 
+	color: #000;
 }
 
 h2 {
