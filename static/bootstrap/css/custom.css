@@ -55,3 +55,12 @@ img.align-center, .figure.align-center, object.align-center, iframe.align-center
 .tagcloud span {
     margin-bottom: 3px;
 }
+
+.field-name {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.field-list {
+    margin-bottom: 20px;
+}
