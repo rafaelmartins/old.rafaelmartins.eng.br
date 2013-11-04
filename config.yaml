@@ -7,5 +7,6 @@ TIMEZONE: UTC
 POSTS_PER_PAGE: 4
 RST_HEADER_LEVEL: 4
 EXTENSIONS:
+    - machines
     - projects
     - resume
