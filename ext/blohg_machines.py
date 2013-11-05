@@ -55,11 +55,13 @@ class MachineDirective(Directive):
 
     required_arguments = 1  # machine name
     option_spec = {
+        'model': directives.unchanged,
         'aliases': argument_list(),
         'services': argument_list(),
         'cpu': argument_list(';'),
         'ram': argument_list(';'),
         'storage': argument_list(';'),
+        'network': argument_list(';'),
         'os': directives.unchanged,
         'provider': directives.unchanged,
         'location': directives.unchanged,
@@ -69,6 +71,8 @@ class MachineDirective(Directive):
 
     def run(self):
         childrens = [text_field('Name', self.arguments[0])]
+        if 'model' in self.options:
+            childrens.append(text_field('Model', self.options['model']))
         if 'aliases' in self.options:
             childrens.append(bullet_list_field('Aliases',
                                                self.options['aliases']))
@@ -82,8 +86,12 @@ class MachineDirective(Directive):
         if 'storage' in self.options:
             childrens.append(bullet_list_field('Storage',
                                                self.options['storage']))
+        if 'network' in self.options:
+            childrens.append(bullet_list_field('Network',
+                                               self.options['network']))
         if 'os' in self.options:
-            childrens.append(text_field('Operating System', self.options['os']))
+            childrens.append(text_field('Operating System',
+                                        self.options['os']))
         if 'provider' in self.options:
             childrens.append(text_field('Provider', self.options['provider']))
         if 'location' in self.options:
