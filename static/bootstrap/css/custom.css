@@ -77,3 +77,11 @@ img.align-center, .figure.align-center, object.align-center, iframe.align-center
 .tag-title {
     margin-top: 21px;
 }
+
+.label a {
+    color: #CCC;
+}
+
+.label a:hover, .label a:focus {
+    color: #999;
+}
