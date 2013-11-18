@@ -89,15 +89,15 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">Under the hood</h4>
                         </div>
-                        <ul class="list-group">
+                        <div class="list-group">
                             {%- for href, title in [
                                 ('http://blohg.org/', 'blohg'),
                                 ('http://mercurial.selenic.com/', 'Mercurial'),
                                 ('http://www.gentoo.org/', 'Gentoo Linux'),
                             ] %}
-                            <li class="list-group-item"><a href="{{ href }}">{{ title }}</a></li>
+                            <a class="list-group-item" href="{{ href }}">{{ title }}</a>
                             {%- endfor %}
-                        </ul>
+                        </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
