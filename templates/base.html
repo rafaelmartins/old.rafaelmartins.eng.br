@@ -5,16 +5,18 @@
         <meta charset="utf-8" />
         <meta name="generator" content="blohg {{ version }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!--[if lt IE 9]><script src="{{
-            url_for('static', filename='bootstrap/js/html5.min.js') }}"></script><![endif]-->
         <link type="text/css" rel="stylesheet" href="{{
             url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
-        <link type="text/css" rel="stylesheet" href="{{
-            url_for('static', filename='bootstrap/css/bootstrap-responsive.min.css') }}" />
         <link type="text/css" rel="stylesheet" href="{{
             url_for('static', filename='bootstrap/css/custom.css') }}" />
         <link type="text/css" rel="stylesheet" href="{{
             url_for('static', filename='pygments.css') }}" />
+        <!--[if lt IE 9]>
+        <script src="{{
+            url_for('static', filename='bootstrap/js/html5shiv.js') }}"></script>
+        <script src="{{
+            url_for('static', filename='bootstrap/js/respond.min.js') }}"></script>
+        <![endif]-->
         <link rel="alternate" type="application/atom+xml" href="{{
             url_for('views.atom') }}" title="{{ config.TITLE }}" />
 
@@ -30,40 +32,40 @@
 
     </head>
     <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ url_for('views.home') }}">{{ config.TITLE_HTML }}</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="{{ url_for('views.home') }}">{{ config.TITLE_HTML }}</a>
-                    <nav class="nav-collapse collapse">
-                        <ul class="nav">
-                            {%- if active_page == 'page' %}
-                                {%- set active_page = 'home' %}
-                            {%- endif %}
-                            {%- if active_page == 'tag' %}
-                                {%- set active_page = 'post' %}
-                            {%- endif %}
-                            {%- for href, id, title in [
-                                (url_for('views.home'), '', 'Home'),
-                                (url_for('views.post_list'), 'post', 'Posts'),
-                                (url_for('views.content', slug='about'), 'about', 'About'),
-                                (url_for('views.content', slug='resume'), 'resume', 'Resume'),
-                            ] %}
-                            <li{% if active_page == id %} class="active"{%
-                                endif %}><a href="{{ href }}">{{ title }}</a></li>
-                            {%- endfor %}
-                        </ul>
-                    </nav>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        {%- if active_page == 'page' %}
+                            {%- set active_page = 'home' %}
+                        {%- endif %}
+                        {%- if active_page == 'tag' %}
+                            {%- set active_page = 'post' %}
+                        {%- endif %}
+                        {%- for href, id, title in [
+                            (url_for('views.home'), '', 'Home'),
+                            (url_for('views.post_list'), 'post', 'Posts'),
+                            (url_for('views.content', slug='about'), 'about', 'About'),
+                            (url_for('views.content', slug='resume'), 'resume', 'Resume'),
+                        ] %}
+                        <li{% if active_page == id %} class="active"{%
+                            endif %}><a href="{{ href }}">{{ title }}</a></li>
+                        {%- endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="span9">
+                <div class="col-md-9">
 
 <!-- begin content -->
 {% block body %}{% endblock %}
@@ -71,53 +73,65 @@
 <!-- end content -->
 
                 </div>
-                <div class="span3">
-                    <h4 class="hidden-phone">Tags</h4>
-                    <div class="tagcloud hidden-phone">
-                        {%- for tag in tags %}
-                        <span class="label"><a href="{{
-                            url_for('views.tag', tag=tag) }}"><i class="icon-tag"></i> {{
-                            tag }}</a></span> {%- endfor %}
+                <div class="col-md-3 sidebar">
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Tags</h4>
+                        </div>
+                        <div class="panel-body tagcloud">
+                            {%- for tag in tags %}
+                            <span class="label label-default"><a href="{{
+                                url_for('views.tag', tag=tag) }}"><i class="glyphicon glyphicon-tag"></i> {{
+                                tag }}</a></span> {%- endfor %}
+                        </div>
                     </div>
-                    <h4 class="hidden-phone">Under the hood</h4>
-                    <ul class="hidden-phone">
-                        {%- for href, title in [
-                            ('http://blohg.org/', 'blohg'),
-                            ('http://python.org/', 'Python'),
-                            ('http://mercurial.selenic.com/', 'Mercurial'),
-                            ('http://docutils.sf.net/', 'Docutils'),
-                            ('http://code.google.com/p/modwsgi/', 'modwsgi'),
-                            ('http://flask.pocoo.org/', 'Flask'),
-                            ('http://jinja.pocoo.org/', 'Jinja2'),
-                            ('http://werkzeug.pocoo.org/', 'Werkzeug'),
-                            ('http://www.gentoo.org/', 'Gentoo Linux'),
-                        ] %}
-                        <li><a href="{{ href }}">{{ title }}</a></li>
-                        {%- endfor %}
-                    </ul>
-                    <h4>Content License</h4>
-                    <p>
-                        <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
-                            <img alt="Creative Commons License"
-                                style="border-width:0"
-                                src="{{ url_for('static', filename='creative-commons-88x31.png') }}" />
-                        </a>
-                        <br />
-                        This work is licensed under a <a rel="license"
-                            href="http://creativecommons.org/licenses/by-nc/2.5/">
-                            Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
-                    </p>
-                    <h4>Disclaimer</h4>
-                    <p>
-                        This is a personal weblog. The opinions expressed here represent my own
-                        and not those of Titans Group, Gentoo Foundation or anyone else.
-                    </p>
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Under the hood</h4>
+                        </div>
+                        <ul class="list-group">
+                            {%- for href, title in [
+                                ('http://blohg.org/', 'blohg'),
+                                ('http://mercurial.selenic.com/', 'Mercurial'),
+                                ('http://www.gentoo.org/', 'Gentoo Linux'),
+                            ] %}
+                            <li class="list-group-item"><a href="{{ href }}">{{ title }}</a></li>
+                            {%- endfor %}
+                        </ul>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Content License</h4>
+                        </div>
+                        <div class="panel-body">
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">
+                                <img alt="Creative Commons License" class="license"
+                                    src="{{ url_for('static', filename='creative-commons-88x31.png') }}" />
+                            </a>
+                            This work is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-nc/2.5/">
+                                Creative Commons Attribution-NonCommercial 2.5 Generic License</a>.
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Disclaimer</h4>
+                        </div>
+                        <div class="panel-body">
+                            This is a personal weblog. The opinions expressed here represent my own
+                            and not those of Titans Group, Gentoo Foundation or anyone else.
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer>
-                <p>
-                    Powered by: <a href="http://blohg.org/">blohg {{ version }}</a>
-                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Powered by: <a href="http://blohg.org/">blohg {{ version }}</a>
+                        </p>
+                    </div>
+                </div>
             </footer>
         </div>
         <script src="{{ url_for('static', filename='bootstrap/js/jquery.min.js') }}"></script>
