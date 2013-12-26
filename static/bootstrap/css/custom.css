@@ -85,3 +85,13 @@ img.align-center, .figure.align-center, object.align-center, iframe.align-center
 .label a:hover, .label a:focus {
     color: #999;
 }
+
+table.docutils td ul, table.docutils td li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
