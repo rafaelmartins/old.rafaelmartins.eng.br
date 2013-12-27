@@ -1,0 +1,46 @@
+{%- extends 'base.html' %}
+
+{%- block title %} » Projects{% endblock %}
+
+{%- block body %}
+
+<article>  <!-- This isn't really semantic, but I don't really care about it! :P -->
+    <h3>Projects</h3>
+    <p>
+        These are some of my relevant open source software projects.
+    </p>
+    <p>
+        A full list of my public Git repositories is available at GitHub:
+        <a href="https://github.com/{{ username }}">@{{ username }}</a>.
+    </p>
+    {%- for project in projects %}
+    <table class="project-table field-list">
+        <tr class="field">
+            <th class="field-name" colspan="2">
+                {%- if project.homepage or project.html_url %}<a href="{{
+                    project.homepage or project.html_url }}">{% endif %}
+                {{ project.name }}
+                {%- if project.homepage or project.html_url %}</a>{% endif %}
+            </th>
+        </tr>
+        {%- if project.description %}
+        <tr class="field">
+            <th class="field-name">Description:</th>
+            <td class="field-body">{{ project.description }}</td>
+        </tr>
+        {%- endif %}
+        {%- if project.homepage %}
+        <tr>
+            <th class="field-name">Home page:</th>
+            <td class="field-body"><a href="{{ project.homepage }}">{{ project.homepage }}</a></td>
+        </tr>
+        {%- endif %}
+        <tr>
+            <th class="field-name">GitHub repository:</th>
+            <td class="field-body"><a href="{{ project.html_url }}">{{ project.html_url }}</a></td>
+        </tr>
+    </table>
+    {%- endfor %}
+</article>
+
+{%- endblock %}

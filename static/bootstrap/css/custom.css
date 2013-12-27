@@ -95,3 +95,8 @@ table.docutils td ul, table.docutils td li {
 h3 {
     margin-bottom: 20px;
 }
+
+table.project-table {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
