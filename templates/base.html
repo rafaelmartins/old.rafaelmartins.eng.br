@@ -47,8 +47,8 @@
                         {%- if active_page == 'page' %}
                             {%- set active_page = 'home' %}
                         {%- endif %}
-                        {%- if active_page == 'tag' %}
-                            {%- set active_page = 'post' %}
+                        {%- if active_page in ('tag', 'post') %}
+                            {%- set active_page = '' %}
                         {%- endif %}
                         {%- for href, id, title in [
                             (url_for('views.home'), '', 'Posts'),
