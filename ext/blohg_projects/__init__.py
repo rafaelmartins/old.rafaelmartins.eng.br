@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-    blohg_gh_projects
-    ~~~~~~~~~~~~~~~~~
+    blohg_projects
+    ~~~~~~~~~~~~~~
 
     A blohg extension that renders a page with information about projects
     hosted at github.com
@@ -18,7 +18,7 @@ from flask import current_app, render_template
 from blohg.ext import BlohgBlueprint, BlohgExtension
 
 ext = BlohgExtension(__name__)
-projects = BlohgBlueprint('gh_projects', __name__, url_prefix='/projects',
+projects = BlohgBlueprint('projects', __name__, url_prefix='/projects',
                           template_folder='templates')
 cache = make_region().configure('dogpile.cache.memory',
                                 expiration_time=timedelta(hours=1))
