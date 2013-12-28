@@ -53,6 +53,7 @@
                         {%- for href, id, title in [
                             (url_for('views.home'), '', 'Posts'),
                             (url_for('views.content', slug='about'), 'about', 'About'),
+                            (url_for('projects.main'), 'projects', 'Projects'),
                             (url_for('views.content', slug='resume'), 'resume', 'Resume'),
                         ] %}
                         <li{% if active_page == id %} class="active"{%
