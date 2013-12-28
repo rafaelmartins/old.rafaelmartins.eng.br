@@ -51,8 +51,7 @@
                             {%- set active_page = 'post' %}
                         {%- endif %}
                         {%- for href, id, title in [
-                            (url_for('views.home'), '', 'Home'),
-                            (url_for('views.post_list'), 'post', 'Posts'),
+                            (url_for('views.home'), '', 'Posts'),
                             (url_for('views.content', slug='about'), 'about', 'About'),
                             (url_for('views.content', slug='resume'), 'resume', 'Resume'),
                         ] %}
