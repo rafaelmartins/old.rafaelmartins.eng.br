@@ -12,6 +12,13 @@ EXTENSIONS:
     - resume
 GITHUB_USERNAME: rafaelmartins
 GITHUB_PROJECTS:
-    - balde
     - blohg
-    - vimrc
+    - distpatch
+    - balde
+    - marrie
+    - dnsimple-dyndns
+    - cgisysinfo
+    - ownpaste
+    - github-repo-mirror
+    - github-pages-publish
+    - g-octave
