@@ -30,7 +30,7 @@ Contact
 - **IRC**: rafaelmartins [at] irc.{freenode,oftc}.net
 - **Facebook**: http://www.facebook.com/rafaelgmartins
 - **Twitter**: http://twitter.com/rafaelmartins/
-- **PGP key**: `0293536F <http://pgp.mit.edu:11371/pks/lookup?op=get&search=0xC987E66C0293536F>`_
+- **PGP key**: `E894ABDE <http://pgp.mit.edu/pks/lookup?op=get&search=0x3EF74952E894ABDE>`_
 
 Feel free to drop me a line, or ping me on IRC, if you need something. I'm
 not very responsive nowadays, though.
