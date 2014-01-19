@@ -23,14 +23,15 @@ You can see the application working here:
 
 http://pidsim.rafaelmartins.eng.br/
 
-The software repositories are still available on my Mercurial server:
+The software repositories are still available on Github:
 
-http://hg.rafaelmartins.eng.br/pidsim/
+https://github.com/rafaelmartins/pidsim
+https://github.com/rafaelmartins/pidsim-models
+https://github.com/rafaelmartins/pidsim-web
 
 Gentoo users can install it from a specific overlay I created:
 
-http://hg.rafaelmartins.eng.br/pidsim/gentoo-overlay/
-
+https://github.com/rafaelmartins/pidsim-gentoo-overlay
 
 P.S.: Some time ago I heard some rumors that this project is being ported to
 PHP by another student. The people who knows me well can imagine how "happy" I

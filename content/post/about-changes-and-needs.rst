@@ -37,7 +37,7 @@ of them is widely used or "famous". I just work on them because I like. I can't
 explain how happy I am when I get a patch for one of these projects. :o)
 
 .. _`blogging engine`: http://blohg.org/
-.. _`other projects`: http://hg.rafaelmartins.eng.br/
+.. _`other projects`: https://github.com/rafaelmartins
 
 But when I start looking back I see that a lot of things I really need are
 lacking in my life. Actually I think that my needs are changing with the time and

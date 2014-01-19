@@ -169,7 +169,7 @@ I can publish it somewhere using the command::
     
     $ hg push --mq $REMOTE_REPO_URL
 
-My repository is here:
+My repository is here (broken url):
 
 http://hg.rafaelmartins.eng.br/mq/diffball
 

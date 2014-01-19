@@ -117,10 +117,11 @@ Writing, Projects, and Links
 - blohg_ - A mercurial-based blogging engine
 - g-octave_ - A tool that generates and installs ebuilds for Octave-Forge on Gentoo Linux
 - Blog about Free Software and Engineering at http://rafaelmartins.eng.br/
-- Profiles: Twitter_, Linkedin_, Facebook_
-- Projects: Are at http://hg.rafaelmartins.eng.br/
+- Profiles: GitHub_, Twitter_, Linkedin_, Facebook_
+- Projects: Are at http://rafaelmartins.eng.br/projects/
 
 .. _blohg: http://blohg.org/
+.. _GitHub: https://github.com/rafaelmartins
 .. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
 .. _Facebook: http://facebook.com/rafaelgmartins/

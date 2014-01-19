@@ -10,3 +10,8 @@ EXTENSIONS:
     - machines
     - projects
     - resume
+GITHUB_USERNAME: rafaelmartins
+GITHUB_PROJECTS:
+    - balde
+    - blohg
+    - vimrc

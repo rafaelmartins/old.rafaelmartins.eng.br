@@ -3,14 +3,6 @@ Creating a tumblelog with blohg
 
 .. tags: en-us,blohg,gentoo
 
-.. pull-quote::
-
-   **Warning**: This post relies on unreleased blohg features. You will need
-   to install blohg from the
-   `Mercurial repository <http://hg.rafaelmartins.eng.br/blohg>`_ or use the
-   live ebuild (=www-apps/blohg-9999), if you are a Gentoo user. Please ignore
-   this warning after blohg-1.0 release.
-
 Tumblelogs are `old stuff <http://www.kottke.org/05/10/tumblelogs>`_, but
 services like `Tumblr <http://tumblr.com/>`_ popularized them a lot recently.
 Thumblelogs are a quick and simple way to share random content with readers.
@@ -25,7 +17,7 @@ the tumblelogs: simplicity.
 .. read_more
 
 To solve this issue, I developed a `blohg extension
-<http://hg.rafaelmartins.eng.br/blogs/rafael.martins.im/file/default/ext/blohg_tumblelog.py>`_
+<https://github.com/rafaelmartins/rafael.martins.im/blob/master/ext/blohg_tumblelog.py>`_
 (Yeah, blohg-1.0 supports extensions! ``\o/`` ) that adds some cool
 reStructuredText directives:
 
@@ -87,7 +79,7 @@ http://rafael.martins.im/
 The source code of the tumblelog, including the blohg extension and the
 mobile-friendly templates, is available here:
 
-http://hg.rafaelmartins.eng.br/blogs/rafael.martins.im/
+https://github.com/rafaelmartins/rafael.martins.im
 
 I have no plans to release this extension as part of blohg, but feel free to
 use it if you find it useful!

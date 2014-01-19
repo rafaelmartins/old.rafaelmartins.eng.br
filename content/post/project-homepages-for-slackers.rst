@@ -3,6 +3,11 @@ Project homepages for slackers
 
 .. tags: en-us,gentoo,mercurial
 
+.. pull-quote::
+
+   **Warning**: This project is deprecated. Look at
+   http://rafaelmartins.eng.br/projects/
+
 Create a homepage and documentation for a project is a boring task. I
 have a few projects that were not released yet due to lack of time and
 motivation to create a simple webpage and write down some Sphinx_-based
@@ -29,7 +34,7 @@ projects.
 
 .. _`PyPI Package Index`: http://pypi.python.org/
 
-My instance of the application lives here:
+My instance of the application lives here (not anymore):
 
 http://projects.rafaelmartins.eng.br/
 
@@ -37,7 +42,7 @@ The application is highly tied to my workflow, e.g. the way I handle tags
 and the directory structure of my repositories on my server, but the code
 is available in a Mercurial repository:
 
-http://hg.rafaelmartins.eng.br/projects/
+https://github.com/rafaelmartins/projects/
 
 Most of my projects aren't listed yet, and I'll start enabling them as soon
 as I fix their READMEs.
