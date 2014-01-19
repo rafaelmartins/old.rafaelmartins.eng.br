@@ -25,7 +25,7 @@ cache = make_region().configure('dogpile.cache.memory',
 
 
 @cache.cache_on_arguments()
-def get_projects_from_github(username, projects):
+def get_projects_from_github(username, project_list):
     required_keys = ['description', 'homepage', 'html_url', 'name']
     headers = {'Accept': 'application/vnd.github.v3'}
     response = requests.get('https://api.github.com/users/%s/repos' % username,
@@ -33,12 +33,14 @@ def get_projects_from_github(username, projects):
     if not response.ok:
         raise RuntimeError('Failed to get projects: %s' % username)
     rv = []
-    for project in response.json():
-        if project['name'] not in projects:
+    projects = dict([(project['name'], project)
+                     for project in response.json()])
+    for project_name in project_list:
+        if project_name not in projects:
             continue
         proj = {}
         for key in required_keys:
-            proj[key] = project[key]
+            proj[key] = projects[project_name][key]
         rv.append(proj)
     return rv
 
