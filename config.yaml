@@ -9,16 +9,24 @@ RST_HEADER_LEVEL: 4
 EXTENSIONS:
     - machines
     - projects
+    - redirect
     - resume
 GITHUB_USERNAME: rafaelmartins
 GITHUB_PROJECTS:
     - blohg
     - distpatch
     - balde
-    - marrie
     - dnsimple-dyndns
     - cgisysinfo
     - ownpaste
     - github-repo-mirror
     - github-pages-publish
     - g-octave
+REDIRECT:
+    facebook: https://www.facebook.com/rafaelgmartins
+    twitter: https://twitter.com/rafaelmartins
+    medium: https://medium.com/@rafaelmartins
+    lattes: http://lattes.cnpq.br/7365999517312436
+    pgp: http://pgp.mit.edu/pks/lookup?op=get&search=0x3EF74952E894ABDE
+    github: https://github.com/rafaelmartins
+    resume: http://rafaelmartins.eng.br/resume/resume-en.pdf
