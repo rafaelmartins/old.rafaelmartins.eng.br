@@ -16,6 +16,7 @@ GITHUB_PROJECTS:
     - blohg
     - distpatch
     - balde
+    - pyoembed
     - dnsimple-dyndns
     - cgisysinfo
     - ownpaste
@@ -25,7 +26,7 @@ GITHUB_PROJECTS:
 REDIRECT:
     facebook: https://www.facebook.com/rafaelgmartins
     twitter: https://twitter.com/rafaelmartins
-    medium: https://medium.com/@rafaelmartins
+    medium: http://bit.ly/1gbznNo
     lattes: http://lattes.cnpq.br/7365999517312436
     pgp: http://pgp.mit.edu/pks/lookup?op=get&search=0x3EF74952E894ABDE
     github: https://github.com/rafaelmartins
