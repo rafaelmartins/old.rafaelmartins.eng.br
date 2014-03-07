@@ -10,10 +10,10 @@
     :license: GPL-2, see blohg/LICENSE for more details.
 """
 
-import requests
 from datetime import timedelta
 from dogpile.cache import make_region
 from flask import current_app, render_template
+from github import Github
 
 from blohg.ext import BlohgBlueprint, BlohgExtension
 
@@ -27,20 +27,18 @@ cache = make_region().configure('dogpile.cache.memory',
 @cache.cache_on_arguments()
 def get_projects_from_github(username, project_list):
     required_keys = ['description', 'homepage', 'html_url', 'name']
-    headers = {'Accept': 'application/vnd.github.v3'}
-    response = requests.get('https://api.github.com/users/%s/repos' % username,
-                            headers=headers)
-    if not response.ok:
-        raise RuntimeError('Failed to get projects: %s' % username)
+    gh = Github()
+    user = gh.get_user(username)
+    repos = user.get_repos()
     rv = []
-    projects = dict([(project['name'], project)
-                     for project in response.json()])
+    projects = dict([(project.name, project)
+                     for project in repos])
     for project_name in project_list:
         if project_name not in projects:
             continue
         proj = {}
         for key in required_keys:
-            proj[key] = projects[project_name][key]
+            proj[key] = getattr(projects[project_name], key)
         rv.append(proj)
     return rv
 
