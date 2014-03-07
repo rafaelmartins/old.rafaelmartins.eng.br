@@ -1,0 +1,5 @@
+-e git+https://github.com/rafaelmartins/blohg.git#egg=blohg[git]
+Babel
+dogpile.cache
+PyGithub
+rst2pdf
