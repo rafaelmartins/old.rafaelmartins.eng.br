@@ -11,7 +11,10 @@
     </p>
     <p>
         A full list of my public Git repositories is available on GitHub:
-        <a href="https://github.com/{{ username }}?tab=repositories">@{{ username }}</a>.
+        {%- for username in usernames %}
+        <a href="https://github.com/{{ username }}?tab=repositories">@{{ username }}</a>
+        {%- if loop.last %}.{% else %},{% endif %}
+        {%- endfor %}
     </p>
     {%- for project in projects %}
     <table class="project-table field-list">
@@ -19,7 +22,7 @@
             <th class="field-name" colspan="2">
                 {%- if project.homepage or project.html_url %}<a href="{{
                     project.homepage or project.html_url }}">{% endif %}
-                {{ project.name }}
+                {{ project.username }}/{{ project.name }}
                 {%- if project.homepage or project.html_url %}</a>{% endif %}
             </th>
         </tr>

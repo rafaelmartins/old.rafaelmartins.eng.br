@@ -39,16 +39,20 @@ def get_projects_from_github(username, project_list):
         proj = {}
         for key in required_keys:
             proj[key] = getattr(projects[project_name], key)
+        proj['username'] = username
         rv.append(proj)
     return rv
 
 
 @projects.route('/')
 def main():
-    username = current_app.config['GITHUB_USERNAME']
-    project_list = current_app.config['GITHUB_PROJECTS']
-    projects = get_projects_from_github(username, project_list)
-    return render_template('projects.html', username=username,
+    projects = []
+    usernames = []
+    for project_dict in current_app.config['GITHUB_PROJECTS']:
+        for username, project_list in project_dict.iteritems():
+            usernames.append(username)
+            projects.extend(get_projects_from_github(username, project_list))
+    return render_template('projects.html', usernames=usernames,
                            projects=projects)
 
 

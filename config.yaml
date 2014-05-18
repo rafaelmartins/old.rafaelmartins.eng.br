@@ -11,18 +11,19 @@ EXTENSIONS:
     - projects
     - redirect
     - resume
-GITHUB_USERNAME: rafaelmartins
 GITHUB_PROJECTS:
-    - blohg
-    - distpatch
-    - balde
-    - pyoembed
-    - dnsimple-dyndns
-    - cgisysinfo
-    - ownpaste
-    - github-repo-mirror
-    - github-pages-publish
-    - g-octave
+    - balde:
+        - balde
+    - rafaelmartins:
+        - blohg
+        - distpatch
+        - pyoembed
+        - dnsimple-dyndns
+        - cgisysinfo
+        - ownpaste
+        - github-repo-mirror
+        - github-pages-publish
+        - g-octave
 REDIRECT:
     facebook: https://www.facebook.com/rafaelgmartins
     twitter: https://twitter.com/rafaelmartins
