@@ -22,10 +22,7 @@ TEMPLATE = '''\
 <table class="project-table field-list">
     <tr class="field">
         <th class="field-name" colspan="2">
-            {% if homepage or github_url %}<a href="{{
-                homepage or github_url }}">{% endif %}
-                {{ repository }}
-            {% if homepage or github_url %}</a>{% endif %}
+            <a href="{{ github_url }}">{{ repository }}</a>
         </th>
     </tr>
     {%- if description %}
@@ -48,7 +45,8 @@ TEMPLATE = '''\
             <a href="{{ github_url }}">{{ github_url }}</a>
         </td>
     </tr>
-</table>'''
+</table>
+'''
 
 
 class ProjectDirective(Directive):
