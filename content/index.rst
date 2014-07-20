@@ -10,6 +10,8 @@ As you come here, you may be interested in my `open source work`_, in my
 brazilian portuguese). You can also learn more `about me`_ and get in touch,
 if you want. ;-)
 
+For nerds: the sources of this website are `publicly available`_.
+
 .. raw:: html
 
   </div>
@@ -19,3 +21,4 @@ if you want. ;-)
 .. _`technical blog`: http://rafaelmartins.eng.br/posts/
 .. _`personal blog`: http://rafael.martins.im/
 .. _`about me`: http://rafaelmartins.eng.br/about/
+.. _`publicly available`: https://github.com/rafaelmartins/rafaelmartins.eng.br
