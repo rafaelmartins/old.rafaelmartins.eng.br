@@ -1,5 +1,5 @@
 body {
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 footer p {
@@ -79,11 +79,11 @@ img.align-center, .figure.align-center, object.align-center, iframe.align-center
 }
 
 .label a {
-    color: #CCC;
+    color: #FFF;
 }
 
 .label a:hover, .label a:focus {
-    color: #999;
+    color: #EEE;
 }
 
 table.docutils td ul, table.docutils td li {
