@@ -50,13 +50,13 @@
                         {%- if active_page in ('tag', 'post') %}
                             {%- set active_page = '' %}
                         {%- endif %}
-                        {%- for href, id, title in [
-                            (url_for('views.home'), '', 'Posts'),
-                            (url_for('views.content', slug='about'), 'about', 'About'),
-                            (url_for('views.content', slug='projects'), 'projects', 'Projects'),
-                            (url_for('views.content', slug='resume'), 'resume', 'Resume'),
+                        {%- for href, ids, title in [
+                            (url_for('views.posts'), ['post', 'posts'], 'Blog'),
+                            (url_for('views.content', slug='about'), ['about'], 'About'),
+                            (url_for('views.content', slug='projects'), ['projects'], 'Projects'),
+                            (url_for('views.content', slug='resume'), ['resume'], 'Resume'),
                         ] %}
-                        <li{% if active_page == id %} class="active"{%
+                        <li{% if active_page in ids %} class="active"{%
                             endif %}><a href="{{ href }}">{{ title }}</a></li>
                         {%- endfor %}
                     </ul>
@@ -76,7 +76,7 @@
                 <div class="col-md-3 sidebar">
                     <div class="panel panel-default hidden-xs">
                         <div class="panel-heading">
-                            <h4 class="panel-title">Tags</h4>
+                            <h4 class="panel-title">Blog Tags</h4>
                         </div>
                         <div class="panel-body tagcloud">
                             {%- for tag in tags %}

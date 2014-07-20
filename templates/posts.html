@@ -32,6 +32,7 @@
         endif -%}
 
     <div class="clear"></div>
+    {% if is_post(post.slug) -%}
     <div class="metadata well well-sm">
         {% if post.tags %}<p>{% for tag in post.tags
             %}<span class="label label-default"><a href="{{ url_for('views.tag', tag=tag)
@@ -53,6 +54,7 @@
             url_for('views.content', slug=post.slug)
             }}#disqus_thread">Comments</a>{% endif %}
     </div>
+    {%- endif %}
 
 <!-- start disqus post -->
 {% block disqus_post %}{% endblock %}
