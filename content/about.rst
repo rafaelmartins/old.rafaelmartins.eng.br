@@ -18,7 +18,7 @@ I'm currently working for `Titans Group`_, as Software Architect.
 I spend almost all my free time playing with open-source stuff. The main
 projects I'm working on are `Gentoo Linux`_, balde_ and blohg_.
 
-On the personal-side, I'm a 25 years old guy, single, living at São Paulo/SP,
+On the personal-side, I'm a 26 years old guy, single, living at São Paulo/SP,
 Brazil.
 
 
