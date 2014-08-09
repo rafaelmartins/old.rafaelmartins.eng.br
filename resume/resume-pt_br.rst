@@ -31,12 +31,7 @@ Desenvolvedor (voluntário), Gentoo Linux, *2010 - presente*
 
 - Mantém pacotes dos seguintes *herds*: sci-electronics, sci-mathematics,
   python
-- Mantém o g-octave_
-- Líder do `subprojeto Eletrônica`_ do Gentoo Linux
 - Mantém pacotes aleatórios de várias categorias
-
-.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
-.. _`subprojeto Eletrônica`: http://www.gentoo.org/proj/en/science/electronics/
 
 
 Orientador (voluntário, Google Summer of Code), Google Inc., *2013*
@@ -73,6 +68,8 @@ Estagiario, CIERMag/IFSC/USP, *2011*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Desenvolvimento de software (Python)
+
+.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
 
 
 Desenvolvedor (Google Summer of Code), Google Inc., *2010*

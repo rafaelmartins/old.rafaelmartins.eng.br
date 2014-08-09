@@ -31,12 +31,7 @@ Developer (volunteer), Gentoo Linux, *2010 - present*
 
 - Maintain packages of the following herds: sci-electronics, sci-mathematics,
   python
-- Maintain g-octave_
-- Gentoo `Electronics subproject`_ lead
 - Maintain random packages of several categories
-
-.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
-.. _`Electronics subproject`: http://www.gentoo.org/proj/en/science/electronics/
 
 
 Mentor (volunteer, Google Summer of Code), Google Inc., *2013*
@@ -79,6 +74,8 @@ Developer (Google Summer of Code), Google Inc., *2010*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Worked during 3 months developing g-octave_, for Gentoo Linux
+
+.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
 
 
 Languages
