@@ -17,8 +17,6 @@ Bachelor's Degree: Control and Automation Engineering.
 
 Relevant experience
 -------------------
-*For full experience details please contact me by email.*
-
 
 Development Architect, Titans Group, *2013 - present*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,6 +54,11 @@ Project Analist, Siemens Ltda, *2011 - 2012*
 .. _PLC: http://en.wikipedia.org/wiki/Programmable_logic_controller
 
 
+.. raw:: pdf
+
+   PageBreak
+
+
 Developer (Google Summer of Code), Google Inc., *2011*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,16 +91,6 @@ Languages
 Skills
 ------
 
-Engineering
-~~~~~~~~~~~
-
-- Simulation and modeling of control systems
-- Design of industrial controllers
-- Design of electronic circuits
-- EDA softwares: Kicad, gEDA, Orcad, Multisim
-- Automation-related softwares: WINCC, Step7, Indusoft Web Studio, Automation Studio
-- Numerical computation softwares: GNU Octave, MATLAB
-
 Software Development
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -107,6 +100,16 @@ Software Development
   Cmake, Pkgconfig, Subversion, CVS, MySQL, SQLite3, etc.
 - Platforms: Linux (Gentoo, Debian, Ubuntu), Windows (2000, XP, 7)
 - Libraries: Qt, GTK, Glib, Readline, Libedit, Zlib, Xenomai, RTAI, etc.
+
+Electronics / Industrial Automation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Simulation and modeling of control systems
+- Design of industrial controllers
+- Design of electronic circuits
+- EDA softwares: Kicad, gEDA, Orcad, Multisim
+- Automation-related softwares: WINCC, Step7, Indusoft Web Studio, Automation Studio
+- Numerical computation softwares: GNU Octave, MATLAB
 
 
 Writing, Projects, and Links

@@ -17,8 +17,6 @@ Curso: Engenharia de Controle e Automação.
 
 Experiência relevante
 ---------------------
-*Para mais detalhes relativos a experiência entre em contato por e-mail*
-
 
 Arquiteto de desenvolvimento, Titans Group, *2013 - presente*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,6 +54,11 @@ Analista de projetos, Siemens Ltda, *2011 - 2012*
 .. _CLP: http://pt.wikipedia.org/wiki/Controlador_l%C3%B3gico_program%C3%A1vel
 
 
+.. raw:: pdf
+
+   PageBreak
+
+
 Desenvolvedor (Google Summer of Code), Google Inc., *2011*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,16 +91,6 @@ Idiomas
 Habilidades
 -----------
 
-Engenharia
-~~~~~~~~~~
-
-- Simulação e modelagem de sistemas de controle
-- Desenvolvimento de controladores industriais
-- Desenvolvimento de circuitos eletrônicos
-- Softwares para *Electronic Design Automation* (EDA): Kicad, gEDA, Orcad, Multisim
-- Softwares para automação industrial: WINCC, Step7, Indusoft Web Studio, Automation Studio
-- Softwares para computação numérica: GNU Octave, MATLAB
-
 Desenvolvimento de Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -107,6 +100,16 @@ Desenvolvimento de Software
   Cmake, Pkgconfig, Subversion, CVS, MySQL, SQLite3, etc.
 - Plataformas: Linux (Gentoo, Debian, Ubuntu), Windows (2000, XP, 7)
 - Bibliotecas: Qt, GTK, Glib, Readline, Libedit, Zlib, Xenomai, RTAI, etc.
+
+Eletrônica / Automação Industrial
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Simulação e modelagem de sistemas de controle
+- Desenvolvimento de controladores industriais
+- Desenvolvimento de circuitos eletrônicos
+- Softwares para *Electronic Design Automation* (EDA): Kicad, gEDA, Orcad, Multisim
+- Softwares para automação industrial: WINCC, Step7, Indusoft Web Studio, Automation Studio
+- Softwares para computação numérica: GNU Octave, MATLAB
 
 
 Publicações, Projetos, e Links
