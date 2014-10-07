@@ -55,7 +55,7 @@
                             (url_for('views.content', slug='about'), ['about'], 'About'),
                             (url_for('views.content', slug='projects'), ['projects'], 'Projects'),
                             (url_for('views.content', slug='talks'), ['talks'], 'Talks'),
-                            (url_for('views.content', slug='resume'), ['resume'], 'Resume'),
+                            (url_for('resume.main'), ['resume'], 'Resume'),
                         ] %}
                         <li{% if active_page in ids %} class="active"{%
                             endif %}><a href="{{ href }}">{{ title }}</a></li>
