@@ -54,6 +54,7 @@
                             (url_for('views.posts'), ['post', 'posts'], 'Blog'),
                             (url_for('views.content', slug='about'), ['about'], 'About'),
                             (url_for('views.content', slug='projects'), ['projects'], 'Projects'),
+                            (url_for('views.content', slug='talks'), ['talks'], 'Talks'),
                             (url_for('views.content', slug='resume'), ['resume'], 'Resume'),
                         ] %}
                         <li{% if active_page in ids %} class="active"{%
