@@ -21,7 +21,7 @@ Relevant experience
 Development Architect, Titans Group, *2013 - present*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Software architecture and development
+- Software architecture and development (Python)
 
 
 Developer (volunteer), Gentoo Linux, *2010 - present*
@@ -35,13 +35,16 @@ Developer (volunteer), Gentoo Linux, *2010 - present*
 Mentor (volunteer, Google Summer of Code), Google Inc., *2013*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Mentored Jauhien Piatlicki during 3 months, for Gentoo Linux
+- Mentored Jauhien Piatlicki during 3 months developing g-sorcery_, for Gentoo
+  Linux
+
+.. _g-sorcery: https://github.com/jauhien/g-sorcery
 
 
 Software Engineer, Collabora Ltd., *2012*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Software development
+- Software development (Python)
 - Quality assurance
 
 
@@ -62,7 +65,7 @@ Project Analist, Siemens Ltda, *2011 - 2012*
 Developer (Google Summer of Code), Google Inc., *2011*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Worked during 3 months developing distpatch_, for Gentoo Linux
+- Worked during 3 months developing distpatch_, for Gentoo Linux (C, Python)
 
 .. _distpatch: http://www.gentoo.org/proj/en/infrastructure/distpatch/
 
@@ -76,9 +79,9 @@ Intern, CIERMag/IFSC/USP, *2011*
 Developer (Google Summer of Code), Google Inc., *2010*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Worked during 3 months developing g-octave_, for Gentoo Linux
+- Worked during 3 months developing g-octave_, for Gentoo Linux (Python)
 
-.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
+.. _g-octave: https://github.com/rafaelmartins/g-octave
 
 
 Languages

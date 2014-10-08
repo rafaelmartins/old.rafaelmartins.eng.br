@@ -21,7 +21,7 @@ Experiência relevante
 Arquiteto de desenvolvimento, Titans Group, *2013 - presente*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Arquitetura e desenvolvimento de software
+- Arquitetura e desenvolvimento de software (Python)
 
 
 Desenvolvedor (voluntário), Gentoo Linux, *2010 - presente*
@@ -35,13 +35,16 @@ Desenvolvedor (voluntário), Gentoo Linux, *2010 - presente*
 Orientador (voluntário, Google Summer of Code), Google Inc., *2013*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Orientou Jauhien Piatlicki durante 3 meses, para o Gentoo Linux
+- Orientou Jauhien Piatlicki durante 3 meses desenvolvendo o g-sorcery_, para o
+  Gentoo Linux
+
+.. _g-sorcery: https://github.com/jauhien/g-sorcery
 
 
 Engenheiro de Software, Collabora Ltd., *2012*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Desenvolvimento de software
+- Desenvolvimento de software (Python)
 - Garantia de qualidade
 
 
@@ -63,6 +66,7 @@ Desenvolvedor (Google Summer of Code), Google Inc., *2011*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Trabalhou durante 3 meses desenvolvendo o distpatch_, para o Gentoo Linux
+  (C, Python)
 
 .. _distpatch: http://www.gentoo.org/proj/en/infrastructure/distpatch/
 
@@ -72,13 +76,14 @@ Estagiario, CIERMag/IFSC/USP, *2011*
 
 - Desenvolvimento de software (Python)
 
-.. _g-octave: http://git.overlays.gentoo.org/gitweb/?p=proj/g-octave.git
-
 
 Desenvolvedor (Google Summer of Code), Google Inc., *2010*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Trabalhou durante 3 meses desenvolvendo o g-octave_, para o Gentoo Linux
+  (Python)
+
+.. _g-octave: https://github.com/rafaelmartins/g-octave
 
 
 Idiomas
