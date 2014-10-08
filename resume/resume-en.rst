@@ -122,6 +122,7 @@ Writing, Projects, and Links
 - Blog about Free Software and Engineering at http://rafaelmartins.eng.br/
 - Profiles: GitHub_, Twitter_, Linkedin_, Facebook_
 - Projects: Are at http://rafaelmartins.eng.br/projects/
+- Talks: Are at: http://rafaelmartins.eng.br/talks/
 
 .. _blohg: http://blohg.org/
 .. _GitHub: https://github.com/rafaelmartins

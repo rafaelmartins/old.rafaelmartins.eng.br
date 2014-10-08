@@ -125,6 +125,7 @@ Publicações, Projetos, e Links
 - Blog sobre Software Livre e Engenharia em http://rafaelmartins.eng.br/
 - Perfis: GitHub_, Twitter_, Linkedin_, Facebook_
 - Projetos: Estão em http://rafaelmartins.eng.br/projects/
+- Palestras: Estão em http://rafaelmartins.eng.br/talks/
 
 .. _blohg: http://blohg.org/
 .. _GitHub: https://github.com/rafaelmartins
