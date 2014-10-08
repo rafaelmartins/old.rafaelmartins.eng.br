@@ -178,7 +178,7 @@ def reload_context(sender):
 
 
 @resume.route('/')
-def home():
+def main():
     return render_template('resume.html', locales=ext.g.locales)
 
 
