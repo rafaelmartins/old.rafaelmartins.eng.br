@@ -81,3 +81,5 @@ I like to study with **Dunlop .71mm** picks and **Ernie Ball Regular Slinky
 10-46** strings.
 
 Cables are all simple, blinded, handmade.
+
+Sometimes I use a cheap dedicated chromatic tuner with metronome.
