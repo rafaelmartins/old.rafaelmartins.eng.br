@@ -6,6 +6,7 @@ footer p {
     text-align: center;
     font-size: 18px;
     margin: 16px;
+    margin-top: 30px;
 }
 
 img.align-left, .figure.align-left, object.align-left, iframe.align-left {
@@ -97,6 +98,10 @@ h3 {
 }
 
 h4 {
+    margin-top: 20px;
+}
+
+h5 {
     margin-top: 20px;
 }
 
