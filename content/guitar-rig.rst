@@ -48,6 +48,23 @@ I use it most of the time, with my headphones, instead of using the amplifier.
 More info: http://www.zoom.co.jp/products/g1on
 
 
+Audio Interfaces
+----------------
+
+Behringer U-CONTROL UCA222
+``````````````````````````
+
+This is a simple audio interface, that I use to record myself playing and listen
+afterwards. I bought it because it is known to work fine on Linux, but I'm still
+struggling a bit with Audacity_.
+
+.. _Audacity: http://audacity.sourceforge.net/
+
+.. attachment-image:: guitar-rig/uca222.jpg
+
+More info: http://www.behringer.com/EN/Products/UCA222.aspx
+
+
 Amplifiers
 ----------
 
