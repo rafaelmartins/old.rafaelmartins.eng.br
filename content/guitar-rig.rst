@@ -58,6 +58,9 @@ This is a simple audio interface, that I use to record myself playing and listen
 afterwards. I bought it because it is known to work fine on Linux, but I'm still
 struggling a bit with Audacity_.
 
+This interface requires a pre-amplifier, then I need to use it together with
+my effects pedal.
+
 .. _Audacity: http://audacity.sourceforge.net/
 
 .. attachment-image:: guitar-rig/uca222.jpg
