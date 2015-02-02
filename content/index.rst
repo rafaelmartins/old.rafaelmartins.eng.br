@@ -6,9 +6,8 @@
 My name is Rafael Martins and this is my place on the web!
 
 As you come here, you may be interested in my `open source work`_, in my
-`professional resume`_, in my `technical blog`_, or in my `personal blog`_ (in
-brazilian portuguese). You can also learn more `about me`_ and get in touch,
-if you want. ;-)
+`professional resume`_, in my `technical blog`_, or in my `personal blog`_.
+You can also learn more `about me`_ and get in touch, if you want. ;-)
 
 For nerds: the sources of this website are `publicly available`_.
 
