@@ -29,7 +29,6 @@ Contact
 - **Email (Gentoo-related stuff)**: rafaelmartins [at] gentoo [dot] org
 - **Email (Work-related stuff)**: rafael.martins [at] titansgroup [dot] com [dot] br
 - **IRC**: rafaelmartins [at] irc.{freenode,oftc}.net
-- **Facebook**: http://www.facebook.com/rafaelgmartins
 - **Twitter**: http://twitter.com/rafaelmartins/
 - **PGP key**: `E894ABDE <http://pgp.mit.edu/pks/lookup?op=get&search=0x3EF74952E894ABDE>`_
 

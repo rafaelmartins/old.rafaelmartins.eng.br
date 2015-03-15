@@ -13,7 +13,6 @@ EXTENSIONS:
     - redirect
     - resume
 REDIRECT:
-    facebook: https://www.facebook.com/rafaelgmartins
     twitter: https://twitter.com/rafaelmartins
     medium: http://bit.ly/1gbznNo
     lattes: http://lattes.cnpq.br/7365999517312436
