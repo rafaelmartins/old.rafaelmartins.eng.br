@@ -123,15 +123,14 @@ Publicações, Projetos, e Links
 - g-octave_ - Uma ferramanta que gera e instala *ebuilds* para pacotes do
   Octave-forge no Gentoo Linux
 - Blog sobre Software Livre e Engenharia em http://rafaelmartins.eng.br/
-- Perfis: GitHub_, Twitter_, Linkedin_, Facebook_
+- Perfis: GitHub_, Linkedin_, Twitter_
 - Projetos: Estão em http://rafaelmartins.eng.br/projects/
 - Palestras: Estão em http://rafaelmartins.eng.br/talks/
 
 .. _blohg: http://blohg.org/
 .. _GitHub: https://github.com/rafaelmartins
-.. _Twitter: http://twitter.com/rafaelmartins/
 .. _LinkedIn: http://www.linkedin.com/in/rafaelgmartins/
-.. _Facebook: http://facebook.com/rafaelgmartins/
+.. _Twitter: http://twitter.com/rafaelmartins/
 
 .. last-modified::
 
