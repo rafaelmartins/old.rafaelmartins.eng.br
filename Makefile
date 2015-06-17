@@ -1,7 +1,10 @@
 all: build/
 
-build/:
+build/: clean
 	blohg freeze
+
+run: clean
+	blohg freeze -s
 
 deploy: build/
 	github-pages-publish \
@@ -13,4 +16,4 @@ deploy: build/
 clean:
 	rm -rf build/
 
-.PHONY: all deploy clean
+.PHONY: all run deploy clean
