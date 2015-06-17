@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Rafael Martins</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="blohg 0.13+/e8d8e6d" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/static/custom.css" />
+        <link type="text/css" rel="stylesheet" href="/static/pygments.css" />
+        <!--[if lt IE 9]>
+        <script src="/static/bootstrap/js/html5shiv.js"></script>
+        <script src="/static/bootstrap/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="alternate" type="application/atom+xml" href="/atom.atom" title="Rafael Martins" />
+
+<!-- begin opengraph header -->
+
+<meta prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#" />
+<meta property="og:site_name" content="Rafael Martins" />
+<meta property="og:url" content="http://old.rafaelmartins.eng.br/posts/" />
+<meta property="og:title" content="Rafael Martins" />
+<meta property="og:description" content="Gentoo Linux, Engineering and random stuff." />
+
+<!-- end opengraph header -->
+
+<!-- begin disqus header -->
+
+
+<!-- end disqus header -->
+
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Rafael Martins</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/talks/">Talks</a></li>
+                        <li><a href="/guitar-rig/">Guitar Rig</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+<!-- begin content -->
+
+<article>
+    <h3><a href="/post/introducing-pyoembed/">Introducing pyoembed</a></h3>
+
+<!-- begin html parsed by docutils -->
+
+<!-- tags: en-us, pyoembed, oembed, python, gentoo -->
+<blockquote class="pull-quote">
+<strong>Warning</strong>: This is a (very) delayed announcement! ;-)</blockquote>
+<p><a class="reference external" href="http://oembed.com/">oEmbed</a> is an open standard for embedded content. It allows users to embed some
+resource, like a picture or a video, in a web page using only the resource URL,
+without knowing the details of how to embed the resource in a web page.</p>
+<p><a class="reference external" href="http://oembed.com/">oEmbed</a> isn't new stuff. It was created around 2008, and despite not being
+widely supported by content providers, it is supported by some big players,
+like YouTube, Vimeo, Flickr and Instagram, making its usage highly viable.</p>
+<p>To support the <a class="reference external" href="http://oembed.com/">oEmbed</a> standard, the content provider just needs to provide a
+simple API endpoint, that receives an URL and a few other parameters, like the
+maximum allowed height/width, and returns a JSON or XML object, with ready-to-use
+embeddable code.</p>
+<p>The content provider API endpoint can be previously known by the oEmbed client,
+or auto-discovered using some meta tags added to the resource's HTML page. This is
+the point where the standard isn't precise enough: not all of the providers support
+auto-discovering of the API endpoint, neither all of the providers are properly
+listed on the <a class="reference external" href="http://oembed.com/">oEmbed</a> specification. Proper <a class="reference external" href="http://oembed.com/">oEmbed</a> clients should try both
+approaches, looking for known providers first, falling back to auto-discovered
+endpoints, if possible.</p>
+<p>Each of the <a class="reference external" href="http://code.google.com/p/python-oembed/">Python</a> <a class="reference external" href="http://pyembed.github.io/">libraries</a> for <a class="reference external" href="http://oembed.com/">oEmbed</a> decided to follow one of the mentioned
+approaches, without caring about the other one, failing to support relevant
+providers. And this is the reason why I decided to start writing pyoembed!</p>
+
+
+<!-- end html parsed by docutils -->
+
+    <p><a class="btn btn-default" href="/post/introducing-pyoembed/">Read more</a></p><div class="clear"></div>
+    <div class="metadata well well-sm">
+        <p><span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span> <span class="label label-default"><a href="/tag/pyoembed/"><i class="glyphicon glyphicon-tag"></i> pyoembed</a></span> <span class="label label-default"><a href="/tag/oembed/"><i class="glyphicon glyphicon-tag"></i> oembed</a></span> <span class="label label-default"><a href="/tag/python/"><i class="glyphicon glyphicon-tag"></i> python</a></span> <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span> </p>
+        Author: <a href="mailto:rafael@rafaelmartins.eng.br">Rafael G. Martins</a>
+        <br />
+        Published on: Aug 9, 2014, 9:46:25 PM
+        <br />
+        <a href="/post/introducing-pyoembed/">Permalink</a> - <a href="/source/post/introducing-pyoembed.txt">Source code</a> - <a href="/post/introducing-pyoembed/#disqus_thread">Comments</a>
+    </div>
+
+<!-- start disqus post -->
+
+
+<!-- end disqus post -->
+
+
+<article>
+    <h3><a href="/post/gentoo-news-for-pic-devs/">Gentoo: News for PIC developers</a></h3>
+
+<!-- begin html parsed by docutils -->
+
+<!-- tags: en-us,gentoo,electronics,pic -->
+<p>Some weeks ago I decided to restart working with PIC microcontrollers, just for fun,
+and bought some electronic components, tools, etc. After having everything in hands,
+I started looking at the state of the PIC development tools in Gentoo, and found some
+outdated packages. I updated the packages I wanted to use (<tt class="docutils literal"><span class="pre">dev-embedded/gputils</span></tt>
+and <tt class="docutils literal"><span class="pre">dev-embedded/gpsim</span></tt>; <tt class="docutils literal"><span class="pre">dev-embedded/sdcc</span></tt> still needs some work), and added
+some other packages (<tt class="docutils literal"><span class="pre">dev-embedded/cpik</span></tt>, a C compiler for PIC 18F, and re-added
+<tt class="docutils literal"><span class="pre">dev-embedded/pikdev</span></tt>, a simple graphic IDE for the development of PIC-based
+applications, that was previously removed due to the usage of kdelibs3, and now is a
+Qt4-only application).</p>
+<p>I'll be putting some effort on packaging the MPLAB X IDE and the XC8 compiler in the
+next weeks, if permitted by their licenses. I'm not sure yet.</p>
+<p>That's all for now.</p>
+<p>Thanks.</p>
+
+
+<!-- end html parsed by docutils -->
+
+    <div class="clear"></div>
+    <div class="metadata well well-sm">
+        <p><span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span> <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span> <span class="label label-default"><a href="/tag/electronics/"><i class="glyphicon glyphicon-tag"></i> electronics</a></span> <span class="label label-default"><a href="/tag/pic/"><i class="glyphicon glyphicon-tag"></i> pic</a></span> </p>
+        Author: <a href="mailto:rafael@rafaelmartins.eng.br">Rafael G. Martins</a>
+        <br />
+        Published on: Dec 26, 2013, 3:31:54 AM
+        <br />
+        <a href="/post/gentoo-news-for-pic-devs/">Permalink</a> - <a href="/source/post/gentoo-news-for-pic-devs.txt">Source code</a> - <a href="/post/gentoo-news-for-pic-devs/#disqus_thread">Comments</a>
+    </div>
+
+<!-- start disqus post -->
+
+
+<!-- end disqus post -->
+
+
+<article>
+    <h3><a href="/post/gsoc-and-scrum/">GSoC and Scrum</a></h3>
+
+<!-- begin html parsed by docutils -->
+
+<!-- tags: en-us,gentoo,gsoc -->
+<p>This year I helped the <a class="reference external" href="http://wiki.gentoo.org/wiki/Google_Summer_of_Code/2013">Gentoo GSoC</a> project as a mentor for the first time! I
+mentored Jauhien Piatlicki, that worked on the g-sorcery project, that is a
+framework for automated ebuild generators. It is meant to replace g-octave
+and some of the other Gentoo automated ebuild generators in the future.</p>
+<p>For those who don't know, <a class="reference external" href="http://www.google-melange.com/gsoc/homepage/google/gsoc2013">Google Summer of Code</a> is a Google program that
+pays a student to work during 3 months on an open source project.</p>
+<p>I have been using Scrum at work for some time already, and asked Jauhien about
+trying to use it in our project. We agreed on using it wherever it made sense
+for our workflow. In other words, we adapted Scrum to our workflow, instead of
+adapt our workflow to Scrum. That's because none of us was a Scrum expert, and
+because we needed to follow Gentoo/Google guidelines and timeline during all
+the project, making it hard to apply some aspects of the Scrum methodologies.</p>
+<p>We had sprints of 2 weeks, starting on monday, after a quick planning on IRC.
+We had a private IRC channel at Freenode, where we discussed stuff, had
+meetings, etc.</p>
+
+
+<!-- end html parsed by docutils -->
+
+    <p><a class="btn btn-default" href="/post/gsoc-and-scrum/">Read more</a></p><div class="clear"></div>
+    <div class="metadata well well-sm">
+        <p><span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span> <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span> <span class="label label-default"><a href="/tag/gsoc/"><i class="glyphicon glyphicon-tag"></i> gsoc</a></span> </p>
+        Author: <a href="mailto:rafael@rafaelmartins.eng.br">Rafael G. Martins</a>
+        <br />
+        Published on: Nov 1, 2013, 4:34:52 AM - Modified on: Nov 3, 2013, 3:57:52 AM
+        <br />
+        <a href="/post/gsoc-and-scrum/">Permalink</a> - <a href="/source/post/gsoc-and-scrum.txt">Source code</a> - <a href="/post/gsoc-and-scrum/#disqus_thread">Comments</a>
+    </div>
+
+<!-- start disqus post -->
+
+
+<!-- end disqus post -->
+
+
+<article>
+    <h3><a href="/post/creating-a-tumblelog-with-blohg/">Creating a tumblelog with blohg</a></h3>
+
+<!-- begin html parsed by docutils -->
+
+<!-- tags: en-us,blohg,gentoo -->
+<p>Tumblelogs are <a class="reference external" href="http://www.kottke.org/05/10/tumblelogs">old stuff</a>, but
+services like <a class="reference external" href="http://tumblr.com/">Tumblr</a> popularized them a lot recently.
+Thumblelogs are a quick and simple way to share random content with readers.
+They can be used to share a link, a photo, a video, a quote, a chat log, etc.</p>
+<p>blohg is a good blogging engine, we know, but what about tumblelogs?!</p>
+<p>You can already share videos from Youtube and Vimeo, and can share most of the
+other stuff manually, but it is boring, and diverges from the main objective of
+the tumblelogs: simplicity.</p>
+
+
+<!-- end html parsed by docutils -->
+
+    <p><a class="btn btn-default" href="/post/creating-a-tumblelog-with-blohg/">Read more</a></p><div class="clear"></div>
+    <div class="metadata well well-sm">
+        <p><span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span> <span class="label label-default"><a href="/tag/blohg/"><i class="glyphicon glyphicon-tag"></i> blohg</a></span> <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span> </p>
+        Author: <a href="mailto:rafael@rafaelmartins.eng.br">Rafael G. Martins</a>
+        <br />
+        Published on: Dec 21, 2012, 5:39:19 AM - Modified on: Jan 19, 2014, 1:31:57 AM
+        <br />
+        <a href="/post/creating-a-tumblelog-with-blohg/">Permalink</a> - <a href="/source/post/creating-a-tumblelog-with-blohg.txt">Source code</a> - <a href="/post/creating-a-tumblelog-with-blohg/#disqus_thread">Comments</a>
+    </div>
+
+<!-- start disqus post -->
+
+
+<!-- end disqus post -->
+
+
+
+<!-- start pagination -->
+
+<ul class="pager">
+    <li class="previous disabled"><span>&larr; Newer</span></li>
+    <li class="next"><a href="/page/2/">Older &rarr;</a></li>
+</ul>
+
+<!-- end pagination -->
+
+<!-- end content -->
+
+                </div>
+                <div class="col-md-3 sidebar">
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Blog Tags</h4>
+                        </div>
+                        <div class="panel-body tagcloud">
+                            <span class="label label-default"><a href="/tag/bitbucket/"><i class="glyphicon glyphicon-tag"></i> bitbucket</a></span>
+                            <span class="label label-default"><a href="/tag/blohg/"><i class="glyphicon glyphicon-tag"></i> blohg</a></span>
+                            <span class="label label-default"><a href="/tag/celtic-folk/"><i class="glyphicon glyphicon-tag"></i> celtic-folk</a></span>
+                            <span class="label label-default"><a href="/tag/collabora/"><i class="glyphicon glyphicon-tag"></i> collabora</a></span>
+                            <span class="label label-default"><a href="/tag/diffball/"><i class="glyphicon glyphicon-tag"></i> diffball</a></span>
+                            <span class="label label-default"><a href="/tag/electronics/"><i class="glyphicon glyphicon-tag"></i> electronics</a></span>
+                            <span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span>
+                            <span class="label label-default"><a href="/tag/engineering/"><i class="glyphicon glyphicon-tag"></i> engineering</a></span>
+                            <span class="label label-default"><a href="/tag/events/"><i class="glyphicon glyphicon-tag"></i> events</a></span>
+                            <span class="label label-default"><a href="/tag/fisl/"><i class="glyphicon glyphicon-tag"></i> fisl</a></span>
+                            <span class="label label-default"><a href="/tag/g-octave/"><i class="glyphicon glyphicon-tag"></i> g-octave</a></span>
+                            <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span>
+                            <span class="label label-default"><a href="/tag/git/"><i class="glyphicon glyphicon-tag"></i> git</a></span>
+                            <span class="label label-default"><a href="/tag/google/"><i class="glyphicon glyphicon-tag"></i> google</a></span>
+                            <span class="label label-default"><a href="/tag/gsoc/"><i class="glyphicon glyphicon-tag"></i> gsoc</a></span>
+                            <span class="label label-default"><a href="/tag/lua/"><i class="glyphicon glyphicon-tag"></i> lua</a></span>
+                            <span class="label label-default"><a href="/tag/mercurial/"><i class="glyphicon glyphicon-tag"></i> mercurial</a></span>
+                            <span class="label label-default"><a href="/tag/music/"><i class="glyphicon glyphicon-tag"></i> music</a></span>
+                            <span class="label label-default"><a href="/tag/oembed/"><i class="glyphicon glyphicon-tag"></i> oembed</a></span>
+                            <span class="label label-default"><a href="/tag/pic/"><i class="glyphicon glyphicon-tag"></i> pic</a></span>
+                            <span class="label label-default"><a href="/tag/pt-br/"><i class="glyphicon glyphicon-tag"></i> pt-br</a></span>
+                            <span class="label label-default"><a href="/tag/pyoembed/"><i class="glyphicon glyphicon-tag"></i> pyoembed</a></span>
+                            <span class="label label-default"><a href="/tag/python/"><i class="glyphicon glyphicon-tag"></i> python</a></span>
+                            <span class="label label-default"><a href="/tag/random-stuff/"><i class="glyphicon glyphicon-tag"></i> random-stuff</a></span>
+                            <span class="label label-default"><a href="/tag/scottish-folk/"><i class="glyphicon glyphicon-tag"></i> scottish-folk</a></span>
+                            <span class="label label-default"><a href="/tag/stupid-stuff/"><i class="glyphicon glyphicon-tag"></i> stupid-stuff</a></span>
+                        </div>
+                    </div>
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Under the hood</h4>
+                        </div>
+                        <div class="list-group">
+                            <a class="list-group-item" href="http://blohg.org/">blohg</a>
+                            <a class="list-group-item" href="http://git-scm.com/">Git</a>
+                            <a class="list-group-item" href="http://www.gentoo.org/">Gentoo Linux</a>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Content License</h4>
+                        </div>
+                        <div class="panel-body">
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                                <img alt="Creative Commons License" class="license"
+                                    src="/static/creative-commons-88x31.png" />
+                            </a>
+                            This work is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-nc/4.0/">
+                                Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Disclaimer</h4>
+                        </div>
+                        <div class="panel-body">
+                            This is a personal weblog. The opinions expressed here represent my own
+                            and not those of my employer, Gentoo Foundation or anyone else.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Powered by: <a href="http://blohg.org/">blohg 0.13+/e8d8e6d</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="/static/bootstrap/js/jquery.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/resize.js"></script>
+
+<!-- begin disqus footer -->
+
+<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/rafaelmartins-en/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+</script>
+
+<!-- end disqus footer -->
+
+<!-- begin google analytics -->
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-2886928-8");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+<!-- end google analytics -->
+
+    </body>
+</html>

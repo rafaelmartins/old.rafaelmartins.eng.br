@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » blohg</title>
+  <id>/atom/blohg.atom</id>
+  <updated>2012-12-21T05:39:19Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/blohg.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">Creating a tumblelog with blohg</title>
+    <id>/post/creating-a-tumblelog-with-blohg/</id>
+    <updated>2012-12-21T05:39:19Z</updated>
+    <published>2012-12-21T05:39:19Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/creating-a-tumblelog-with-blohg/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,blohg,gentoo --&gt;
+&lt;p&gt;Tumblelogs are &lt;a class=&quot;reference external&quot; href=&quot;http://www.kottke.org/05/10/tumblelogs&quot;&gt;old stuff&lt;/a&gt;, but
+services like &lt;a class=&quot;reference external&quot; href=&quot;http://tumblr.com/&quot;&gt;Tumblr&lt;/a&gt; popularized them a lot recently.
+Thumblelogs are a quick and simple way to share random content with readers.
+They can be used to share a link, a photo, a video, a quote, a chat log, etc.&lt;/p&gt;
+&lt;p&gt;blohg is a good blogging engine, we know, but what about tumblelogs?!&lt;/p&gt;
+&lt;p&gt;You can already share videos from Youtube and Vimeo, and can share most of the
+other stuff manually, but it is boring, and diverges from the main objective of
+the tumblelogs: simplicity.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,blohg,gentoo --&gt;
+&lt;p&gt;Tumblelogs are &lt;a class=&quot;reference external&quot; href=&quot;http://www.kottke.org/05/10/tumblelogs&quot;&gt;old stuff&lt;/a&gt;, but
+services like &lt;a class=&quot;reference external&quot; href=&quot;http://tumblr.com/&quot;&gt;Tumblr&lt;/a&gt; popularized them a lot recently.
+Thumblelogs are a quick and simple way to share random content with readers.
+They can be used to share a link, a photo, a video, a quote, a chat log, etc.&lt;/p&gt;
+&lt;p&gt;blohg is a good blogging engine, we know, but what about tumblelogs?!&lt;/p&gt;
+&lt;p&gt;You can already share videos from Youtube and Vimeo, and can share most of the
+other stuff manually, but it is boring, and diverges from the main objective of
+the tumblelogs: simplicity.&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;p&gt;To solve this issue, I developed a &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/rafael.martins.im/blob/master/ext/blohg_tumblelog.py&quot;&gt;blohg extension&lt;/a&gt;
+(Yeah, blohg-1.0 supports extensions! &lt;tt class=&quot;docutils literal&quot;&gt;\o/&lt;/tt&gt; ) that adds some cool
+reStructuredText directives:&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;link&quot;&gt;
+&lt;h4&gt;link&lt;/h4&gt;
+&lt;p&gt;This directive is used to share links. It will embed the content of the link to
+the post automatically, if the provided link is from a service that supports
+the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; protocol. If it isn't, and the link is from
+a HTML page, it will include the link with the title of the page to the post.
+Otherwise it will just include the raw link to the post.&lt;/p&gt;
+&lt;p&gt;Usage example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt; http://www.youtube.com/watch?v=gp30v6XMxBg
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;quote&quot;&gt;
+&lt;h4&gt;quote&lt;/h4&gt;
+&lt;p&gt;This directive is used to share quotes. It will create a &lt;tt class=&quot;docutils literal&quot;&gt;blockquote&lt;/tt&gt; element
+with the quote and add a signature with the author name, if provided.&lt;/p&gt;
+&lt;p&gt;Usage example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;
+   &lt;span class=&quot;nc&quot;&gt;:author:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Myself&lt;/span&gt;
+
+   This is a random quote!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;chat&quot;&gt;
+&lt;h4&gt;chat&lt;/h4&gt;
+&lt;p&gt;This directive is used to share chat logs. It will add a div with the chat log,
+highlighted with &lt;a class=&quot;reference external&quot; href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Usage example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;chat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;
+
+   [00:56:38] &amp;lt;rafaelmartins&amp;gt; I&amp;#39;m crazy.
+   [00:56:48] &amp;lt;rafaelmartins&amp;gt; I chat alone.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;p&gt;You can see the directives in action on my shiny new tumblelog:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://rafael.martins.im/&quot;&gt;http://rafael.martins.im/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The source code of the tumblelog, including the blohg extension and the
+mobile-friendly templates, is available here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/rafael.martins.im&quot;&gt;https://github.com/rafaelmartins/rafael.martins.im&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I have no plans to release this extension as part of blohg, but feel free to
+use it if you find it useful!&lt;/p&gt;
+&lt;p&gt;That's all!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">Deploying blohg to bitbucket</title>
+    <id>/post/deploying-blohg-to-bitbucket/</id>
+    <updated>2012-08-13T02:35:34Z</updated>
+    <published>2012-08-13T02:35:34Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/deploying-blohg-to-bitbucket/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,blohg,bitbucket,mercurial --&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt; is a repository hosting service widely used by &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; users.
+Its basic plan is free and includes unlimited private repositories.&lt;/p&gt;
+&lt;p&gt;Some people don't know, because it isn't widely advertised, but &lt;a class=&quot;reference external&quot; href=&quot;http://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt;
+provides free web hosting for static files. Any files stored in a repo called
+&lt;tt class=&quot;docutils literal&quot;&gt;username.bitbucket.org&lt;/tt&gt; will be served from &lt;a class=&quot;reference external&quot; href=&quot;http://username.bitbucket.org/&quot;&gt;http://username.bitbucket.org/&lt;/a&gt;.
+It just works for user names, as far as I know.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,blohg,bitbucket,mercurial --&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt; is a repository hosting service widely used by &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; users.
+Its basic plan is free and includes unlimited private repositories.&lt;/p&gt;
+&lt;p&gt;Some people don't know, because it isn't widely advertised, but &lt;a class=&quot;reference external&quot; href=&quot;http://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt;
+provides free web hosting for static files. Any files stored in a repo called
+&lt;tt class=&quot;docutils literal&quot;&gt;username.bitbucket.org&lt;/tt&gt; will be served from &lt;a class=&quot;reference external&quot; href=&quot;http://username.bitbucket.org/&quot;&gt;http://username.bitbucket.org/&lt;/a&gt;.
+It just works for user names, as far as I know.&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;p&gt;Some documentation is available here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://confluence.atlassian.com/display/BITBUCKET/Publishing+a+Website+on+bitbucket&quot;&gt;https://confluence.atlassian.com/display/BITBUCKET/Publishing+a+Website+on+bitbucket&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I never cared about creating a way to build a static version of a blohg-based
+blog, but blohg is open-source and someone else cared about it. :)&lt;/p&gt;
+&lt;p&gt;Benoît Allard implemented a &lt;tt class=&quot;docutils literal&quot;&gt;freeze&lt;/tt&gt; command for blohg, that uses the
+&lt;a class=&quot;reference external&quot; href=&quot;http://packages.python.org/Frozen-Flask/&quot;&gt;Frozen-Flask&lt;/a&gt; extension to create a static version of the blog, and it was
+merged with blohg a long time ago.&lt;/p&gt;
+&lt;p&gt;I will list here the basic steps required to get your blohg-based blog
+running on &lt;a class=&quot;reference external&quot; href=&quot;http://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;creating-the-bitbucket-repository&quot;&gt;
+&lt;h4&gt;Creating the Bitbucket repository&lt;/h4&gt;
+&lt;p&gt;First of all, create a repository using the Bitbucket web interface.
+It should be named &lt;tt class=&quot;docutils literal&quot;&gt;username.bitbucket.org&lt;/tt&gt;. For example, if your username
+is &lt;tt class=&quot;docutils literal&quot;&gt;john&lt;/tt&gt;, your repository will be &lt;tt class=&quot;docutils literal&quot;&gt;john.bitbucket.org&lt;/tt&gt;. I'll use &lt;tt class=&quot;docutils literal&quot;&gt;blohg&lt;/tt&gt;
+as the username for this example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;setting-up-your-blohg-repository-before-freeze-the-content&quot;&gt;
+&lt;h4&gt;Setting up your blohg repository before &amp;quot;freeze&amp;quot; the content&lt;/h4&gt;
+&lt;p&gt;Supposing that you already have a blohg repository with the sources of your
+blog, created following the &lt;a class=&quot;reference external&quot; href=&quot;http://docs.blohg.org&quot;&gt;official documentation&lt;/a&gt;,
+you should add the following content to your &lt;tt class=&quot;docutils literal&quot;&gt;.hgignore&lt;/tt&gt; file, if it wasn't
+added yet by the default blohg template:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+^build/
+&lt;/pre&gt;
+&lt;p&gt;This will prevent your blohg repository of include the build files by mistake.&lt;/p&gt;
+&lt;p&gt;Now commit the &lt;tt class=&quot;docutils literal&quot;&gt;.hgignore&lt;/tt&gt; file to the repository, if needed:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg commit -Am 'Added .hgignore'
+&lt;/pre&gt;
+&lt;p&gt;These two steps aren't needed if your blohg repository was created using the
+template shipped with a recent enough version of blohg.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;creating-a-makefile-to-automate-the-deployment&quot;&gt;
+&lt;h4&gt;Creating a Makefile to automate the deployment&lt;/h4&gt;
+&lt;p&gt;Now create a &lt;tt class=&quot;docutils literal&quot;&gt;Makefile&lt;/tt&gt; file at the root of your blohg repository, with the
+following content (make sure to change &lt;tt class=&quot;docutils literal&quot;&gt;blohg&lt;/tt&gt; to your username):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nf&quot;&gt;.PHONY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;push&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;USERNAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;blohg
+&lt;span class=&quot;nv&quot;&gt;REPO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;USERNAME&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.bitbucket.org
+
+&lt;span class=&quot;nf&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    blohg freeze
+    hg clone ssh://hg@bitbucket.org/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;USERNAME&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/ /tmp/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    cp -vr build/* /tmp/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/
+    hg commit -Am &lt;span class=&quot;s2&quot;&gt;&amp;quot;blohg update: $(shell date)&amp;quot;&lt;/span&gt; -R /tmp/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    hg push -R /tmp/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    rm -rf /tmp/&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;REPO&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This &lt;tt class=&quot;docutils literal&quot;&gt;Makefile&lt;/tt&gt; isn't optimal, as it will clone/delete a local copy of the
+repository each time you deploy your blog, but I think that you got the idea
+and can improve it by yourself. :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;commiting-the-makefile-to-your-blohg-repository&quot;&gt;
+&lt;h4&gt;Commiting the Makefile to your blohg repository&lt;/h4&gt;
+&lt;p&gt;You can add this &lt;tt class=&quot;docutils literal&quot;&gt;Makefile&lt;/tt&gt; to your blohg repository, to make the deployments
+easier everywhere:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg commit -Am 'Added Makefile'
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;publishing-the-blog&quot;&gt;
+&lt;h4&gt;Publishing the blog&lt;/h4&gt;
+&lt;p&gt;If everything is ok you should be able to publish your blog running the
+following command:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ make push
+&lt;/pre&gt;
+&lt;p&gt;If you was already using the repository, you may get some conflicts. You'll
+need to fix them by yourself, like you usually do for your software projects
+versioned with &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt;. :)&lt;/p&gt;
+&lt;p&gt;You should run this command each time you publish a new post, change some
+configuration parameter, etc. Make sure to run it after commit the changes
+to the blohg repository.&lt;/p&gt;
+&lt;p&gt;That's it, have fun!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">blohg, A Mercurial based blog engine</title>
+    <id>/post/blohg-a-mercurial-based-blog-engine/</id>
+    <updated>2011-05-24T05:57:17Z</updated>
+    <published>2011-05-24T05:57:17Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/blohg-a-mercurial-based-blog-engine/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,blohg,gentoo --&gt;
+&lt;p&gt;The more detail-oriented people may have noticed that this blog runs on a
+different blog engine, called &lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;blohg&lt;/a&gt;, that's developed by myself. I'm
+developing it for some time already, but it's the first time that I'm talking
+about it here.&lt;/p&gt;
+&lt;p&gt;It's my pet project, that I do for fun when I'm annoyed with the real world
+issues, and wasn't created to be distributed. This situation changed a bit
+during the last months and now it have a few users, a website
+(&lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;http://blohg.org/&lt;/a&gt;), and is distributed in the &lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/&quot;&gt;Python Package index&lt;/a&gt;
+(&lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/pypi/blohg&quot;&gt;http://pypi.python.org/pypi/blohg&lt;/a&gt;) and &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; (&lt;a class=&quot;reference external&quot; href=&quot;http://packages.gentoo.org/package/www-apps/blohg&quot;&gt;www-apps/blohg&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It uses &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; to store and manage the blog content, and &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt;
+as markup language. There's also some cool features implemented. Take a look at
+the official documentation here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://docs.blohg.org/&quot;&gt;http://docs.blohg.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you like &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; and want something new for your blog, give &lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;blohg&lt;/a&gt; a try.
+:)&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,blohg,gentoo --&gt;
+&lt;p&gt;The more detail-oriented people may have noticed that this blog runs on a
+different blog engine, called &lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;blohg&lt;/a&gt;, that's developed by myself. I'm
+developing it for some time already, but it's the first time that I'm talking
+about it here.&lt;/p&gt;
+&lt;p&gt;It's my pet project, that I do for fun when I'm annoyed with the real world
+issues, and wasn't created to be distributed. This situation changed a bit
+during the last months and now it have a few users, a website
+(&lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;http://blohg.org/&lt;/a&gt;), and is distributed in the &lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/&quot;&gt;Python Package index&lt;/a&gt;
+(&lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/pypi/blohg&quot;&gt;http://pypi.python.org/pypi/blohg&lt;/a&gt;) and &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; (&lt;a class=&quot;reference external&quot; href=&quot;http://packages.gentoo.org/package/www-apps/blohg&quot;&gt;www-apps/blohg&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;It uses &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; to store and manage the blog content, and &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt;
+as markup language. There's also some cool features implemented. Take a look at
+the official documentation here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://docs.blohg.org/&quot;&gt;http://docs.blohg.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you like &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; and want something new for your blog, give &lt;a class=&quot;reference external&quot; href=&quot;http://blohg.org/&quot;&gt;blohg&lt;/a&gt; a try.
+:)&lt;/p&gt;
+</content>
+  </entry>
+</feed>

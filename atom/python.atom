@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » python</title>
+  <id>/atom/python.atom</id>
+  <updated>2014-08-09T21:46:25Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/python.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">Introducing pyoembed</title>
+    <id>/post/introducing-pyoembed/</id>
+    <updated>2014-08-09T21:46:25Z</updated>
+    <published>2014-08-09T21:46:25Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/introducing-pyoembed/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us, pyoembed, oembed, python, gentoo --&gt;
+&lt;blockquote class=&quot;pull-quote&quot;&gt;
+&lt;strong&gt;Warning&lt;/strong&gt;: This is a (very) delayed announcement! ;-)&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; is an open standard for embedded content. It allows users to embed some
+resource, like a picture or a video, in a web page using only the resource URL,
+without knowing the details of how to embed the resource in a web page.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; isn't new stuff. It was created around 2008, and despite not being
+widely supported by content providers, it is supported by some big players,
+like YouTube, Vimeo, Flickr and Instagram, making its usage highly viable.&lt;/p&gt;
+&lt;p&gt;To support the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; standard, the content provider just needs to provide a
+simple API endpoint, that receives an URL and a few other parameters, like the
+maximum allowed height/width, and returns a JSON or XML object, with ready-to-use
+embeddable code.&lt;/p&gt;
+&lt;p&gt;The content provider API endpoint can be previously known by the oEmbed client,
+or auto-discovered using some meta tags added to the resource's HTML page. This is
+the point where the standard isn't precise enough: not all of the providers support
+auto-discovering of the API endpoint, neither all of the providers are properly
+listed on the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; specification. Proper &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; clients should try both
+approaches, looking for known providers first, falling back to auto-discovered
+endpoints, if possible.&lt;/p&gt;
+&lt;p&gt;Each of the &lt;a class=&quot;reference external&quot; href=&quot;http://code.google.com/p/python-oembed/&quot;&gt;Python&lt;/a&gt; &lt;a class=&quot;reference external&quot; href=&quot;http://pyembed.github.io/&quot;&gt;libraries&lt;/a&gt; for &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; decided to follow one of the mentioned
+approaches, without caring about the other one, failing to support relevant
+providers. And this is the reason why I decided to start writing pyoembed!&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us, pyoembed, oembed, python, gentoo --&gt;
+&lt;blockquote class=&quot;pull-quote&quot;&gt;
+&lt;strong&gt;Warning&lt;/strong&gt;: This is a (very) delayed announcement! ;-)&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; is an open standard for embedded content. It allows users to embed some
+resource, like a picture or a video, in a web page using only the resource URL,
+without knowing the details of how to embed the resource in a web page.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; isn't new stuff. It was created around 2008, and despite not being
+widely supported by content providers, it is supported by some big players,
+like YouTube, Vimeo, Flickr and Instagram, making its usage highly viable.&lt;/p&gt;
+&lt;p&gt;To support the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; standard, the content provider just needs to provide a
+simple API endpoint, that receives an URL and a few other parameters, like the
+maximum allowed height/width, and returns a JSON or XML object, with ready-to-use
+embeddable code.&lt;/p&gt;
+&lt;p&gt;The content provider API endpoint can be previously known by the oEmbed client,
+or auto-discovered using some meta tags added to the resource's HTML page. This is
+the point where the standard isn't precise enough: not all of the providers support
+auto-discovering of the API endpoint, neither all of the providers are properly
+listed on the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; specification. Proper &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; clients should try both
+approaches, looking for known providers first, falling back to auto-discovered
+endpoints, if possible.&lt;/p&gt;
+&lt;p&gt;Each of the &lt;a class=&quot;reference external&quot; href=&quot;http://code.google.com/p/python-oembed/&quot;&gt;Python&lt;/a&gt; &lt;a class=&quot;reference external&quot; href=&quot;http://pyembed.github.io/&quot;&gt;libraries&lt;/a&gt; for &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; decided to follow one of the mentioned
+approaches, without caring about the other one, failing to support relevant
+providers. And this is the reason why I decided to start writing pyoembed!&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;p&gt;pyoembed is a simple and easy to use implementation of the &lt;a class=&quot;reference external&quot; href=&quot;http://oembed.com/&quot;&gt;oEmbed&lt;/a&gt; standard for
+Python, that supports both auto-discovered and explicitly defined providers,
+supporting most (if not all) the relevant providers.&lt;/p&gt;
+&lt;p&gt;pyoembed's architecture makes it easy to add new providers and supports most of
+the existing providers out of the box.&lt;/p&gt;
+&lt;p&gt;To install it, just type:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ pip install pyoembed
+&lt;/pre&gt;
+&lt;p&gt;Gentoo users can install it from &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+# emerge -av pyoembed
+&lt;/pre&gt;
+&lt;p&gt;pyoembed is developed and managed using Github, the repository is publicly
+available:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/pyoembed&quot;&gt;https://github.com/rafaelmartins/pyoembed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A Jenkins instance runs the unit tests and the integration tests automatically,
+you can check the results here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://ci.rgm.io/view/pyoembed/&quot;&gt;https://ci.rgm.io/view/pyoembed/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The integration tests are supposed to fail from time to time, because they rely
+on external urls, that may be unavailable while the tests are running.&lt;/p&gt;
+&lt;p&gt;pyoembed is released under a 3 clause BSD license.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</content>
+  </entry>
+</feed>

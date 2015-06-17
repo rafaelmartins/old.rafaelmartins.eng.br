@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » stupid-stuff</title>
+  <id>/atom/stupid-stuff.atom</id>
+  <updated>2011-10-09T19:07:32Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/stupid-stuff.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">PIDSIM</title>
+    <id>/post/pidsim/</id>
+    <updated>2011-10-09T19:07:32Z</updated>
+    <published>2011-10-09T19:07:32Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/pidsim/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,engineering,gentoo,stupid-stuff --&gt;
+&lt;p&gt;Following the line of the previous post, I will talk about the projects I'll
+stop maintaining for now. It's not a &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/tt&gt; package, but it's available
+for Gentoo users anyway.&lt;/p&gt;
+&lt;p&gt;This post is about &lt;a class=&quot;reference external&quot; href=&quot;http://pidsim.rafaelmartins.eng.br/&quot;&gt;PIDSIM&lt;/a&gt;, that was the base of my bachelor thesis. It is a
+web-based PID controllers simulator, created with Python and some cool
+libraries, like Matplotlib and the Flask framework.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,engineering,gentoo,stupid-stuff --&gt;
+&lt;p&gt;Following the line of the previous post, I will talk about the projects I'll
+stop maintaining for now. It's not a &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/tt&gt; package, but it's available
+for Gentoo users anyway.&lt;/p&gt;
+&lt;p&gt;This post is about &lt;a class=&quot;reference external&quot; href=&quot;http://pidsim.rafaelmartins.eng.br/&quot;&gt;PIDSIM&lt;/a&gt;, that was the base of my bachelor thesis. It is a
+web-based PID controllers simulator, created with Python and some cool
+libraries, like Matplotlib and the Flask framework.&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;p&gt;I spent almost 3 years working on this project, and now I'm tired of it.
+Actually I finished the stuff I wanted to implement and presented it to get my
+degree.&lt;/p&gt;
+&lt;p&gt;You can see the application working here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://pidsim.rafaelmartins.eng.br/&quot;&gt;http://pidsim.rafaelmartins.eng.br/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The software repositories are still available on Github:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/pidsim&quot;&gt;https://github.com/rafaelmartins/pidsim&lt;/a&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/pidsim-models&quot;&gt;https://github.com/rafaelmartins/pidsim-models&lt;/a&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/pidsim-web&quot;&gt;https://github.com/rafaelmartins/pidsim-web&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gentoo users can install it from a specific overlay I created:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/pidsim-gentoo-overlay&quot;&gt;https://github.com/rafaelmartins/pidsim-gentoo-overlay&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;P.S.: Some time ago I heard some rumors that this project is being ported to
+PHP by another student. The people who knows me well can imagine how &amp;quot;happy&amp;quot; I
+became with this. It looks like I did a big effort to create something good
+and they are just throwing away. I don't know if it's possible to port this
+software to PHP, or if they will succeed, I don't care. The question is:
+&amp;quot;How they want to obtain progress on the research, if they rewrite things that
+are already done instead of just extend them?&amp;quot; Anyway, I really don't care and
+this thing is not my problem anymore.&lt;/p&gt;
+&lt;p&gt;Thanks.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

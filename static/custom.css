@@ -1,0 +1,111 @@
+body {
+    padding-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 18px;
+    margin: 16px;
+    margin-top: 30px;
+}
+
+img.align-left, .figure.align-left, object.align-left, iframe.align-left {
+    clear: left ;
+    float: left ;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-right, .figure.align-right, object.align-right, iframe.align-right {
+    clear: right ;
+    float: right ;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+img.align-center, .figure.align-center, object.align-center, iframe.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    clear: both;
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.tagcloud {
+    text-align: center;
+}
+
+.tagcloud .label {
+    line-height: 24px;
+}
+
+.field-name {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.field-list {
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    padding-top: 20px;
+}
+
+.license {
+    border-width: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tag-title {
+    margin-top: 21px;
+}
+
+.label a {
+    color: #FFF;
+}
+
+.label a:hover, .label a:focus {
+    color: #EEE;
+}
+
+table.docutils td ul, table.docutils td li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+h5 {
+    margin-top: 20px;
+}
+
+table.project-table {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

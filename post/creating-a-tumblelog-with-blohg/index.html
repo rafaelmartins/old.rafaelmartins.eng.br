@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Rafael Martins » Post: Creating a tumblelog with blohg</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="blohg 0.13+/e8d8e6d" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/static/custom.css" />
+        <link type="text/css" rel="stylesheet" href="/static/pygments.css" />
+        <!--[if lt IE 9]>
+        <script src="/static/bootstrap/js/html5shiv.js"></script>
+        <script src="/static/bootstrap/js/respond.min.js"></script>
+        <![endif]-->
+        <link rel="alternate" type="application/atom+xml" href="/atom.atom" title="Rafael Martins" />
+
+<!-- begin opengraph header -->
+
+<meta prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#" />
+<meta property="og:site_name" content="Rafael Martins" />
+<meta property="og:url" content="http://old.rafaelmartins.eng.br/post/creating-a-tumblelog-with-blohg/" />
+<meta property="og:title" content="Rafael Martins » Post: Creating a tumblelog with blohg" />
+<meta property="og:description" content="Tumblelogs are old stuff, but services like Tumblr popularized them a lot recently. Thumblelogs are a quick and simple way to share random content with readers. They can be used to share a link, a photo, a video, a quote, a chat log, etc." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-12-21T05:39:19Z" />
+<meta property="article:modified_time" content="2014-01-19T01:31:57Z" />
+<meta property="article:tag" content="en-us" />
+<meta property="article:tag" content="blohg" />
+<meta property="article:tag" content="gentoo" />
+
+<!-- end opengraph header -->
+
+<!-- begin disqus header -->
+
+<script type="text/javascript">
+    var disqus_shortname = "rafaelmartins-en";
+    var disqus_url = "http://old.rafaelmartins.eng.br/post/creating-a-tumblelog-with-blohg/";
+</script>
+
+<!-- end disqus header -->
+
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Rafael Martins</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/talks/">Talks</a></li>
+                        <li><a href="/guitar-rig/">Guitar Rig</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+<!-- begin content -->
+
+<article>
+    <h3><a href="/post/creating-a-tumblelog-with-blohg/">Creating a tumblelog with blohg</a></h3>
+
+<!-- begin html parsed by docutils -->
+
+<!-- tags: en-us,blohg,gentoo -->
+<p>Tumblelogs are <a class="reference external" href="http://www.kottke.org/05/10/tumblelogs">old stuff</a>, but
+services like <a class="reference external" href="http://tumblr.com/">Tumblr</a> popularized them a lot recently.
+Thumblelogs are a quick and simple way to share random content with readers.
+They can be used to share a link, a photo, a video, a quote, a chat log, etc.</p>
+<p>blohg is a good blogging engine, we know, but what about tumblelogs?!</p>
+<p>You can already share videos from Youtube and Vimeo, and can share most of the
+other stuff manually, but it is boring, and diverges from the main objective of
+the tumblelogs: simplicity.</p>
+<!-- read_more -->
+<p>To solve this issue, I developed a <a class="reference external" href="https://github.com/rafaelmartins/rafael.martins.im/blob/master/ext/blohg_tumblelog.py">blohg extension</a>
+(Yeah, blohg-1.0 supports extensions! <tt class="docutils literal">\o/</tt> ) that adds some cool
+reStructuredText directives:</p>
+<div class="section" id="link">
+<h4>link</h4>
+<p>This directive is used to share links. It will embed the content of the link to
+the post automatically, if the provided link is from a service that supports
+the <a class="reference external" href="http://oembed.com/">oEmbed</a> protocol. If it isn't, and the link is from
+a HTML page, it will include the link with the title of the page to the post.
+Otherwise it will just include the raw link to the post.</p>
+<p>Usage example:</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">link</span><span class="p">::</span> http://www.youtube.com/watch?v=gp30v6XMxBg
+</pre></div>
+</div>
+<div class="section" id="quote">
+<h4>quote</h4>
+<p>This directive is used to share quotes. It will create a <tt class="docutils literal">blockquote</tt> element
+with the quote and add a signature with the author name, if provided.</p>
+<p>Usage example:</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">quote</span><span class="p">::</span>
+   <span class="nc">:author:</span> <span class="nf">Myself</span>
+
+   This is a random quote!
+</pre></div>
+</div>
+<div class="section" id="chat">
+<h4>chat</h4>
+<p>This directive is used to share chat logs. It will add a div with the chat log,
+highlighted with <a class="reference external" href="http://pygments.org/">Pygments</a>.</p>
+<p>Usage example:</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">chat</span><span class="p">::</span>
+
+   [00:56:38] &lt;rafaelmartins&gt; I&#39;m crazy.
+   [00:56:48] &lt;rafaelmartins&gt; I chat alone.
+</pre></div>
+<hr class="docutils" />
+<p>You can see the directives in action on my shiny new tumblelog:</p>
+<p><a class="reference external" href="http://rafael.martins.im/">http://rafael.martins.im/</a></p>
+<p>The source code of the tumblelog, including the blohg extension and the
+mobile-friendly templates, is available here:</p>
+<p><a class="reference external" href="https://github.com/rafaelmartins/rafael.martins.im">https://github.com/rafaelmartins/rafael.martins.im</a></p>
+<p>I have no plans to release this extension as part of blohg, but feel free to
+use it if you find it useful!</p>
+<p>That's all!</p>
+</div>
+
+
+
+<!-- end html parsed by docutils -->
+
+    <div class="clear"></div>
+    <div class="metadata well well-sm">
+        <p><span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span> <span class="label label-default"><a href="/tag/blohg/"><i class="glyphicon glyphicon-tag"></i> blohg</a></span> <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span> </p>
+        Author: <a href="mailto:rafael@rafaelmartins.eng.br">Rafael G. Martins</a>
+        <br />
+        Published on: Dec 21, 2012, 5:39:19 AM - Modified on: Jan 19, 2014, 1:31:57 AM
+        <br />
+        <a href="/post/creating-a-tumblelog-with-blohg/">Permalink</a> - <a href="/source/post/creating-a-tumblelog-with-blohg.txt">Source code</a> - <a href="/post/creating-a-tumblelog-with-blohg/#disqus_thread">Comments</a>
+    </div>
+
+<!-- start disqus post -->
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://rafaelmartins-en.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript=rafaelmartins-en">
+        comments powered by Disqus.
+    </a>
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">
+    blog comments powered by <span class="logo-disqus">Disqus</span>
+</a>
+
+<!-- end disqus post -->
+
+
+
+<!-- start pagination -->
+
+
+<!-- end pagination -->
+
+<!-- end content -->
+
+                </div>
+                <div class="col-md-3 sidebar">
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Blog Tags</h4>
+                        </div>
+                        <div class="panel-body tagcloud">
+                            <span class="label label-default"><a href="/tag/bitbucket/"><i class="glyphicon glyphicon-tag"></i> bitbucket</a></span>
+                            <span class="label label-default"><a href="/tag/blohg/"><i class="glyphicon glyphicon-tag"></i> blohg</a></span>
+                            <span class="label label-default"><a href="/tag/celtic-folk/"><i class="glyphicon glyphicon-tag"></i> celtic-folk</a></span>
+                            <span class="label label-default"><a href="/tag/collabora/"><i class="glyphicon glyphicon-tag"></i> collabora</a></span>
+                            <span class="label label-default"><a href="/tag/diffball/"><i class="glyphicon glyphicon-tag"></i> diffball</a></span>
+                            <span class="label label-default"><a href="/tag/electronics/"><i class="glyphicon glyphicon-tag"></i> electronics</a></span>
+                            <span class="label label-default"><a href="/tag/en-us/"><i class="glyphicon glyphicon-tag"></i> en-us</a></span>
+                            <span class="label label-default"><a href="/tag/engineering/"><i class="glyphicon glyphicon-tag"></i> engineering</a></span>
+                            <span class="label label-default"><a href="/tag/events/"><i class="glyphicon glyphicon-tag"></i> events</a></span>
+                            <span class="label label-default"><a href="/tag/fisl/"><i class="glyphicon glyphicon-tag"></i> fisl</a></span>
+                            <span class="label label-default"><a href="/tag/g-octave/"><i class="glyphicon glyphicon-tag"></i> g-octave</a></span>
+                            <span class="label label-default"><a href="/tag/gentoo/"><i class="glyphicon glyphicon-tag"></i> gentoo</a></span>
+                            <span class="label label-default"><a href="/tag/git/"><i class="glyphicon glyphicon-tag"></i> git</a></span>
+                            <span class="label label-default"><a href="/tag/google/"><i class="glyphicon glyphicon-tag"></i> google</a></span>
+                            <span class="label label-default"><a href="/tag/gsoc/"><i class="glyphicon glyphicon-tag"></i> gsoc</a></span>
+                            <span class="label label-default"><a href="/tag/lua/"><i class="glyphicon glyphicon-tag"></i> lua</a></span>
+                            <span class="label label-default"><a href="/tag/mercurial/"><i class="glyphicon glyphicon-tag"></i> mercurial</a></span>
+                            <span class="label label-default"><a href="/tag/music/"><i class="glyphicon glyphicon-tag"></i> music</a></span>
+                            <span class="label label-default"><a href="/tag/oembed/"><i class="glyphicon glyphicon-tag"></i> oembed</a></span>
+                            <span class="label label-default"><a href="/tag/pic/"><i class="glyphicon glyphicon-tag"></i> pic</a></span>
+                            <span class="label label-default"><a href="/tag/pt-br/"><i class="glyphicon glyphicon-tag"></i> pt-br</a></span>
+                            <span class="label label-default"><a href="/tag/pyoembed/"><i class="glyphicon glyphicon-tag"></i> pyoembed</a></span>
+                            <span class="label label-default"><a href="/tag/python/"><i class="glyphicon glyphicon-tag"></i> python</a></span>
+                            <span class="label label-default"><a href="/tag/random-stuff/"><i class="glyphicon glyphicon-tag"></i> random-stuff</a></span>
+                            <span class="label label-default"><a href="/tag/scottish-folk/"><i class="glyphicon glyphicon-tag"></i> scottish-folk</a></span>
+                            <span class="label label-default"><a href="/tag/stupid-stuff/"><i class="glyphicon glyphicon-tag"></i> stupid-stuff</a></span>
+                        </div>
+                    </div>
+                    <div class="panel panel-default hidden-xs">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Under the hood</h4>
+                        </div>
+                        <div class="list-group">
+                            <a class="list-group-item" href="http://blohg.org/">blohg</a>
+                            <a class="list-group-item" href="http://git-scm.com/">Git</a>
+                            <a class="list-group-item" href="http://www.gentoo.org/">Gentoo Linux</a>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Content License</h4>
+                        </div>
+                        <div class="panel-body">
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                                <img alt="Creative Commons License" class="license"
+                                    src="/static/creative-commons-88x31.png" />
+                            </a>
+                            This work is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-nc/4.0/">
+                                Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Disclaimer</h4>
+                        </div>
+                        <div class="panel-body">
+                            This is a personal weblog. The opinions expressed here represent my own
+                            and not those of my employer, Gentoo Foundation or anyone else.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Powered by: <a href="http://blohg.org/">blohg 0.13+/e8d8e6d</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="/static/bootstrap/js/jquery.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/resize.js"></script>
+
+<!-- begin disqus footer -->
+
+<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+            if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+            }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/rafaelmartins-en/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+</script>
+
+<!-- end disqus footer -->
+
+<!-- begin google analytics -->
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-2886928-8");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+<!-- end google analytics -->
+
+    </body>
+</html>

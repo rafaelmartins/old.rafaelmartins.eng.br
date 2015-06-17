@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » events</title>
+  <id>/atom/events.atom</id>
+  <updated>2012-08-13T03:49:21Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/events.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">FISL 13</title>
+    <id>/post/fisl-13/</id>
+    <updated>2012-08-13T03:49:21Z</updated>
+    <published>2012-08-13T03:49:21Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/fisl-13/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,events,collabora,fisl,gsoc --&gt;
+&lt;p&gt;This is just a quick (and late) post about FISL 13, that happened at Porto
+Alegre/RS, Brazil, from July 25th to 28th.&lt;/p&gt;
+&lt;p&gt;It was a really cool conference, and I had the first chance to meet another
+Collaboran (Thiago Santos), and lots of people that I just knew from the
+Internet.&lt;/p&gt;
+&lt;p&gt;I had an activity in the schedule. It was a talk/BoF about Google Summer of
+Code, with some discussions and lightning talks about the projects developed
+by the present students and mentors. I presented an introduction about the
+Google Summer of Code and moderated the discussions and lightning talks. Pretty
+cool! :)&lt;/p&gt;
+&lt;p&gt;Thanks to my employer &lt;a class=&quot;reference external&quot; href=&quot;http://www.collabora.com/&quot;&gt;Collabora&lt;/a&gt; for sponsoring
+the trip.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,events,collabora,fisl,gsoc --&gt;
+&lt;p&gt;This is just a quick (and late) post about FISL 13, that happened at Porto
+Alegre/RS, Brazil, from July 25th to 28th.&lt;/p&gt;
+&lt;p&gt;It was a really cool conference, and I had the first chance to meet another
+Collaboran (Thiago Santos), and lots of people that I just knew from the
+Internet.&lt;/p&gt;
+&lt;p&gt;I had an activity in the schedule. It was a talk/BoF about Google Summer of
+Code, with some discussions and lightning talks about the projects developed
+by the present students and mentors. I presented an introduction about the
+Google Summer of Code and moderated the discussions and lightning talks. Pretty
+cool! :)&lt;/p&gt;
+&lt;p&gt;Thanks to my employer &lt;a class=&quot;reference external&quot; href=&quot;http://www.collabora.com/&quot;&gt;Collabora&lt;/a&gt; for sponsoring
+the trip.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">LinuxCon Brazil 2010</title>
+    <id>/post/linuxcon-brazil-2010/</id>
+    <updated>2010-09-06T03:26:13Z</updated>
+    <published>2010-09-06T03:26:13Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/linuxcon-brazil-2010/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,events,gentoo --&gt;
+&lt;p&gt;Last week I have been attending to the LinuxCon Brazil 2010, that was the first
+edition of this event here in Brazil.&lt;/p&gt;
+&lt;p&gt;All the talks were pretty good and the event was a great oportunity to meet nice
+people, good projects and learn some cool stuff (and get an &lt;a class=&quot;reference external&quot; href=&quot;http://files.rafaelmartins.eng.br/img/autograph_linus.jpg&quot;&gt;autograph of Linus
+Torvalds&lt;/a&gt; as well :)&lt;/p&gt;
+&lt;p&gt;Unfortunately the Gentoo presence in the event was null. Well, not really null
+because I was there, but it seems that the Brazilian users are not very
+interested in Gentoo and I'm not sure if someone will be able to change this
+some day.&lt;/p&gt;
+&lt;p&gt;Maybe I'll write more stuff about the LinuxCon soon.&lt;/p&gt;
+&lt;p&gt;Stay tuned! ;)&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1283743573 --&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,events,gentoo --&gt;
+&lt;p&gt;Last week I have been attending to the LinuxCon Brazil 2010, that was the first
+edition of this event here in Brazil.&lt;/p&gt;
+&lt;p&gt;All the talks were pretty good and the event was a great oportunity to meet nice
+people, good projects and learn some cool stuff (and get an &lt;a class=&quot;reference external&quot; href=&quot;http://files.rafaelmartins.eng.br/img/autograph_linus.jpg&quot;&gt;autograph of Linus
+Torvalds&lt;/a&gt; as well :)&lt;/p&gt;
+&lt;p&gt;Unfortunately the Gentoo presence in the event was null. Well, not really null
+because I was there, but it seems that the Brazilian users are not very
+interested in Gentoo and I'm not sure if someone will be able to change this
+some day.&lt;/p&gt;
+&lt;p&gt;Maybe I'll write more stuff about the LinuxCon soon.&lt;/p&gt;
+&lt;p&gt;Stay tuned! ;)&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1283743573 --&gt;
+</content>
+  </entry>
+</feed>

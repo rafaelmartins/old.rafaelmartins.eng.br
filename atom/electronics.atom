@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » electronics</title>
+  <id>/atom/electronics.atom</id>
+  <updated>2013-12-26T03:31:54Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/electronics.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">Gentoo: News for PIC developers</title>
+    <id>/post/gentoo-news-for-pic-devs/</id>
+    <updated>2013-12-26T03:31:54Z</updated>
+    <published>2013-12-26T03:31:54Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/gentoo-news-for-pic-devs/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,electronics,pic --&gt;
+&lt;p&gt;Some weeks ago I decided to restart working with PIC microcontrollers, just for fun,
+and bought some electronic components, tools, etc. After having everything in hands,
+I started looking at the state of the PIC development tools in Gentoo, and found some
+outdated packages. I updated the packages I wanted to use (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gputils&lt;/span&gt;&lt;/tt&gt;
+and &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gpsim&lt;/span&gt;&lt;/tt&gt;; &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/sdcc&lt;/span&gt;&lt;/tt&gt; still needs some work), and added
+some other packages (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/cpik&lt;/span&gt;&lt;/tt&gt;, a C compiler for PIC 18F, and re-added
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/pikdev&lt;/span&gt;&lt;/tt&gt;, a simple graphic IDE for the development of PIC-based
+applications, that was previously removed due to the usage of kdelibs3, and now is a
+Qt4-only application).&lt;/p&gt;
+&lt;p&gt;I'll be putting some effort on packaging the MPLAB X IDE and the XC8 compiler in the
+next weeks, if permitted by their licenses. I'm not sure yet.&lt;/p&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Thanks.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,electronics,pic --&gt;
+&lt;p&gt;Some weeks ago I decided to restart working with PIC microcontrollers, just for fun,
+and bought some electronic components, tools, etc. After having everything in hands,
+I started looking at the state of the PIC development tools in Gentoo, and found some
+outdated packages. I updated the packages I wanted to use (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gputils&lt;/span&gt;&lt;/tt&gt;
+and &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gpsim&lt;/span&gt;&lt;/tt&gt;; &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/sdcc&lt;/span&gt;&lt;/tt&gt; still needs some work), and added
+some other packages (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/cpik&lt;/span&gt;&lt;/tt&gt;, a C compiler for PIC 18F, and re-added
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/pikdev&lt;/span&gt;&lt;/tt&gt;, a simple graphic IDE for the development of PIC-based
+applications, that was previously removed due to the usage of kdelibs3, and now is a
+Qt4-only application).&lt;/p&gt;
+&lt;p&gt;I'll be putting some effort on packaging the MPLAB X IDE and the XC8 compiler in the
+next weeks, if permitted by their licenses. I'm not sure yet.&lt;/p&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Thanks.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">Gentoo Electronics' status</title>
+    <id>/post/gentoo-electronics-status/</id>
+    <updated>2010-11-09T03:22:44Z</updated>
+    <published>2010-11-09T03:22:44Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/gentoo-electronics-status/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,electronics --&gt;
+&lt;p&gt;Although I'm relatively busy with my work to improve &lt;a class=&quot;reference external&quot; href=&quot;/en-us/tag/lua/&quot;&gt;Lua on Gentoo&lt;/a&gt; I need to
+update you about my main role: sci-electronics. Actually, the Gentoo Electronics
+subproject right now.&lt;/p&gt;
+&lt;p&gt;On October 17 the developers from the sci-electronics herd had a meeting to
+discuss the state of the herd and the creation of a subproject. At the end of
+the meeting I was elected the lead of this subproject, and now I should stop
+slacking and start doing something to make the &amp;quot;Soldering Iron Brotherhood&amp;quot;
+move ahead.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/science/electronics/&quot;&gt;subproject page&lt;/a&gt; was created by me, based on a work of Denis (Calchan),
+with some help of Thomas (TomJBE) and is already online (not listed on the
+Science page because its not done yet):&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/science/electronics/&quot;&gt;http://www.gentoo.org/proj/en/science/electronics/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Currently we have 2 main tasks:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Recruit new developers: We need more developers to take care of the
+electronics-related stuff. New blood is never enough. ;) I still can't
+mentoring anyone to join Gentoo as developer, but I'm sure that some senior
+developer will be glad to help you join the team if you are really interested.&lt;/li&gt;
+&lt;li&gt;Write test benches: Electronics software is kinda esoteric. Arch testers
+usually are not specialists, then we should provide good test benches to
+make their life easier when stabilizing our packages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Feel free to contact me and stay tuned! :)&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1289272964 --&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,electronics --&gt;
+&lt;p&gt;Although I'm relatively busy with my work to improve &lt;a class=&quot;reference external&quot; href=&quot;/en-us/tag/lua/&quot;&gt;Lua on Gentoo&lt;/a&gt; I need to
+update you about my main role: sci-electronics. Actually, the Gentoo Electronics
+subproject right now.&lt;/p&gt;
+&lt;p&gt;On October 17 the developers from the sci-electronics herd had a meeting to
+discuss the state of the herd and the creation of a subproject. At the end of
+the meeting I was elected the lead of this subproject, and now I should stop
+slacking and start doing something to make the &amp;quot;Soldering Iron Brotherhood&amp;quot;
+move ahead.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/science/electronics/&quot;&gt;subproject page&lt;/a&gt; was created by me, based on a work of Denis (Calchan),
+with some help of Thomas (TomJBE) and is already online (not listed on the
+Science page because its not done yet):&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/science/electronics/&quot;&gt;http://www.gentoo.org/proj/en/science/electronics/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Currently we have 2 main tasks:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Recruit new developers: We need more developers to take care of the
+electronics-related stuff. New blood is never enough. ;) I still can't
+mentoring anyone to join Gentoo as developer, but I'm sure that some senior
+developer will be glad to help you join the team if you are really interested.&lt;/li&gt;
+&lt;li&gt;Write test benches: Electronics software is kinda esoteric. Arch testers
+usually are not specialists, then we should provide good test benches to
+make their life easier when stabilizing our packages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Feel free to contact me and stay tuned! :)&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1289272964 --&gt;
+</content>
+  </entry>
+</feed>

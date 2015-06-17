@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » git</title>
+  <id>/atom/git.atom</id>
+  <updated>2011-07-19T02:03:04Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/git.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">Reworking patches with Mercurial Queues</title>
+    <id>/post/reworking-patches-with-mercurial-queues/</id>
+    <updated>2011-07-19T02:03:04Z</updated>
+    <published>2011-07-19T02:03:04Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/reworking-patches-with-mercurial-queues/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,mercurial,git,gsoc,gentoo,diffball --&gt;
+&lt;p&gt;The first task of my &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/infrastructure/distpatch/&quot;&gt;GSoC project&lt;/a&gt; was to add XZ support to diffball,
+that is a tool that generates binary deltas for tarballs and binaries
+in general.&lt;/p&gt;
+&lt;p&gt;diffball is versioned using &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;, that isn't something I like, personally.
+I usually do &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; in the same way as I do CVS and other centralized version
+control systems, resulting in a bad patch series.&lt;/p&gt;
+&lt;p&gt;As I don't know how to rework patches properly with &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;, I did it using
+&lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/MqExtension&quot;&gt;Mercurial Queues&lt;/a&gt; that are something I know better.&lt;/p&gt;
+&lt;p&gt;I'll show here how I reworked this patch series, as a mini-howto.&lt;/p&gt;
+&lt;p&gt;Enjoy :)&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,mercurial,git,gsoc,gentoo,diffball --&gt;
+&lt;p&gt;The first task of my &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/proj/en/infrastructure/distpatch/&quot;&gt;GSoC project&lt;/a&gt; was to add XZ support to diffball,
+that is a tool that generates binary deltas for tarballs and binaries
+in general.&lt;/p&gt;
+&lt;p&gt;diffball is versioned using &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;, that isn't something I like, personally.
+I usually do &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; in the same way as I do CVS and other centralized version
+control systems, resulting in a bad patch series.&lt;/p&gt;
+&lt;p&gt;As I don't know how to rework patches properly with &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;, I did it using
+&lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/MqExtension&quot;&gt;Mercurial Queues&lt;/a&gt; that are something I know better.&lt;/p&gt;
+&lt;p&gt;I'll show here how I reworked this patch series, as a mini-howto.&lt;/p&gt;
+&lt;p&gt;Enjoy :)&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;div class=&quot;section&quot; id=&quot;enable-required-extensions&quot;&gt;
+&lt;h4&gt;Enable required extensions&lt;/h4&gt;
+&lt;p&gt;I needed 2 extensions, &lt;a class=&quot;reference external&quot; href=&quot;http://hg-git.github.com/&quot;&gt;hg-git&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/MqExtension&quot;&gt;mq&lt;/a&gt;. The first one for work in &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt;
+repositories with &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt;, and the last one to work with &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/MqExtension&quot;&gt;Mercurial Queues&lt;/a&gt;.
+&lt;a class=&quot;reference external&quot; href=&quot;http://hg-git.github.com/&quot;&gt;hg-git&lt;/a&gt; needs to be installed manually. &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/MqExtension&quot;&gt;mq&lt;/a&gt; is shipped with &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is what I added to my ~/.hgrc file:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+[extensions]
+hggit =
+mq =
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;cloning-the-repository-and-creating-the-queue&quot;&gt;
+&lt;h4&gt;Cloning the repository and creating the queue&lt;/h4&gt;
+&lt;p&gt;I need to clone the repository and analyze the &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; log:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg clone git://pkgcore.org/diffball
+$ cd diffball
+$ hg log
+changeset:   451:481ff769b7fb
+bookmark:    personal/rafaelmartins/xz-support
+tag:         default/personal/rafaelmartins/xz-support
+tag:         tip
+user:        Rafael G. Martins &amp;lt;rafael&amp;#64;rafaelmartins.eng.br&amp;gt;
+date:        Sun May 22 22:48:50 2011 -0300
+summary:     actually added XZ functionality to libcfile.
+
+changeset:   450:421a260e9f28
+user:        Rafael G. Martins &amp;lt;rafael&amp;#64;rafaelmartins.eng.br&amp;gt;
+date:        Sun May 22 17:22:08 2011 -0300
+summary:     fixed typo when enabling dcbuffer debug
+
+changeset:   449:69a5b5d62cc1
+user:        Rafael G. Martins &amp;lt;rafael&amp;#64;rafaelmartins.eng.br&amp;gt;
+date:        Sun May 22 13:22:28 2011 -0300
+summary:     it's XZ, not LZMA.
+
+changeset:   448:566bd0ffd47c
+user:        Rafael G. Martins &amp;lt;rafael&amp;#64;rafaelmartins.eng.br&amp;gt;
+date:        Sun May 22 12:44:49 2011 -0300
+summary:     added liblzma build system checks, using pkgconfig
+
+changeset:   447:bf8e84c492de
+user:        Rafael G. Martins &amp;lt;rafael&amp;#64;rafaelmartins.eng.br&amp;gt;
+date:        Sun May 22 12:33:32 2011 -0300
+summary:     added LZMA auto-detection support.
+
+changeset:   446:5797215cb97f
+bookmark:    master
+tag:         default/master
+user:        Brian Harring &amp;lt;brian.harring&amp;#64;intel.com&amp;gt;
+date:        Thu Apr 07 13:52:26 2011 -0700
+summary:     update copyright/license specifics
+
+...
+&lt;/pre&gt;
+&lt;p&gt;My commits are 447:451. I need to convert them to mq patches, after
+initialize the mq repository:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg init --mq
+$ hg qimport --git -r 447:451
+$ hg qseries
+447.diff
+448.diff
+449.diff
+450.diff
+451.diff
+&lt;/pre&gt;
+&lt;p&gt;Now I have 5 patches, with the local revision number as name. They are applied to
+the original repository by default. I need to remove them before start re-adding
+each one in the correct order:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg qpop -a
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;reworking-the-patches&quot;&gt;
+&lt;h4&gt;Reworking the patches&lt;/h4&gt;
+&lt;p&gt;I fixed a typo in the code that enable the dcbuffer debug. It's the 4th patch
+in the original queue. As this patch isn't related to the XZ support I'm
+implementing itself, I'll move it to the begin of the queue and rename it to
+something better than the local revision number:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg qpush --move 450.diff
+applying 450.diff
+now at: 450.diff
+$ hg qmv 450.diff fixed-typo-when-enabling-dcbuffer-debug.diff
+&lt;/pre&gt;
+&lt;p&gt;The patches &lt;tt class=&quot;docutils literal&quot;&gt;447.diff&lt;/tt&gt; and &lt;tt class=&quot;docutils literal&quot;&gt;449.diff&lt;/tt&gt; are related. I decided that I should
+use the XZ name instead of LZMA, and changed the code of the first patch.
+These 2 patches should be unified, creating a new patch:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ patch -p1 &amp;lt; .hg/patches/447.diff
+patching file include/cfile.h
+patching file libcfile/cfile.c
+$ patch -p1 &amp;lt; .hg/patches/449.diff
+patching file include/cfile.h
+patching file libcfile/cfile.c
+$ hg qnew --git --currentuser --currentdate -m &amp;quot;added XZ auto-detection support.&amp;quot; added-xz-autodetection-support.diff
+$ hg qdelete 447.diff 449.diff
+&lt;/pre&gt;
+&lt;p&gt;&lt;tt class=&quot;docutils literal&quot;&gt;.hg/patches&lt;/tt&gt; is the &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; repository that the extension uses to store
+the patches. It was created by the &lt;tt class=&quot;docutils literal&quot;&gt;hg init &lt;span class=&quot;pre&quot;&gt;--mq&lt;/span&gt;&lt;/tt&gt; command.&lt;/p&gt;
+&lt;p&gt;The patch &lt;tt class=&quot;docutils literal&quot;&gt;448.diff&lt;/tt&gt; is ok, I'll just re-add it and rename:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg qpush 448.diff
+applying 448.diff
+now at: 448.diff
+$ hg qmv 448.diff added-liblzma-build-system-checks-using-pkgconfig.diff
+&lt;/pre&gt;
+&lt;p&gt;The last unnaplied patch I have is &lt;tt class=&quot;docutils literal&quot;&gt;451.diff&lt;/tt&gt;, that is good, but the commit
+message isn't ok. I'll re-add it, change the commit message and rename it:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg qpush 451.diff
+applying 451.diff
+now at: 451.diff
+$ hg qrefresh -m &amp;quot;added XZ functionality to libcfile.&amp;quot;
+$ hg qmv 451.diff added-xz-functionality-to-libcfile.diff
+&lt;/pre&gt;
+&lt;p&gt;At this point I have a &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt; queue with the 4 reworked patches inside
+&lt;tt class=&quot;docutils literal&quot;&gt;.hg/patches&lt;/tt&gt;:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg qseries
+fixed-typo-when-enabling-dcbuffer-debug.diff
+added-xz-autodetection-support.diff
+added-liblzma-build-system-checks-using-pkgconfig.diff
+added-xz-functionality-to-libcfile.diff
+&lt;/pre&gt;
+&lt;p&gt;Commit the queue changes:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg commit --mq -m &amp;quot;added queue&amp;quot;
+&lt;/pre&gt;
+&lt;p&gt;I can publish it somewhere using the command:&lt;/p&gt;
+&lt;pre class=&quot;literal-block&quot;&gt;
+$ hg push --mq $REMOTE_REPO_URL
+&lt;/pre&gt;
+&lt;p&gt;My repository is here (broken url):&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://hg.rafaelmartins.eng.br/mq/diffball&quot;&gt;http://hg.rafaelmartins.eng.br/mq/diffball&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This howto is far from perfect. I just wanted to give a quick introdution
+for people that want to get started with this cool feature of &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;Mercurial&lt;/a&gt;. :)&lt;/p&gt;
+&lt;p&gt;That's all!&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » g-octave</title>
+  <id>/atom/g-octave.atom</id>
+  <updated>2011-09-18T06:06:19Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/g-octave.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">g-octave: past, present and future</title>
+    <id>/post/g-octave-past-present-and-future/</id>
+    <updated>2011-09-18T06:06:19Z</updated>
+    <published>2011-09-18T06:06:19Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/g-octave-past-present-and-future/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;I started &lt;a class=&quot;reference external&quot; href=&quot;http://g-octave.org/&quot;&gt;g-octave&lt;/a&gt; in the end of 2009, as a pet project. I was needing
+something better to deal with &lt;a class=&quot;reference external&quot; href=&quot;http://octave.sf.net/&quot;&gt;octave-forge&lt;/a&gt; software than the old
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sci-mathematics/octave-forge-*&lt;/span&gt;&lt;/tt&gt; packages distributed by the gentoo-science
+overlay. In a few weeks it was already able to do the basic stuff:
+install/uninstall packages, manage the package database, etc. I had a lot of
+fun working on this project.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;I started &lt;a class=&quot;reference external&quot; href=&quot;http://g-octave.org/&quot;&gt;g-octave&lt;/a&gt; in the end of 2009, as a pet project. I was needing
+something better to deal with &lt;a class=&quot;reference external&quot; href=&quot;http://octave.sf.net/&quot;&gt;octave-forge&lt;/a&gt; software than the old
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sci-mathematics/octave-forge-*&lt;/span&gt;&lt;/tt&gt; packages distributed by the gentoo-science
+overlay. In a few weeks it was already able to do the basic stuff:
+install/uninstall packages, manage the package database, etc. I had a lot of
+fun working on this project.&lt;/p&gt;
+&lt;!-- read_more --&gt;
+&lt;p&gt;Some time after I start the project, the Gentoo Foundation announced the
+call for proposals for the Google Summer of Code 2010. I sent a proposal and
+it was accepted. This was an awesome job: improve the software I created and
+be paid for it. :o)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://g-octave.org/&quot;&gt;g-octave&lt;/a&gt; improved heavily during the 3 months of Google Summer of Code and
+I considered it ready to replace the old packages from the overlay, reducing
+the amount of maintenance needed.&lt;/p&gt;
+&lt;p&gt;But my amount of time available to work on this project reduced on the last
+months. I was busy with an internship at the start of the year, my bachelor
+thesis, and I also participated of the Google Summer of Code again, with
+another project. Now I'm starting a job and I don't know when I will have free
+time again.&lt;/p&gt;
+&lt;p&gt;Some people started complaining about the &amp;quot;lack of maintenance&amp;quot; of
+the project. The complains actually started almost a year ago,
+&lt;a class=&quot;reference external&quot; href=&quot;http://forums.gentoo.org/viewtopic-t-854170-highlight-goctave.html&quot;&gt;on the forums&lt;/a&gt;, but I don't read Gentoo forums at all. I just noticed
+this today, when someone moved the topic to the gentoo-science mailing list.&lt;/p&gt;
+&lt;p&gt;What this people can't see is that the project &lt;strong&gt;was created to reduce the
+maintenance efforts&lt;/strong&gt;. I mean, it provides tools to allow people to install
+fresh software, even if the default package database is outdated.&lt;/p&gt;
+&lt;p&gt;Things like the &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--scm&lt;/span&gt;&lt;/tt&gt; option and the script &lt;tt class=&quot;docutils literal&quot;&gt;contrib/manage_pkgdb.py&lt;/tt&gt;
+allow anyone to install new versions of packages and/or update the &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/rafaelmartins/g-octave-db&quot;&gt;package
+database on GitHub&lt;/a&gt;, sending me a pull request to update the &lt;em&gt;official&lt;/em&gt;
+database.&lt;/p&gt;
+&lt;p&gt;Everything is documented on the &lt;a class=&quot;reference external&quot; href=&quot;http://g-octave.org/&quot;&gt;project website&lt;/a&gt;, but looks like this
+people don't read the docs nor the elog messages at the end of the installation
+of g-octave. This behavior results on users that don't know the features of the
+tool and that can't use it because &lt;em&gt;forgot&lt;/em&gt; to run &lt;tt class=&quot;docutils literal&quot;&gt;emerge &lt;span class=&quot;pre&quot;&gt;--config&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;g-octave&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;This kind of behavior really annoys me.&lt;/p&gt;
+&lt;p&gt;I updated the package database, added a g-octave-0.4.1-r2 ebuild to the
+tree and closed a few bugs. Feel free to do future updates by yourself on
+GitHub and send me a pull request.&lt;/p&gt;
+&lt;p&gt;I don't know what will happen with the project in the future. The maintainer of
+the old-style packages retired from Gentoo and was bored of maintain these
+packages, IIRC. I stopped using octave a few months ago, and looks like I'll
+not use it for the coming months or years.&lt;/p&gt;
+&lt;p&gt;I'll still do whatever I can to keep &lt;a class=&quot;reference external&quot; href=&quot;http://g-octave.org/&quot;&gt;g-octave&lt;/a&gt; working, but please be kind and
+contribute, instead of complain.&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">[ANN] g-octave 0.4.1</title>
+    <id>/post/g-octave-0.4.1/</id>
+    <updated>2010-10-24T01:44:20Z</updated>
+    <published>2010-10-24T01:44:20Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/g-octave-0.4.1/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;I just released g-octave 0.4.1, that is a bug fix release. This version fixes
+the bug &lt;a class=&quot;reference external&quot; href=&quot;http://bugs.gentoo.org/show_bug.cgi?id=340577&quot;&gt;#340577&lt;/a&gt; and some issues with the script &lt;tt class=&quot;docutils literal&quot;&gt;manage_pkgdb.py&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, this release comes with an updated package database. The
+new packages are:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;dataframe-0.4&lt;/li&gt;
+&lt;li&gt;dataframe-0.5&lt;/li&gt;
+&lt;li&gt;nan-2.3.0&lt;/li&gt;
+&lt;li&gt;nan-2.3.1&lt;/li&gt;
+&lt;li&gt;nurbs-1.3.1&lt;/li&gt;
+&lt;li&gt;tsa-4.1.0&lt;/li&gt;
+&lt;li&gt;fits-1.0.0&lt;/li&gt;
+&lt;li&gt;general-1.2.2&lt;/li&gt;
+&lt;li&gt;io-1.0.13&lt;/li&gt;
+&lt;li&gt;parallel-2.0.2&lt;/li&gt;
+&lt;li&gt;parallel-2.0.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The ebuild is already available on the Gentoo main tree (a.k.a. Portage tree)
+and updated documentation can be found here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://doc.g-octave.org/0.4.1/&quot;&gt;http://doc.g-octave.org/0.4.1/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please test it! :)&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1287884660 --&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;I just released g-octave 0.4.1, that is a bug fix release. This version fixes
+the bug &lt;a class=&quot;reference external&quot; href=&quot;http://bugs.gentoo.org/show_bug.cgi?id=340577&quot;&gt;#340577&lt;/a&gt; and some issues with the script &lt;tt class=&quot;docutils literal&quot;&gt;manage_pkgdb.py&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Additionally, this release comes with an updated package database. The
+new packages are:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;dataframe-0.4&lt;/li&gt;
+&lt;li&gt;dataframe-0.5&lt;/li&gt;
+&lt;li&gt;nan-2.3.0&lt;/li&gt;
+&lt;li&gt;nan-2.3.1&lt;/li&gt;
+&lt;li&gt;nurbs-1.3.1&lt;/li&gt;
+&lt;li&gt;tsa-4.1.0&lt;/li&gt;
+&lt;li&gt;fits-1.0.0&lt;/li&gt;
+&lt;li&gt;general-1.2.2&lt;/li&gt;
+&lt;li&gt;io-1.0.13&lt;/li&gt;
+&lt;li&gt;parallel-2.0.2&lt;/li&gt;
+&lt;li&gt;parallel-2.0.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The ebuild is already available on the Gentoo main tree (a.k.a. Portage tree)
+and updated documentation can be found here:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://doc.g-octave.org/0.4.1/&quot;&gt;http://doc.g-octave.org/0.4.1/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please test it! :)&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1287884660 --&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">g-octave reaches the main tree!</title>
+    <id>/post/g-octave_reaches_the_main_tree/</id>
+    <updated>2010-10-01T23:03:53Z</updated>
+    <published>2010-10-01T23:03:53Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/g-octave_reaches_the_main_tree/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;Since the last sunday I'm officially a &lt;a class=&quot;reference external&quot; href=&quot;http://article.gmane.org/gmane.linux.gentoo.devel.announce/1098&quot;&gt;Gentoo developer&lt;/a&gt; and one of
+my first actions was move g-octave from the science overlay to the
+main tree.&lt;/p&gt;
+&lt;p&gt;Now any Gentoo user will be able to install g-octave without using the
+science overlay (but the ebuild is still marked as unstable). I hope
+that this will increase the number of users testing it, and possibly
+reporting issues.&lt;/p&gt;
+&lt;p&gt;I'm still using my &lt;a class=&quot;reference external&quot; href=&quot;http://www.g-octave.org/&quot;&gt;Trac instance&lt;/a&gt; to receive bug reports, mainly because
+my automated scripts are still depending on the Trac XMLRPC API.&lt;/p&gt;
+&lt;p&gt;You will still needs to use the science overlay if you want to install
+the live version of g-octave, at least for now.&lt;/p&gt;
+&lt;p&gt;I hope you all enjoy and contribute!&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1285974233 --&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,g-octave --&gt;
+&lt;p&gt;Since the last sunday I'm officially a &lt;a class=&quot;reference external&quot; href=&quot;http://article.gmane.org/gmane.linux.gentoo.devel.announce/1098&quot;&gt;Gentoo developer&lt;/a&gt; and one of
+my first actions was move g-octave from the science overlay to the
+main tree.&lt;/p&gt;
+&lt;p&gt;Now any Gentoo user will be able to install g-octave without using the
+science overlay (but the ebuild is still marked as unstable). I hope
+that this will increase the number of users testing it, and possibly
+reporting issues.&lt;/p&gt;
+&lt;p&gt;I'm still using my &lt;a class=&quot;reference external&quot; href=&quot;http://www.g-octave.org/&quot;&gt;Trac instance&lt;/a&gt; to receive bug reports, mainly because
+my automated scripts are still depending on the Trac XMLRPC API.&lt;/p&gt;
+&lt;p&gt;You will still needs to use the science overlay if you want to install
+the live version of g-octave, at least for now.&lt;/p&gt;
+&lt;p&gt;I hope you all enjoy and contribute!&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1285974233 --&gt;
+</content>
+  </entry>
+  <entry>
+    <title type="text">GSoC is over!</title>
+    <id>/post/gsoc_is_over/</id>
+    <updated>2010-08-17T02:14:44Z</updated>
+    <published>2010-08-17T02:14:44Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/gsoc_is_over/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,g-octave,gsoc --&gt;
+&lt;p&gt;I'm done with my work on the Google Summer of Code for this year
+and I would like to thank to all the people that helped me during
+the last 3 months.&lt;/p&gt;
+&lt;p&gt;Special thanks goes to my mentor (&lt;a class=&quot;reference external&quot; href=&quot;http://blogs.gentoo.org/index.php?blog=83&quot;&gt;Denis Dupeyron&lt;/a&gt;) by all the
+friendship, support and the daily talks. I know that it was not
+easy for him. ;)&lt;/p&gt;
+&lt;p&gt;I would also like to thank:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Sebastien Fabbro and all the people from &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#gentoo-science&lt;/span&gt;&lt;/tt&gt; by the cool
+chat.&lt;/li&gt;
+&lt;li&gt;The Gentoo GSoC admin, &lt;a class=&quot;reference external&quot; href=&quot;http://dberkholz.wordpress.com/&quot;&gt;Donnie Berkholz&lt;/a&gt;, by the support.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.pkgcore.org/&quot;&gt;Brian Harring&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://robbat2.livejournal.com/&quot;&gt;Robin H. Johnson&lt;/a&gt; by the help with the infrastructure.&lt;/li&gt;
+&lt;li&gt;All the people from the &lt;a class=&quot;reference external&quot; href=&quot;http://google-opensource.blogspot.com/&quot;&gt;Google Open Source Office&lt;/a&gt;, mainly the GSoC admin,
+&lt;a class=&quot;reference external&quot; href=&quot;http://www.fossygirl.com/&quot;&gt;Carol Smith&lt;/a&gt;, by the support and the GSoC itself.&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://www.octave.org/&quot;&gt;GNU Octave&lt;/a&gt; developers by the great piece of software.&lt;/li&gt;
+&lt;li&gt;All the &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you all for make my Winter(?) coolest. ;)&lt;/p&gt;
+&lt;p&gt;I'm sorry if I forgot someone.&lt;/p&gt;
+&lt;p&gt;That's all for now...&lt;/p&gt;
+&lt;p&gt;Oooops... Wait! I'm not leaving the Gentoo development as can looks like,
+of course! &lt;a class=&quot;reference external&quot; href=&quot;http://bugs.gentoo.org/show_bug.cgi?id=296814&quot;&gt;My work is only starting&lt;/a&gt;. :)&lt;/p&gt;
+&lt;p&gt;Thanks again!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1282011284 --&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,g-octave,gsoc --&gt;
+&lt;p&gt;I'm done with my work on the Google Summer of Code for this year
+and I would like to thank to all the people that helped me during
+the last 3 months.&lt;/p&gt;
+&lt;p&gt;Special thanks goes to my mentor (&lt;a class=&quot;reference external&quot; href=&quot;http://blogs.gentoo.org/index.php?blog=83&quot;&gt;Denis Dupeyron&lt;/a&gt;) by all the
+friendship, support and the daily talks. I know that it was not
+easy for him. ;)&lt;/p&gt;
+&lt;p&gt;I would also like to thank:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;Sebastien Fabbro and all the people from &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#gentoo-science&lt;/span&gt;&lt;/tt&gt; by the cool
+chat.&lt;/li&gt;
+&lt;li&gt;The Gentoo GSoC admin, &lt;a class=&quot;reference external&quot; href=&quot;http://dberkholz.wordpress.com/&quot;&gt;Donnie Berkholz&lt;/a&gt;, by the support.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.pkgcore.org/&quot;&gt;Brian Harring&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://robbat2.livejournal.com/&quot;&gt;Robin H. Johnson&lt;/a&gt; by the help with the infrastructure.&lt;/li&gt;
+&lt;li&gt;All the people from the &lt;a class=&quot;reference external&quot; href=&quot;http://google-opensource.blogspot.com/&quot;&gt;Google Open Source Office&lt;/a&gt;, mainly the GSoC admin,
+&lt;a class=&quot;reference external&quot; href=&quot;http://www.fossygirl.com/&quot;&gt;Carol Smith&lt;/a&gt;, by the support and the GSoC itself.&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://www.octave.org/&quot;&gt;GNU Octave&lt;/a&gt; developers by the great piece of software.&lt;/li&gt;
+&lt;li&gt;All the &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you all for make my Winter(?) coolest. ;)&lt;/p&gt;
+&lt;p&gt;I'm sorry if I forgot someone.&lt;/p&gt;
+&lt;p&gt;That's all for now...&lt;/p&gt;
+&lt;p&gt;Oooops... Wait! I'm not leaving the Gentoo development as can looks like,
+of course! &lt;a class=&quot;reference external&quot; href=&quot;http://bugs.gentoo.org/show_bug.cgi?id=296814&quot;&gt;My work is only starting&lt;/a&gt;. :)&lt;/p&gt;
+&lt;p&gt;Thanks again!&lt;/p&gt;
+&lt;!-- date added automatically by the script blohg_dump.py.
+this file was exported from an old repository, and this comment will
+help me to forcing the old creation date, instead of the date of the
+first commit on the new repository. --&gt;
+&lt;!-- date: 1282011284 --&gt;
+</content>
+  </entry>
+</feed>

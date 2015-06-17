@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Rafael Martins » pic</title>
+  <id>/atom/pic.atom</id>
+  <updated>2013-12-26T03:31:54Z</updated>
+  <link href="http://old.rafaelmartins.eng.br/" />
+  <link href="http://old.rafaelmartins.eng.br/atom/pic.atom" rel="self" />
+  <author>
+    <name>Rafael G. Martins</name>
+  </author>
+  <subtitle type="text">Gentoo Linux, Engineering and random stuff.</subtitle>
+  <generator>blohg</generator>
+  <entry>
+    <title type="text">Gentoo: News for PIC developers</title>
+    <id>/post/gentoo-news-for-pic-devs/</id>
+    <updated>2013-12-26T03:31:54Z</updated>
+    <published>2013-12-26T03:31:54Z</published>
+    <link href="http://old.rafaelmartins.eng.br/post/gentoo-news-for-pic-devs/" />
+    <author>
+      <name>Rafael G. Martins</name>
+      <email>rafael@rafaelmartins.eng.br</email>
+    </author>
+    <summary type="html">&lt;!-- tags: en-us,gentoo,electronics,pic --&gt;
+&lt;p&gt;Some weeks ago I decided to restart working with PIC microcontrollers, just for fun,
+and bought some electronic components, tools, etc. After having everything in hands,
+I started looking at the state of the PIC development tools in Gentoo, and found some
+outdated packages. I updated the packages I wanted to use (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gputils&lt;/span&gt;&lt;/tt&gt;
+and &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gpsim&lt;/span&gt;&lt;/tt&gt;; &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/sdcc&lt;/span&gt;&lt;/tt&gt; still needs some work), and added
+some other packages (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/cpik&lt;/span&gt;&lt;/tt&gt;, a C compiler for PIC 18F, and re-added
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/pikdev&lt;/span&gt;&lt;/tt&gt;, a simple graphic IDE for the development of PIC-based
+applications, that was previously removed due to the usage of kdelibs3, and now is a
+Qt4-only application).&lt;/p&gt;
+&lt;p&gt;I'll be putting some effort on packaging the MPLAB X IDE and the XC8 compiler in the
+next weeks, if permitted by their licenses. I'm not sure yet.&lt;/p&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Thanks.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;!-- tags: en-us,gentoo,electronics,pic --&gt;
+&lt;p&gt;Some weeks ago I decided to restart working with PIC microcontrollers, just for fun,
+and bought some electronic components, tools, etc. After having everything in hands,
+I started looking at the state of the PIC development tools in Gentoo, and found some
+outdated packages. I updated the packages I wanted to use (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gputils&lt;/span&gt;&lt;/tt&gt;
+and &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/gpsim&lt;/span&gt;&lt;/tt&gt;; &lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/sdcc&lt;/span&gt;&lt;/tt&gt; still needs some work), and added
+some other packages (&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/cpik&lt;/span&gt;&lt;/tt&gt;, a C compiler for PIC 18F, and re-added
+&lt;tt class=&quot;docutils literal&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dev-embedded/pikdev&lt;/span&gt;&lt;/tt&gt;, a simple graphic IDE for the development of PIC-based
+applications, that was previously removed due to the usage of kdelibs3, and now is a
+Qt4-only application).&lt;/p&gt;
+&lt;p&gt;I'll be putting some effort on packaging the MPLAB X IDE and the XC8 compiler in the
+next weeks, if permitted by their licenses. I'm not sure yet.&lt;/p&gt;
+&lt;p&gt;That's all for now.&lt;/p&gt;
+&lt;p&gt;Thanks.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
